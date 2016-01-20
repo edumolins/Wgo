@@ -45,7 +45,8 @@
             android:id="@+id/last_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shadow_bar">
+            android:background="@drawable/shadow_bar"
+            android:visibility="gone">
             <TextView
                 android:id="@+id/text_last_search"
                 android:layout_width="wrap_content"
@@ -85,7 +86,8 @@
             android:id="@+id/alerts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/last_search">
+            android:layout_below="@+id/last_search"
+            android:visibility="gone">
             <RelativeLayout
                 android:id="@+id/new_alert"
                 android:layout_width="match_parent"
@@ -184,7 +186,7 @@
 
         </RelativeLayout>
 
-        <!-- Friends Layout -->
+        <!-- Log Out Layout -->
         <RelativeLayout
             android:id="@+id/logout_layout"
             android:layout_width="match_parent"
@@ -231,6 +233,149 @@
                 android:text="@string/accept"
                 android:textColor="@color/white"
                 android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+        <!-- Welcome Layout -->
+        <RelativeLayout
+            android:id="@+id/welcome_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/last_search"
+            android:background="@color/white"
+            android:visibility="visible">
+            <ViewFlipper
+                android:id="@+id/view_flipper"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="6dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/welcome"
+                        android:textColor="@color/green"
+                        android:textSize="25dp">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/welcome1"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/welcome2"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/welcome3"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/welcome4"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/nice_journey"
+                        android:textColor="@color/green"
+                        android:textSize="25dp">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/journey1"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/journey2"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </TextView>
+                    <Button
+                        android:id="@+id/go_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/green_button"
+                        android:text="@string/lets_go"
+                        android:textColor="@color/white"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/wanna_trip"
+                        android:textColor="@color/green"
+                        android:textSize="25dp">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/trip1"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/trip2"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </TextView>
+                </LinearLayout>
+            </ViewFlipper>
 
         </RelativeLayout>
 

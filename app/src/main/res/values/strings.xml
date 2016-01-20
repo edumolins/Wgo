@@ -2,6 +2,21 @@
     <string name="app_name">Wgo</string>
     <string name="action_settings">Settings</string>
 
+    <!--Welcome -->
+    <string name="welcome">WELCOME!</string>
+    <string name="welcome1">OpenGate is the app that tells you when</string>
+    <string name="welcome2">to travel. Set your budget, select a range</string>
+    <string name="welcome3">of dates, and we will do the work for you,</string>
+    <string name="welcome4">offering the best deals you can find!</string>
+
+    <string name="wanna_trip">WANNA TRIP?</string>
+    <string name="trip1">Select your depart and landing</string>
+    <string name="trip2">locations, and a range of flying dates</string>
+
+    <string name="nice_journey">HAVE A NICE JOURNEY</string>
+    <string name="journey1">OpenGate will do the researchand come</string>
+    <string name="journey2">back with the best offers for you</string>
+    <string name="lets_go">LET\'S GO!</string>
     <!-- Home -->
     <string name="your_last_search">YOUR LAST SEARCH</string>
     <string name="view_more">VIEW MORE RESULTS ></string>
