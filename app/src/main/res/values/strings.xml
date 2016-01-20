@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Wgo</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Home -->
+    <string name="your_last_search">YOUR LAST SEARCH</string>
+    <string name="view_more">VIEW MORE RESULTS ></string>
+    <string name="new_alert">NEW ALERT</string>
+    <string name="manage_alerts">MANAGE ALERTS</string>
+    <string name="tell_friends">TELL YOUR FRIENDS</string>
+    <string name="share_friends1">Share you OPENGATE experience,</string>
+    <string name="share_friends2">we\'re sure that someone else are</string>
+    <string name="share_friends3">looking for good flights! :)</string>
+    <string name="see_you">SEE YOU SOON</string>
+    <string name="logout_complete">Log out complete</string>
+    <string name="accept">ACCEPT</string>
+
+    <!--Login -->
+    <string name="login">LOG IN</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="lets_start">LET\'S START</string>
+    <string name="or_can">Or you can</string>
+    <string name="fb_connect">FACEBOOK CONNECT</string>
+    <string name="not_registered">Not registered yet? Please,</string>
+    <string name="sign_in">Sign in</string>
+
+    <!-- Register -->
+    <string name="register">REGISTER</string>
+
+</resources>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="wgo_app.wgo.MainActivity">
+
+    <!-- Home Header Init-->
+    <RelativeLayout
+        android:id="@+id/home_header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/grey_bar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+    <!-- Home Header End-->
+
+    <!-- Body Home Init -->
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/home_header">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/roma"
+        android:scaleType="centerCrop"/>
+    <RelativeLayout
+        android:id="@+id/global_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <!-- Results Layout -->
+        <RelativeLayout
+            android:id="@+id/last_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_bar">
+            <TextView
+                android:id="@+id/text_last_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_last_search"
+                android:layout_centerHorizontal="true"
+                android:textSize="17sp"
+                android:textColor="@color/green"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rome from 75 €"
+                android:layout_below="@+id/text_last_search"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/view_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_more"
+                android:layout_below="@+id/results"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+        </RelativeLayout>
+
+        <!--Alerts Layout -->
+        <RelativeLayout
+            android:id="@+id/alerts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/last_search">
+            <RelativeLayout
+                android:id="@+id/new_alert"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/grey_bar">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/new_alert"
+                    android:textColor="@color/green"
+                    android:textSize="26sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/border"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/grey_dark"
+                android:layout_below="@+id/new_alert">
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/manage_alerts"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/grey_bar"
+                android:layout_below="@+id/border">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/manage_alerts"
+                    android:textColor="@color/green"
+                    android:textSize="26sp"/>
+            </RelativeLayout>
+            <!--Friends Row -->
+            <RelativeLayout
+                android:id="@+id/friends"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/black_friends"
+                android:layout_below="@+id/manage_alerts">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/tell_friends"
+                    android:textColor="@color/green"
+                    android:textSize="22sp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- Friends Layout -->
+        <RelativeLayout
+            android:id="@+id/friends_layout"
+            android:layout_width="match_parent"
+            android:layout_height="191dp"
+            android:layout_below="@+id/last_search"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:src="@android:drawable/ic_delete"
+                android:layout_alignParentRight="true"/>
+            <TextView
+                android:id="@+id/friends1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/close"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:text="@string/share_friends1"/>
+            <TextView
+                android:id="@+id/friends2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/friends1"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:text="@string/share_friends2"/>
+            <TextView
+                android:id="@+id/friends3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/friends2"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:text="@string/share_friends3"/>
+
+        </RelativeLayout>
+
+        <!-- Friends Layout -->
+        <RelativeLayout
+            android:id="@+id/logout_layout"
+            android:layout_width="match_parent"
+            android:layout_height="295dp"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/see"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/grey_dark"
+                android:textSize="30sp"
+                android:text="@string/see_you"/>
+            <RelativeLayout
+                android:id="@+id/border2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:background="@color/grey"
+                android:layout_below="@+id/see"></RelativeLayout>
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/border2"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:text="@string/logout_complete"/>
+
+            <Button
+                android:id="@+id/accept_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/green_button_rect"
+                android:layout_alignParentBottom="true"
+                android:text="@string/accept"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+
+    <!-- Home Body End -->
+
+</RelativeLayout>
