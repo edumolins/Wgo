@@ -16,6 +16,10 @@ import android.widget.ViewFlipper;
 
 public class MainActivity extends Activity {
 
+    private RelativeLayout welcomeLayout;
+    private RelativeLayout globalLayout;
+    private RelativeLayout searchLayout;
+    private RelativeLayout alertsLayout;
     private ViewFlipper viewFlipper;
     private Button goButton;
     private float lastX;
@@ -25,8 +29,32 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RelativeLayout alertLayout = (RelativeLayout)findViewById(R.id.new_alert);
-        alertLayout.setOnClickListener(new View.OnClickListener() {
+        //WELCOME VIEW
+        welcomeLayout = (RelativeLayout)findViewById(R.id.welcome_layout);
+        globalLayout = (RelativeLayout)findViewById(R.id.global_layout);
+        searchLayout = (RelativeLayout)findViewById(R.id.last_search);
+        alertsLayout = (RelativeLayout)findViewById(R.id.alerts);
+        viewFlipper = (ViewFlipper)findViewById(R.id.view_flipper);
+        goButton = (Button)findViewById(R.id.go_button);
+
+        goButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                searchLayout.setVisibility(View.VISIBLE);
+                alertsLayout.setVisibility(View.VISIBLE);
+
+                Animation anim  = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.down_to_up_anim);
+                anim.setDuration(500);
+                globalLayout.setAnimation(anim);
+                globalLayout.startAnimation(anim);
+
+                welcomeLayout.setVisibility(View.GONE);
+            }
+        });
+
+        RelativeLayout alert = (RelativeLayout)findViewById(R.id.new_alert);
+        alert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
@@ -34,8 +62,8 @@ public class MainActivity extends Activity {
             }
         });
 
-        RelativeLayout manageLayout = (RelativeLayout)findViewById(R.id.manage_alerts);
-        manageLayout.setOnClickListener(new View.OnClickListener() {
+        RelativeLayout manage = (RelativeLayout)findViewById(R.id.manage_alerts);
+        manage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (MainActivity.this, LoginActivity.class);
@@ -43,8 +71,8 @@ public class MainActivity extends Activity {
             }
         });
 
-        RelativeLayout friendsLayout = (RelativeLayout)findViewById(R.id.friends);
-        friendsLayout.setOnClickListener(new View.OnClickListener() {
+        RelativeLayout friends = (RelativeLayout)findViewById(R.id.friends);
+        friends.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 RelativeLayout friends = (RelativeLayout)findViewById(R.id.friends_layout);
@@ -71,14 +99,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        viewFlipper = (ViewFlipper)findViewById(R.id.view_flipper);
-        goButton = (Button)findViewById(R.id.go_button);
-        goButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
     }
 
     // Using the following method, we will handle all screen swaps.

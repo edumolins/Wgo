@@ -40,6 +40,19 @@
     <string name="not_registered">Not registered yet? Please,</string>
     <string name="sign_in">Sign in</string>
 
+    <!-- Error Login -->
+    <string name="ups">UPS...</string>
+    <string name="error_mail">The mail was not properly introduced</string>
+    <string name="error_password">Password can\'t be empty</string>
+    <string name="error_login">The user and password don\'t match, please, try again</string>
+    <string name="wait">WAIT...</string>
+    <string name="error_fb1">We don\'t have your mail</string>
+    <string name="error_fb2">so we won\'t be able to send you</string>
+    <string name="error_fb3">our unbelievable offers!</string>
+    <string name="change_mail">CHANGE MAIL</string>
+    <string name="remind_later">REMIND ME LATER</string>
+
+
     <!-- Register -->
     <string name="register">REGISTER</string>
 

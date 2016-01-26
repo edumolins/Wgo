@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class LoginActivity extends Activity {
+public class NewAlertActivity extends Activity {
 
     private Button loginButton;
     private EditText emailInput;
@@ -46,7 +46,7 @@ public class LoginActivity extends Activity {
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                Intent intent = new Intent(NewAlertActivity.this, NewAlertActivity.class);
                 startActivity(intent);
 
             }
@@ -77,7 +77,6 @@ public class LoginActivity extends Activity {
     }
 
     private void validateLogin(){
-
         if(emailInput.getText().toString().equals("")){
 
             showError(getResources().getString(R.string.error_mail));
@@ -86,14 +85,10 @@ public class LoginActivity extends Activity {
 
             showError(getResources().getString(R.string.error_password));
 
-        }else if (emailInput.getText().toString().equals("123") && passwordInput.getText().toString().equals("123")){
-
-            Intent intent = new Intent(LoginActivity.this, NewAlertActivity.class);
-            startActivity(intent);
-
-        }else{
+        }else if (!emailInput.getText().toString().equals("123") && !passwordInput.getText().toString().equals("123")){
 
             showError(getResources().getString(R.string.error_login));
+        }else{
 
         }
     }

@@ -185,7 +185,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/border"
                 android:textColor="@color/grey"
-                android:textSize="14sp"/>
+                android:textSize="14sp"
+                android:text="@string/error_login"/>
             <Button
                 android:id="@+id/error_button"
                 android:layout_width="match_parent"
@@ -194,16 +195,6 @@
                 android:background="@drawable/green_button_rect"
                 android:textColor="@color/white"
                 android:text="@string/accept"/>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/error_fb_layout"
-            android:layout_width="700dp"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            android:background="@color/white">
-
-
         </RelativeLayout>
     <!-- Error Layout End -->
 </RelativeLayout>

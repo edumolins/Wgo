@@ -35,6 +35,12 @@
             android:name=".RegisterActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Black.NoTitleBar"/>
+
+        <activity
+            android:name=".NewAlertActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+
     </application>
 
 </manifest>
