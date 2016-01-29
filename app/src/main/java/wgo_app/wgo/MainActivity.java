@@ -57,7 +57,7 @@ public class MainActivity extends Activity {
         alert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(MainActivity.this, AvailableFlightsActivity.class);
                 startActivity(intent);
             }
         });
@@ -81,6 +81,7 @@ public class MainActivity extends Activity {
                 anim.setDuration(500);
                 friends.setAnimation(anim);
                 friends.startAnimation(anim);
+                alertsLayout.setEnabled(false);
 
 
             }
@@ -96,6 +97,7 @@ public class MainActivity extends Activity {
                 friends.setAnimation(anim);
                 friends.startAnimation(anim);
                 friends.setVisibility(View.GONE);
+                alertsLayout.setEnabled(true);
             }
         });
 

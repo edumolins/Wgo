@@ -19,9 +19,9 @@
             android:id="@+id/back_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_revert"
+            android:src="@drawable/back"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="10dp"/>
 
         <TextView
             android:id="@+id/login_text"
@@ -30,8 +30,7 @@
             android:text="@string/login"
             android:layout_centerInParent="true"
             android:textColor="@color/white"
-            android:textSize="18dp"
-            android:textStyle="bold"/>
+            android:textSize="18dp"/>
 
     </RelativeLayout>
 
@@ -47,7 +46,7 @@
             android:id="@+id/email_input"
             android:layout_width="match_parent"
             android:layout_height="38dp"
-            android:layout_centerVertical="true"
+            android:layout_marginTop="150dp"
             android:background="@drawable/white_input"
             android:inputType="textEmailAddress"
             android:ellipsize="start"

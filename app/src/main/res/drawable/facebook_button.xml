@@ -4,8 +4,6 @@
             <shape>
                 <solid android:color="#000000" />
                 <corners android:radius="3dp" />
-                <stroke android:color="@color/grey"
-                    android:width="1dp"/>
             </shape>
 
         </item>
@@ -13,8 +11,6 @@
         <shape>
             <solid
                 android:color="@color/grey_button"/>
-            <stroke android:color="@color/grey"
-                android:width="1dp"/>
             <corners android:radius="3dp"/>
 
         </shape>

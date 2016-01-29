@@ -19,9 +19,9 @@
             android:id="@+id/back_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_revert"
+            android:src="@drawable/back"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="10dp"/>
 
         <TextView
             android:id="@+id/login_text"
@@ -30,8 +30,7 @@
             android:text="@string/register"
             android:layout_centerInParent="true"
             android:textColor="@color/white"
-            android:textSize="18dp"
-            android:textStyle="bold"/>
+            android:textSize="18dp"/>
 
     </RelativeLayout>
 
@@ -42,6 +41,22 @@
             android:id="@+id/register_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/name_input"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@drawable/white_input"
+            android:inputType="text"
+            android:ellipsize="start"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="@string/username"
+            android:textColorHint="@color/grey_dark"
+            android:textColor="@color/grey_dark"/>
 
         <EditText
             android:id="@+id/email_input"
@@ -56,19 +71,51 @@
             android:layout_marginBottom="20dp"
             android:gravity="center_horizontal|center_vertical"
             android:hint="@string/email"
+            android:layout_below="@+id/name_input"
             android:textColorHint="@color/grey_dark"
             android:textColor="@color/grey_dark"/>
-
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/white_input"
+            android:inputType="textPassword"
+            android:ellipsize="start"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@+id/email_input"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="@string/password"
+            android:textColorHint="@color/grey_dark"
+            android:textColor="@color/grey_dark"/>
+        <EditText
+            android:id="@+id/confirm_input"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/white_input"
+            android:inputType="textPassword"
+            android:ellipsize="start"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@+id/password_input"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="@string/confirm_password"
+            android:textColorHint="@color/grey_dark"
+            android:textColor="@color/grey_dark"/>
         <Button
             android:id="@+id/button_register"
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:layout_centerVertical="true"
-            android:background="@drawable/green_button"
+            android:background="@drawable/button_green"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginBottom="20dp"
-            android:layout_below="@+id/email_input"
+            android:layout_below="@+id/confirm_input"
             android:gravity="center_horizontal|center_vertical"
             android:text="@string/register"
             android:textColor="@color/white"/>
@@ -88,7 +135,7 @@
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:layout_centerVertical="true"
-            android:background="@drawable/facebook_button"
+            android:background="@drawable/button_grey"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginBottom="20dp"

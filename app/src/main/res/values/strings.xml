@@ -55,5 +55,24 @@
 
     <!-- Register -->
     <string name="register">REGISTER</string>
+    <string name="username">Username</string>
+    <string name="confirm_password">Confirm password</string>
+
+    <!-- Search -->
+    <string name="search">SEARCH</string>
+    <string name="start_trip">START MY TRIP AT</string>
+    <string name="destination">DESTINATION</string>
+    <string name="have_select">YOU HAVE SELECT</string>
+    <string name="weekends">WEEKENDS</string>
+    <string name="want_expend">WANT EXPEND</string>
+    <string name="how_many_people">HOW MANY PEOPLE</string>
+    <string name="show_me">SHOW ME WHAT\'S AVAILABLE!</string>
+
+    <!-- Available Flights -->
+    <string name="available_flights">AVAILABLE FLIGHTS</string>
+    <string name="from">From</string>
+    <string name="to">to</string>
+    <string name="best_price">Best price per each weekend</string>
+    <string name="last_check">Last check</string>
 
 </resources>
