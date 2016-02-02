@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/shadow_bar"
             android:visibility="gone">
-            <TextView
+            <wgo_app.wgo.fonts.GNMediumTextView
                 android:id="@+id/text_last_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,8 +55,9 @@
                 android:layout_centerHorizontal="true"
                 android:textSize="17dp"
                 android:textColor="@color/green"
-                android:layout_marginTop="8dp"/>
-            <TextView
+                android:layout_marginTop="8dp"
+                android:letterSpacing="0.1"/>
+            <wgo_app.wgo.fonts.GNLightTextView
                 android:id="@+id/results"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -66,9 +67,10 @@
                 android:textSize="28dp"
                 android:textColor="@color/white"
                 android:layout_marginTop="1dp"
-                android:layout_marginBottom="3dp"/>
+                android:layout_marginBottom="3dp"
+                android:letterSpacing="0.1"/>
 
-            <TextView
+            <wgo_app.wgo.fonts.GNMediumTextView
                 android:id="@+id/view_more"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -77,7 +79,8 @@
                 android:layout_centerHorizontal="true"
                 android:textSize="16dp"
                 android:textColor="@color/white"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:letterSpacing="0.1"/>
 
         </RelativeLayout>
 
@@ -93,13 +96,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@drawable/grey_bar">
-                <TextView
+                <wgo_app.wgo.fonts.GNBookTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="@string/new_alert"
                     android:textColor="@color/green"
-                    android:textSize="26dp"/>
+                    android:textSize="26dp"
+                    android:letterSpacing="0.1"/>
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/border"
@@ -114,13 +118,14 @@
                 android:layout_height="60dp"
                 android:background="@drawable/grey_bar"
                 android:layout_below="@+id/border">
-                <TextView
+                <wgo_app.wgo.fonts.GNBookTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="@string/manage_alerts"
                     android:textColor="@color/green"
-                    android:textSize="26dp"/>
+                    android:textSize="26dp"
+                    android:letterSpacing="0.1"/>
             </RelativeLayout>
             <!--Friends Row -->
             <RelativeLayout
@@ -129,13 +134,14 @@
                 android:layout_height="50dp"
                 android:background="@drawable/black_bar"
                 android:layout_below="@+id/manage_alerts">
-                <TextView
+                <wgo_app.wgo.fonts.GNBookTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="@string/tell_friends"
                     android:textColor="@color/green"
-                    android:textSize="22dp"/>
+                    android:textSize="22dp"
+                    android:letterSpacing="0.1"/>
             </RelativeLayout>
         </RelativeLayout>
 
@@ -155,7 +161,7 @@
                 android:layout_margin="10dp"
                 android:src="@drawable/close"
                 android:layout_alignParentRight="true"/>
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/friends1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -164,8 +170,9 @@
                 android:layout_below="@+id/close"
                 android:textColor="@color/grey"
                 android:textSize="16dp"
+                android:letterSpacing="0.1"
                 android:text="@string/share_friends1"/>
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/friends2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -173,8 +180,9 @@
                 android:layout_below="@+id/friends1"
                 android:textColor="@color/grey"
                 android:textSize="16dp"
+                android:letterSpacing="0.1"
                 android:text="@string/share_friends2"/>
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/friends3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -182,6 +190,7 @@
                 android:layout_below="@+id/friends2"
                 android:textColor="@color/grey"
                 android:textSize="16dp"
+                android:letterSpacing="0.1"
                 android:text="@string/share_friends3"/>
 
         </RelativeLayout>
@@ -194,7 +203,7 @@
             android:background="@color/white"
             android:visibility="gone">
 
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/see"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -202,6 +211,7 @@
                 android:layout_centerHorizontal="true"
                 android:textColor="@color/grey_dark"
                 android:textSize="30dp"
+                android:letterSpacing="0.1"
                 android:text="@string/see_you"/>
             <RelativeLayout
                 android:id="@+id/border2"
@@ -214,7 +224,7 @@
                 android:layout_marginRight="60dp"
                 android:background="@color/grey"
                 android:layout_below="@+id/see"></RelativeLayout>
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/logout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -224,7 +234,7 @@
                 android:textSize="16dp"
                 android:text="@string/logout_complete"/>
 
-            <Button
+            <wgo_app.wgo.fonts.CustomButton
                 android:id="@+id/accept_button"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -240,15 +250,15 @@
         <RelativeLayout
             android:id="@+id/welcome_layout"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_below="@+id/last_search"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:background="@color/white"
             android:visibility="visible">
             <ViewFlipper
                 android:id="@+id/view_flipper"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_margin="6dp" >
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp" >
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -256,46 +266,47 @@
                     android:gravity="center_horizontal"
                     android:orientation="vertical" >
 
-                    <TextView
+                    <wgo_app.wgo.fonts.GNLightTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="10dp"
                         android:text="@string/welcome"
                         android:textColor="@color/green"
-                        android:textSize="25dp">
-                    </TextView>
-                    <TextView
+                        android:textSize="24dp"
+                        android:letterSpacing="0.1">
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="10dp"
                         android:text="@string/welcome1"
                         android:textColor="@color/grey_dark"
                         android:textSize="16dp">
-                    </TextView>
-                    <TextView
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
                         android:text="@string/welcome2"
                         android:textColor="@color/grey_dark"
                         android:textSize="16dp">
-                    </TextView>
-                    <TextView
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
                         android:text="@string/welcome3"
                         android:textColor="@color/grey_dark"
                         android:textSize="16dp">
-                    </TextView>
-                    <TextView
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
                         android:text="@string/welcome4"
                         android:textColor="@color/grey_dark"
                         android:textSize="16dp">
-                    </TextView>
+                    </wgo_app.wgo.fonts.GNLightTextView>
 
                 </LinearLayout>
 
@@ -305,31 +316,32 @@
                     android:gravity="center_horizontal"
                     android:orientation="vertical" >
 
-                    <TextView
+                    <wgo_app.wgo.fonts.GNLightTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="10dp"
                         android:text="@string/nice_journey"
                         android:textColor="@color/green"
-                        android:textSize="25dp">
-                    </TextView>
-                    <TextView
+                        android:textSize="24dp"
+                        android:letterSpacing="0.1">
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="10dp"
                         android:text="@string/journey1"
                         android:textColor="@color/grey_dark"
                         android:textSize="16dp">
-                    </TextView>
-                    <TextView
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
                         android:text="@string/journey2"
                         android:textColor="@color/grey_dark"
                         android:textSize="16dp">
-                    </TextView>
-                    <Button
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.CustomButton
                         android:id="@+id/go_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -350,33 +362,58 @@
                     android:gravity="center_horizontal"
                     android:orientation="vertical" >
 
-                    <TextView
+                    <wgo_app.wgo.fonts.GNLightTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="10dp"
                         android:text="@string/wanna_trip"
                         android:textColor="@color/green"
-                        android:textSize="25dp">
-                    </TextView>
-                    <TextView
+                        android:textSize="24dp"
+                        android:letterSpacing="0.1">
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="10dp"
                         android:text="@string/trip1"
                         android:textColor="@color/grey_dark"
                         android:textSize="16dp">
-                    </TextView>
-                    <TextView
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
                         android:text="@string/trip2"
                         android:textColor="@color/grey_dark"
                         android:textSize="16dp">
-                    </TextView>
+                    </wgo_app.wgo.fonts.GNLightTextView>
                 </LinearLayout>
             </ViewFlipper>
-
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_flipper"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp">
+                <ImageView
+                    android:id="@+id/point1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/elipse_green"
+                    android:layout_marginRight="15dp"/>
+                <ImageView
+                    android:id="@+id/point2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/elipse_white"
+                    android:layout_marginRight="15dp"/>
+                <ImageView
+                    android:id="@+id/point3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/elipse_white"/>
+            </LinearLayout>
         </RelativeLayout>
 
     </RelativeLayout>

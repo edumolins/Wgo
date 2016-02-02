@@ -3,8 +3,6 @@ package wgo_app.wgo;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
@@ -23,6 +21,12 @@ public class MainActivity extends Activity {
     private ViewFlipper viewFlipper;
     private Button goButton;
     private float lastX;
+    private ImageView point1;
+    private ImageView point2;
+    private ImageView point3;
+
+    //TextViews
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +40,9 @@ public class MainActivity extends Activity {
         alertsLayout = (RelativeLayout)findViewById(R.id.alerts);
         viewFlipper = (ViewFlipper)findViewById(R.id.view_flipper);
         goButton = (Button)findViewById(R.id.go_button);
+        point1 = (ImageView)findViewById(R.id.point1);
+        point2 = (ImageView)findViewById(R.id.point2);
+        point3 = (ImageView)findViewById(R.id.point3);
 
         goButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +64,7 @@ public class MainActivity extends Activity {
         alert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AvailableFlightsActivity.class);
+                Intent intent = new Intent(MainActivity.this, NewAlertActivity.class);
                 startActivity(intent);
             }
         });
@@ -67,6 +74,14 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        searchLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AvailableFlightsActivity.class);
                 startActivity(intent);
             }
         });
@@ -104,7 +119,6 @@ public class MainActivity extends Activity {
 
     }
 
-    // Using the following method, we will handle all screen swaps.
     public boolean onTouchEvent(MotionEvent touchevent) {
         switch (touchevent.getAction()) {
             case MotionEvent.ACTION_DOWN:
@@ -135,32 +149,25 @@ public class MainActivity extends Activity {
                     viewFlipper.setOutAnimation(this, R.anim.slide_out_to_left);
                     // Display previous screen
                     viewFlipper.showPrevious();
+
                 }
+
+                if(viewFlipper.getDisplayedChild() == 1 ){
+                    point3.setImageResource(R.drawable.elipse_green);
+                    point2.setImageResource(R.drawable.elipse_white);
+                    point1.setImageResource(R.drawable.elipse_white);
+                }else if (viewFlipper.getDisplayedChild() == 2){
+                    point2.setImageResource(R.drawable.elipse_green);
+                    point1.setImageResource(R.drawable.elipse_white);
+                    point3.setImageResource(R.drawable.elipse_white);
+                }else{
+                    point1.setImageResource(R.drawable.elipse_green);
+                    point2.setImageResource(R.drawable.elipse_white);
+                    point3.setImageResource(R.drawable.elipse_white);
+                }
+
                 break;
         }
         return false;
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

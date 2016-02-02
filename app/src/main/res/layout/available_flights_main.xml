@@ -23,7 +23,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"/>
 
-        <TextView
+        <wgo_app.wgo.fonts.GNMediumTextView
             android:id="@+id/login_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,34 +43,38 @@
         android:layout_below="@+id/flights_header"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal">
-        <TextView
+        <wgo_app.wgo.fonts.GNBookTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/grey_flights"
             android:textSize="20dp"
             android:text="@string/from"
+            android:letterSpacing="0.1"
             android:layout_marginRight="5dp"/>
-        <TextView
+        <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/from_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/grey_dark_flights"
             android:textSize="20dp"
+            android:letterSpacing="0.1"
             android:text="BARCELONA"
             android:layout_marginRight="5dp"/>
-        <TextView
+        <wgo_app.wgo.fonts.GNBookTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/grey_flights"
             android:textSize="20dp"
             android:text="@string/to"
+            android:letterSpacing="0.1"
             android:layout_marginRight="5dp"/>
-        <TextView
+        <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/to_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/grey_dark_flights"
             android:textSize="20dp"
+            android:letterSpacing="0.1"
             android:text="ROMA"/>
     </LinearLayout>
     <RelativeLayout
@@ -83,7 +87,7 @@
         android:layout_marginBottom="15dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"/>
-    <TextView
+    <wgo_app.wgo.fonts.GNBookTextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -114,7 +118,7 @@
                 android:src="@drawable/arrow"
                 android:layout_marginRight="10dp"
                 android:layout_centerVertical="true" />
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/time1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -122,7 +126,7 @@
                 android:text="29/11/2015"
                 android:layout_toRightOf="@+id/arrow1"
                 android:layout_marginRight="5dp"/>
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/day1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -144,7 +148,7 @@
                 android:src="@drawable/arrow"
                 android:layout_marginRight="10dp"
                 android:layout_centerVertical="true" />
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/time2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -152,7 +156,7 @@
                 android:text="02/12/2015"
                 android:layout_toRightOf="@+id/arrow2"
                 android:layout_marginRight="5dp"/>
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/day2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -161,7 +165,7 @@
                 android:layout_toRightOf="@+id/time2"
                 android:layout_marginRight="5dp"/>
         </RelativeLayout>
-        <TextView
+        <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/last_check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -170,7 +174,7 @@
             android:layout_marginLeft="25dp"
             android:textColor="@color/grey_flights"
             android:text="Last check 09:35h"/>
-        <TextView
+        <wgo_app.wgo.fonts.GNLightTextView
             android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -201,7 +205,7 @@
                 android:src="@drawable/arrow"
                 android:layout_marginRight="10dp"
                 android:layout_centerVertical="true" />
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/time3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -209,7 +213,7 @@
                 android:text="29/11/2015"
                 android:layout_toRightOf="@+id/arrow3"
                 android:layout_marginRight="5dp"/>
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/day3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -231,7 +235,7 @@
                 android:src="@drawable/arrow"
                 android:layout_marginRight="10dp"
                 android:layout_centerVertical="true" />
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/time4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -239,7 +243,7 @@
                 android:text="02/12/2015"
                 android:layout_toRightOf="@+id/arrow4"
                 android:layout_marginRight="5dp"/>
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/day4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -248,7 +252,7 @@
                 android:layout_toRightOf="@+id/time4"
                 android:layout_marginRight="5dp"/>
         </RelativeLayout>
-        <TextView
+        <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/last_check2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -257,7 +261,7 @@
             android:layout_marginLeft="25dp"
             android:textColor="@color/grey_flights"
             android:text="Last check 09:35h"/>
-        <TextView
+        <wgo_app.wgo.fonts.GNLightTextView
             android:id="@+id/price2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

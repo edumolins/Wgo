@@ -4,7 +4,7 @@
 
     <!--Welcome -->
     <string name="welcome">WELCOME!</string>
-    <string name="welcome1">OpenGate is the app that tells you when</string>
+    <string name="welcome1">Wgo is the app that tells you when</string>
     <string name="welcome2">to travel. Set your budget, select a range</string>
     <string name="welcome3">of dates, and we will do the work for you,</string>
     <string name="welcome4">offering the best deals you can find!</string>
@@ -14,7 +14,7 @@
     <string name="trip2">locations, and a range of flying dates</string>
 
     <string name="nice_journey">HAVE A NICE JOURNEY</string>
-    <string name="journey1">OpenGate will do the researchand come</string>
+    <string name="journey1">Wgo will do the researchand come</string>
     <string name="journey2">back with the best offers for you</string>
     <string name="lets_go">LET\'S GO!</string>
     <!-- Home -->
@@ -23,7 +23,7 @@
     <string name="new_alert">NEW ALERT</string>
     <string name="manage_alerts">MANAGE ALERTS</string>
     <string name="tell_friends">TELL YOUR FRIENDS</string>
-    <string name="share_friends1">Share you OPENGATE experience,</string>
+    <string name="share_friends1">Share you Wgo experience,</string>
     <string name="share_friends2">we\'re sure that someone else are</string>
     <string name="share_friends3">looking for good flights! :)</string>
     <string name="see_you">SEE YOU SOON</string>
