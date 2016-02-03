@@ -73,7 +73,7 @@ public class MainActivity extends Activity {
         manage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent (MainActivity.this, LastSearchsActivity.class);
                 startActivity(intent);
             }
         });
@@ -81,7 +81,7 @@ public class MainActivity extends Activity {
         searchLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AvailableFlightsActivity.class);
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -153,17 +153,17 @@ public class MainActivity extends Activity {
                 }
 
                 if(viewFlipper.getDisplayedChild() == 1 ){
-                    point3.setImageResource(R.drawable.elipse_green);
-                    point2.setImageResource(R.drawable.elipse_white);
-                    point1.setImageResource(R.drawable.elipse_white);
+                    point3.setImageResource(R.drawable.elipse_gris);
+                    point2.setImageResource(R.drawable.elipse_trans);
+                    point1.setImageResource(R.drawable.elipse_trans);
                 }else if (viewFlipper.getDisplayedChild() == 2){
-                    point2.setImageResource(R.drawable.elipse_green);
-                    point1.setImageResource(R.drawable.elipse_white);
-                    point3.setImageResource(R.drawable.elipse_white);
+                    point2.setImageResource(R.drawable.elipse_gris);
+                    point1.setImageResource(R.drawable.elipse_trans);
+                    point3.setImageResource(R.drawable.elipse_trans);
                 }else{
-                    point1.setImageResource(R.drawable.elipse_green);
-                    point2.setImageResource(R.drawable.elipse_white);
-                    point3.setImageResource(R.drawable.elipse_white);
+                    point1.setImageResource(R.drawable.elipse_gris);
+                    point2.setImageResource(R.drawable.elipse_trans);
+                    point3.setImageResource(R.drawable.elipse_trans);
                 }
 
                 break;

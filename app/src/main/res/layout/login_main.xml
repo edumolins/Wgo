@@ -89,6 +89,7 @@
             android:layout_below="@+id/password_input"
             android:gravity="center_horizontal|center_vertical"
             android:text="@string/lets_start"
+            android:letterSpacing="0.1"
             android:textColor="@color/white"/>
 
         <wgo_app.wgo.fonts.GNBookTextView
@@ -161,10 +162,10 @@
                 android:id="@+id/close"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:src="@android:drawable/ic_delete"
+                android:layout_margin="10dp"
+                android:src="@drawable/close"
                 android:layout_alignParentRight="true"/>
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/ups"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -172,7 +173,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/close"
                 android:textColor="@color/grey_dark"
-                android:textSize="24sp"
+                android:textSize="24dp"
+                android:letterSpacing="0.1"
                 android:text="@string/ups"/>
             <RelativeLayout
                 android:id="@+id/border"
@@ -183,32 +185,117 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:background="@color/grey"/>
-            <TextView
+            <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/error_message"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/border"
                 android:textColor="@color/grey"
-                android:textSize="14sp"/>
-            <Button
+                android:letterSpacing="0.1"
+                android:textSize="14dp"/>
+            <wgo_app.wgo.fonts.CustomButton
                 android:id="@+id/error_button"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/green_button_rect"
                 android:textColor="@color/white"
+                android:letterSpacing="0.1"
                 android:text="@string/accept"/>
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/error_fb_layout"
-            android:layout_width="700dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/white"
             android:visibility="gone"
-            android:background="@color/white">
+            android:layout_below="@+id/login_header">
 
-
+            <ImageView
+                android:id="@+id/close_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@drawable/close"
+                android:layout_alignParentRight="true"/>
+            <wgo_app.wgo.fonts.GNBookTextView
+                android:id="@+id/wait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/close_fb"
+                android:textColor="@color/grey_dark"
+                android:textSize="24dp"
+                android:letterSpacing="0.1"
+                android:text="@string/wait"/>
+            <RelativeLayout
+                android:id="@+id/border2"
+                android:layout_width="250dp"
+                android:layout_height="1px"
+                android:layout_below="@+id/wait"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/grey"/>
+            <wgo_app.wgo.fonts.GNBookTextView
+                android:id="@+id/error_message_fb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/border2"
+                android:textColor="@color/grey"
+                android:textSize="16dp"
+                android:letterSpacing="0.1"
+                android:text="@string/error_fb1"/>
+            <wgo_app.wgo.fonts.GNBookTextView
+                android:id="@+id/error_message_fb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/error_message_fb1"
+                android:textColor="@color/grey"
+                android:textSize="16dp"
+                android:letterSpacing="0.1"
+                android:layout_marginTop="10dp"
+                android:text="@string/error_fb2"/>
+            <wgo_app.wgo.fonts.GNBookTextView
+                android:id="@+id/error_message_fb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/error_message_fb2"
+                android:textColor="@color/grey"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:letterSpacing="0.1"
+                android:text="@string/error_fb1"/>
+            <wgo_app.wgo.fonts.CustomButton
+                android:id="@+id/change_mail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/green_button"
+                android:textColor="@color/white"
+                android:text="@string/change_mail"
+                android:letterSpacing="0.1"
+                android:layout_below="@+id/error_message_fb3"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"/>
+            <wgo_app.wgo.fonts.CustomButton
+                android:id="@+id/remind_me"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/white_button"
+                android:textColor="@color/grey_dark"
+                android:text="@string/remind_later"
+                android:letterSpacing="0.1"
+                android:layout_below="@+id/change_mail"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"/>
         </RelativeLayout>
-    <!-- Error Layout End -->
+
 </RelativeLayout>

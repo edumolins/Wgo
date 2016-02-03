@@ -10,7 +10,11 @@
     <color name="grey_button">#535353</color>
     <color name="green">#72D54A</color>
     <color name="black_friends">#313131</color>
-    <color name="white_background_flights">#fbfbfb</color>
+    <color name="white_background_flights">#f2f2f2</color>
     <color name="grey_flights">#999999</color>
     <color name="grey_dark_flights">#333333</color>
+    <color name="grey_seekbar">#898989</color>
+    <color name="green_seekbar">#00c853</color>
+
+
 </resources>

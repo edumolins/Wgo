@@ -11,19 +11,19 @@ import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
-import wgo_app.wgo.adapter.FlightAdapter;
+import wgo_app.wgo.adapter.DetailedFlightAdapter;
 import wgo_app.wgo.objects.ObjFlight;
 
-public class AvailableFlightsActivity extends Activity {
+public class DetailedFlightsActivity extends Activity {
 
     private ArrayList<ObjFlight> flightDatos = new ArrayList<>();
-    private FlightAdapter flightAdapter;
+    private DetailedFlightAdapter flightAdapter;
     private ListView listFlights;
     private RelativeLayout headerFlight;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.available_flights_main);
+        setContentView(R.layout.detailed_flights_main);
 
         ImageView back = (ImageView)findViewById(R.id.back_icon);
         back.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +57,7 @@ public class AvailableFlightsActivity extends Activity {
                 for (int i =0; i < 15; i++){
                     flightDatos.add(new ObjFlight(1));
                 }
-                flightAdapter = new FlightAdapter(AvailableFlightsActivity.this, flightDatos);
+                flightAdapter = new DetailedFlightAdapter(DetailedFlightsActivity.this, flightDatos);
                 //listFriends.setVisibility(View.VISIBLE);
                 listFlights.setAdapter(flightAdapter);
                 listFlights.setSelection(0);

@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import wgo_app.wgo.fonts.CustomButton;
+
 public class LoginActivity extends Activity {
 
     private Button loginButton;
@@ -20,6 +22,7 @@ public class LoginActivity extends Activity {
     private TextView errorMessage;
     private RelativeLayout shadowLayout;
     private RelativeLayout errorLayout;
+    private RelativeLayout errorFbLayout;
 
 
     @Override
@@ -32,7 +35,7 @@ public class LoginActivity extends Activity {
         errorMessage = (TextView)findViewById(R.id.error_message);
         shadowLayout = (RelativeLayout)findViewById(R.id.shadow_layout);
         errorLayout = (RelativeLayout)findViewById(R.id.error_layout);
-
+        errorFbLayout = (RelativeLayout)findViewById(R.id.error_fb_layout);
 
         loginButton = (Button)findViewById(R.id.button_login);
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -64,14 +67,30 @@ public class LoginActivity extends Activity {
         errorButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                hideError();
+                hideError(errorLayout);
             }
         });
         ImageView closeButton = (ImageView)findViewById(R.id.close);
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                hideError();
+                hideError(errorLayout);
+            }
+        });
+
+        ImageView closeFbButton = (ImageView)findViewById(R.id.close_fb);
+        closeFbButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hideError(errorFbLayout);
+            }
+        });
+
+        CustomButton fbButton = (CustomButton)findViewById(R.id.button_facebook);
+        fbButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showError(errorFbLayout, "");
             }
         });
     }
@@ -80,11 +99,11 @@ public class LoginActivity extends Activity {
 
         if(emailInput.getText().toString().equals("")){
 
-            showError(getResources().getString(R.string.error_mail));
+            showError(errorLayout, getResources().getString(R.string.error_mail));
 
         }else if (passwordInput.getText().toString().equals("")){
 
-            showError(getResources().getString(R.string.error_password));
+            showError(errorLayout, getResources().getString(R.string.error_password));
 
         }else if (emailInput.getText().toString().equals("123") && passwordInput.getText().toString().equals("123")){
 
@@ -93,27 +112,27 @@ public class LoginActivity extends Activity {
 
         }else{
 
-            showError(getResources().getString(R.string.error_login));
+            showError(errorLayout, getResources().getString(R.string.error_login));
 
         }
     }
 
-    private void hideError(){
+    private void hideError(RelativeLayout layout){
         Animation anim  = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.up_to_down_anim);
         anim.setDuration(500);
-        errorLayout.setAnimation(anim);
-        errorLayout.startAnimation(anim);
+        layout.setAnimation(anim);
+        layout.startAnimation(anim);
         shadowLayout.setVisibility(View.GONE);
-        errorLayout.setVisibility(View.GONE);
+        layout.setVisibility(View.GONE);
     }
 
-    private void showError (String error_message){
+    private void showError (RelativeLayout layout, String error_message){
         shadowLayout.setVisibility(View.VISIBLE);
         errorMessage.setText(error_message);
-        errorLayout.setVisibility(View.VISIBLE);
+        layout.setVisibility(View.VISIBLE);
         Animation anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.down_to_up_anim);
         anim.setDuration(500);
-        errorLayout.setAnimation(anim);
-        errorLayout.startAnimation(anim);
+        layout.setAnimation(anim);
+        layout.startAnimation(anim);
     }
 }

@@ -46,14 +46,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/shadow_bar"
-            android:visibility="gone">
+            android:visibility="gone"
+            android:padding="3dp">
             <wgo_app.wgo.fonts.GNMediumTextView
                 android:id="@+id/text_last_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/your_last_search"
                 android:layout_centerHorizontal="true"
-                android:textSize="17dp"
+                android:textSize="14dp"
                 android:textColor="@color/green"
                 android:layout_marginTop="8dp"
                 android:letterSpacing="0.1"/>
@@ -61,13 +62,13 @@
                 android:id="@+id/results"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rome from 75 €"
+                android:text="ROME FROM 75 €"
                 android:layout_below="@+id/text_last_search"
                 android:layout_centerHorizontal="true"
                 android:textSize="28dp"
                 android:textColor="@color/white"
                 android:layout_marginTop="1dp"
-                android:layout_marginBottom="3dp"
+                android:layout_marginBottom="5dp"
                 android:letterSpacing="0.1"/>
 
             <wgo_app.wgo.fonts.GNMediumTextView
@@ -77,7 +78,7 @@
                 android:text="@string/view_more"
                 android:layout_below="@+id/results"
                 android:layout_centerHorizontal="true"
-                android:textSize="16dp"
+                android:textSize="14dp"
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:letterSpacing="0.1"/>
@@ -94,7 +95,7 @@
             <RelativeLayout
                 android:id="@+id/new_alert"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="65dp"
                 android:background="@drawable/grey_bar">
                 <wgo_app.wgo.fonts.GNBookTextView
                     android:layout_width="wrap_content"
@@ -102,20 +103,20 @@
                     android:layout_centerInParent="true"
                     android:text="@string/new_alert"
                     android:textColor="@color/green"
-                    android:textSize="26dp"
+                    android:textSize="22dp"
                     android:letterSpacing="0.1"/>
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/border"
                 android:layout_width="match_parent"
-                android:layout_height="1px"
+                android:layout_height="1dp"
                 android:background="@color/grey_dark"
                 android:layout_below="@+id/new_alert">
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/manage_alerts"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="65dp"
                 android:background="@drawable/grey_bar"
                 android:layout_below="@+id/border">
                 <wgo_app.wgo.fonts.GNBookTextView
@@ -124,7 +125,7 @@
                     android:layout_centerInParent="true"
                     android:text="@string/manage_alerts"
                     android:textColor="@color/green"
-                    android:textSize="26dp"
+                    android:textSize="22dp"
                     android:letterSpacing="0.1"/>
             </RelativeLayout>
             <!--Friends Row -->
@@ -140,7 +141,7 @@
                     android:layout_centerInParent="true"
                     android:text="@string/tell_friends"
                     android:textColor="@color/green"
-                    android:textSize="22dp"
+                    android:textSize="20dp"
                     android:letterSpacing="0.1"/>
             </RelativeLayout>
         </RelativeLayout>
@@ -149,7 +150,7 @@
         <RelativeLayout
             android:id="@+id/friends_layout"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="180dp"
             android:layout_below="@+id/last_search"
             android:background="@color/white"
             android:visibility="gone">
@@ -192,6 +193,44 @@
                 android:textSize="16dp"
                 android:letterSpacing="0.1"
                 android:text="@string/share_friends3"/>
+            <LinearLayout
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/friends3"
+                android:layout_marginTop="15dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rrss_fb"
+                    android:layout_marginRight="15dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rrss_tw"
+                    android:layout_marginRight="15dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rrss_g"
+                    android:layout_marginRight="15dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rrss_wapp"
+                    android:layout_marginRight="15dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rrss_msg"
+                    android:layout_marginRight="15dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rrss_mail"
+                    android:layout_marginRight="15dp"/>
+            </LinearLayout>
 
         </RelativeLayout>
 
@@ -351,8 +390,8 @@
                         android:textColor="@color/white"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
-                        android:paddingLeft="40dp"
-                        android:paddingRight="40dp"/>
+                        android:paddingLeft="60dp"
+                        android:paddingRight="60dp"/>
 
                 </LinearLayout>
 
@@ -371,10 +410,16 @@
                         android:textSize="24dp"
                         android:letterSpacing="0.1">
                     </wgo_app.wgo.fonts.GNLightTextView>
+                    <ImageView
+                        android:id="@+id/airplane"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/airplane"
+                        android:layout_marginTop="15dp"/>
                     <wgo_app.wgo.fonts.GNLightTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="15dp"
                         android:text="@string/trip1"
                         android:textColor="@color/grey_dark"
                         android:textSize="16dp">
@@ -400,19 +445,19 @@
                     android:id="@+id/point1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/elipse_green"
+                    android:src="@drawable/elipse_gris"
                     android:layout_marginRight="15dp"/>
                 <ImageView
                     android:id="@+id/point2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/elipse_white"
+                    android:src="@drawable/elipse_trans"
                     android:layout_marginRight="15dp"/>
                 <ImageView
                     android:id="@+id/point3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/elipse_white"/>
+                    android:src="@drawable/elipse_trans"/>
             </LinearLayout>
         </RelativeLayout>
 

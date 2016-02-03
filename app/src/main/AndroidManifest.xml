@@ -48,6 +48,16 @@
             android:theme="@android:style/Theme.Black.NoTitleBar"/>
 
         <activity
+            android:name=".LastSearchsActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+
+        <activity
+            android:name=".DetailedFlightsActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+
+        <activity
             android:name=".CalendarActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Black.NoTitleBar"/>

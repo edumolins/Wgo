@@ -25,6 +25,10 @@ public class SearchActivity extends Activity {
 	private GNLightEditText searchBar;
 	private LocationAdapter locationAdapter;
 	private ArrayList<ObjLocation> locationDatos = new ArrayList<ObjLocation>();
+
+	private String from;
+
+
 	StringBuffer buffer;
 	 /** Called when the activity is first created. */
 	@Override
@@ -32,7 +36,8 @@ public class SearchActivity extends Activity {
         super.onCreate(savedInstanceState);
     	try{
 	        setContentView(R.layout.search_main);
-	        jsonArray = new JSONArray();
+	        from = getIntent().getStringExtra("from");
+			jsonArray = new JSONArray();
 	        searchBar = (GNLightEditText)findViewById(R.id.destination);
 	        locationDatos.clear();
 	        listLocations= (ListView)findViewById(R.id.list_locations);
@@ -58,7 +63,7 @@ public class SearchActivity extends Activity {
 	        searchBar.addTextChangedListener(filterTextWatcher);
 	        searchBar.setEnabled(false);
 
-	        new GetLocations().execute();
+			new GetLocations().execute();
     	}catch(Exception e){
     		
     	}
@@ -87,7 +92,7 @@ public class SearchActivity extends Activity {
 				locationDatos.add(new ObjLocation(6, "BERLÍN", "ALEMANIA"));
 				locationDatos.add(new ObjLocation(7, "LONDRINA", "ANDORRA"));
 				locationDatos.add(new ObjLocation(7, "SANTA CRUS DE TENERIFE", "PAÍS MEGALARGO"));
-				locationAdapter = new LocationAdapter(SearchActivity.this, locationDatos);
+				locationAdapter = new LocationAdapter(SearchActivity.this, locationDatos, from);
 				//listFriends.setVisibility(View.VISIBLE);
 				listLocations.setAdapter(locationAdapter);
 				listLocations.setSelection(0);

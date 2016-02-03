@@ -44,7 +44,8 @@
             <RelativeLayout
                 android:id="@+id/origin_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_row">
                 <wgo_app.wgo.fonts.GNBookTextView
                     android:id="@+id/start_trip"
                     android:layout_width="wrap_content"
@@ -60,7 +61,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/grey_dark_flights"
-                    android:text="BARCELONA"
                     android:textSize="24dp"
                     android:letterSpacing="0.1"
                     android:layout_below="@+id/start_trip"
@@ -78,7 +78,8 @@
                 android:id="@+id/destination_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/origin_layout">
+                android:layout_below="@+id/origin_layout"
+                android:background="@drawable/white_row">
                 <wgo_app.wgo.fonts.GNBookTextView
                     android:id="@+id/to"
                     android:layout_width="wrap_content"
@@ -94,7 +95,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/grey_dark_flights"
-                    android:text="ROMA"
                     android:textSize="24dp"
                     android:letterSpacing="0.1"
                     android:layout_below="@+id/to"
@@ -157,21 +157,70 @@
                     android:letterSpacing="0.1"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"/>
-                <SeekBar
-                    android:id="@+id/seek_bar"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:id="@+id/seek_layout"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:thumb="@drawable/elipse_white"
+                    android:layout_marginTop="10dp"
                     android:layout_below="@+id/want_expend"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginRight="30dp"/>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+                    <TextView
+                        android:id="@+id/min_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/grey"/>
+                        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:gravity="center">
+                    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                        android:id="@+id/seek_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:dsb_min="0"
+                        app:dsb_max="300"
+                        android:layout_toRightOf="@+id/min_price"
+                        app:dsb_progressColor="@color/green_seekbar"
+                        app:dsb_trackColor="@color/grey_seekbar"
+                        app:dsb_trackHeight="3dp"
+                        app:dsb_thumbSize="30dp"
+                        app:dsb_indicatorColor="@color/green"
+                        app:dsb_rippleColor="@color/white"/>
+                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/max_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/seek_bar"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/grey"/>
+                    </LinearLayout>
+                </LinearLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/green"
-                    android:layout_below="@+id/seek_bar"/>
+                    android:layout_below="@+id/seek_layout"/>
             </RelativeLayout>
             <!-- Expend Layout -->
             <RelativeLayout
@@ -227,6 +276,7 @@
         </RelativeLayout>
     </ScrollView>
     <wgo_app.wgo.fonts.CustomButton
+        android:id="@+id/button_available"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:background="@drawable/green_button_rect"

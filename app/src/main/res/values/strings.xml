@@ -67,6 +67,7 @@
     <string name="want_expend">WANT EXPEND</string>
     <string name="how_many_people">HOW MANY PEOPLE</string>
     <string name="show_me">SHOW ME WHAT\'S AVAILABLE!</string>
+    <string name="show_flights">SHOW FLIGHTS</string>
 
     <!-- Available Flights -->
     <string name="available_flights">AVAILABLE FLIGHTS</string>
