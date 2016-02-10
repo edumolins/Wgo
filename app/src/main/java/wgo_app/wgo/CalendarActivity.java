@@ -2,54 +2,147 @@ package wgo_app.wgo;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.CalendarView;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.TextView;
+
+import com.squareup.timessquare.CalendarPickerView;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import wgo_app.wgo.fonts.CustomButton;
+import wgo_app.wgo.utils.Constants;
 
 public class CalendarActivity extends Activity {
 
-    CalendarView calendar;
+    private CalendarPickerView calendar;
+    private TextView numberWeekends;
+    private CustomButton buttonAccept;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-
-        //sets the main layout of the activity
         setContentView(R.layout.calendar_main);
 
-        //initializes the calendarview
-        initializeCalendar();
-    }
 
-    public void initializeCalendar() {
-        calendar = (CalendarView) findViewById(R.id.calendar);
 
-        // sets whether to show the week number.
-        calendar.setShowWeekNumber(false);
+        calendar = (CalendarPickerView) findViewById(R.id.calendar_view);
+        numberWeekends = (TextView)findViewById(R.id.num_weekends);
+        buttonAccept = (CustomButton)findViewById(R.id.button_accept);
 
-        // sets the first day of week according to Calendar.
-        // here we set Monday as the first day of the Calendar
-        calendar.setFirstDayOfWeek(2);
-
-        //The background color for the selected week.
-        //calendar.setSelectedWeekBackgroundColor(getResources().getColor(R.color.green));
-
-        //sets the color for the dates of an unfocused month.
-        //calendar.setUnfocusedMonthDateColor(getResources().getColor(R.color.transparent));
-
-        //sets the color for the separator line between weeks.
-        //calendar.setWeekSeparatorLineColor(getResources().getColor(R.color.transparent));
-
-        //sets the color for the vertical bar shown at the beginning and at the end of the selected date.
-        //calendar.setSelectedDateVerticalBar(R.color.darkgreen);
-
-        //sets the listener to be notified upon selected date change.
-        calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            //show the selected date as a toast
+        buttonAccept.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onSelectedDayChange(CalendarView view, int year, int month, int day) {
-                Toast.makeText(getApplicationContext(), day + "/" + month + "/" + year, Toast.LENGTH_LONG).show();
+            public void onClick(View v) {
+                Constants.numWeekends = calendar.getSelectedDates().size() / 3;
+                Constants.fromCalendar = true;
+                finish();
             }
         });
+        Calendar today = Calendar.getInstance();
+
+        today.set(Calendar.DAY_OF_MONTH,
+                today.getActualMaximum(Calendar.DAY_OF_MONTH));
+
+        Calendar nextYear = Calendar.getInstance();
+        nextYear.add(Calendar.YEAR, 1);
+
+        calendar.init(new Date(),nextYear.getTime()) //
+                .inMode(CalendarPickerView.SelectionMode.MULTIPLE);
+
+
+        calendar.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
+            @Override
+            public void onDateSelected(Date date) {
+
+                Calendar c = Calendar.getInstance();
+                c.setTime(date);
+                int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
+                int diff = 7 - dayOfWeek;
+
+                //It's sunday
+                if (diff == 6) {
+                    diff = -1;
+                }
+                //c.clear();
+                c.add(Calendar.DATE, diff);
+                Date saturday = c.getTime();
+                c.clear();
+
+                c.setTime(date);
+                c.add(Calendar.DATE, diff - 1);
+                Date before = c.getTime();
+                c.clear();
+
+                c.setTime(date);
+                c.add(Calendar.DATE, diff + 1);
+                Date next = c.getTime();
+                c.clear();
+
+                calendar.selectDate(before);
+                calendar.selectDate(next);
+                calendar.selectDate(saturday);
+
+                if (dayOfWeek == 7)
+                    calendar.selectDate(saturday, true);
+                else if (dayOfWeek == 6)
+                    calendar.selectDate(before, true);
+                else if (dayOfWeek == 1)
+                    calendar.selectDate(next, true);
+                else if (dayOfWeek < 6 && dayOfWeek > 1)
+                    calendar.selectDate(date, true);
+
+                numberWeekends.setText(Integer.toString(calendar.getSelectedDates().size() / 3));
+
+
+            }
+
+            @Override
+            public void onDateUnselected(Date date) {
+                Calendar c = Calendar.getInstance();
+                c.setTime(date);
+                int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
+                int diff = 7 - dayOfWeek;
+
+                if (diff == 6) {
+                    diff = -1;
+                }
+                //c.clear();
+                c.add(Calendar.DATE, diff);
+                Date saturday = c.getTime();
+                c.clear();
+
+                c.setTime(date);
+                c.add(Calendar.DATE, diff - 1);
+                Date before = c.getTime();
+                c.clear();
+
+                c.setTime(date);
+                c.add(Calendar.DATE, diff + 1);
+                Date next = c.getTime();
+                c.clear();
+
+                calendar.selectDate(before, true);
+                calendar.selectDate(next, true);
+                calendar.selectDate(saturday, true);
+                calendar.selectDate(date, true);
+
+                numberWeekends.setText(Integer.toString(calendar.getSelectedDates().size() / 3));
+
+            }
+        });
+        /*calendar.setSelector(R.drawable.button_green);
+        findViewById(R.id.done_button).setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                //Log.d(TAG, "Selected time in millis: " + calendar.getSelectedDate().getTime());
+                String toast = "Selected dates: " + calendar.getSelectedDate();
+                Toast.makeText(CalendarActivity.this, toast, Toast.LENGTH_SHORT).show();
+            }
+        });*/
     }
 
 }
+

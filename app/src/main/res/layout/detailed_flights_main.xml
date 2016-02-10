@@ -50,12 +50,18 @@
         android:background="@android:color/transparent"
         android:divider="@android:color/transparent"
         android:dividerHeight="10dp"
-        android:layout_above="@+id/banner"
-        android:layout_marginBottom="5dp"/>
+        android:layout_above="@+id/banner"/>
     <RelativeLayout
         android:id="@+id/banner"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@color/grey_dark"
-        android:layout_alignParentBottom="true"></RelativeLayout>
+        android:layout_height="wrap_content"
+        android:background="#313131"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/powered_sky"/>
+    </RelativeLayout>
 </RelativeLayout>

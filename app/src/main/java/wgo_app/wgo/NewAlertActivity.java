@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import org.adw.library.widgets.discreteseekbar.DiscreteSeekBar;
@@ -17,8 +18,10 @@ public class NewAlertActivity extends Activity {
     private RelativeLayout weekendsLayout;
     private RelativeLayout originLayout;
     private RelativeLayout destinationLayout;
+
     private TextView originLocation;
     private TextView destinationLocation;
+    private TextView numberWeekends;
 
 
     private TextView minusText;
@@ -27,6 +30,7 @@ public class NewAlertActivity extends Activity {
 
     private CustomButton availableButton;
 
+    private PriceSeekBar priceSeekBar;
     private DiscreteSeekBar discreteSeekBar1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +71,8 @@ public class NewAlertActivity extends Activity {
 
         originLocation = (TextView)findViewById(R.id.origin);
         destinationLocation = (TextView)findViewById(R.id.destination);
+        numberWeekends = (TextView)findViewById(R.id.number_weekends);
+
         minusText = (TextView)findViewById(R.id.minus);
         plusText = (TextView)findViewById(R.id.plus);
         peopleText = (TextView)findViewById(R.id.people);
@@ -100,6 +106,34 @@ public class NewAlertActivity extends Activity {
             }
         });
 
+        priceSeekBar = (PriceSeekBar)findViewById(R.id.priceLimitPicker);
+        priceLimitCreator(0);
+
+
+    }
+
+    private void priceLimitCreator(final int defaultValue) {
+        priceSeekBar.setProgress(defaultValue);
+
+        priceSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            int progressChanged = 0;
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                progressChanged = 0 + progress;
+                priceSeekBar.setPriceSelected(NewAlertActivity.this, progressChanged);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                seekBar.setSecondaryProgress(seekBar.getProgress());
+            }
+        });
     }
 
     @Override
@@ -109,6 +143,11 @@ public class NewAlertActivity extends Activity {
             Constants.fromLocationAdapter = false;
             originLocation.setText(Constants.originLocation);
             destinationLocation.setText(Constants.destinationLocation);
+        }
+
+        if(Constants.fromCalendar){
+            Constants.fromCalendar= false;
+            numberWeekends.setText(Integer.toString(Constants.numWeekends));
         }
 
 

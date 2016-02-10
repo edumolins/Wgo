@@ -76,4 +76,7 @@
     <string name="best_price">Best price per each weekend</string>
     <string name="last_check">Last check</string>
 
+    <!-- Weekends -->
+    <string name="select_weeks">SELECT YOUR WEEKENDS</string>
+
 </resources>

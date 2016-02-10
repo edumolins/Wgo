@@ -7,17 +7,19 @@ import android.os.Handler;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 public class SplashActivity extends Activity {
 
+    private ImageView logoImg;
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.splash_main);
-        final TextView logoImg = (TextView)findViewById(R.id.log_img);
+
+        logoImg = (ImageView)findViewById(R.id.log_img);
 
         Animation anim = new AlphaAnimation(0.0f, 1.0f);
         anim.setFillAfter(true);
