@@ -40,7 +40,7 @@
                 android:layout_weight="1"
                 android:gravity="left">
 
-                <wgo_app.wgo.fonts.AutoResizeTextView
+                <wgo_app.wgo.fonts.GNLightTextView
                     android:id="@+id/country"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

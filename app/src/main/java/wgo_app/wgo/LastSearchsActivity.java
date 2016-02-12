@@ -57,7 +57,7 @@ public class LastSearchsActivity extends Activity {
         @Override
         protected void onPostExecute(Boolean result) {
             try{
-                for (int i =0; i < 15; i++){
+                for (int i =0; i < 3; i++){
                     searchDatos.add(new ObjLastSearch(1));
                 }
                 searchAdapter = new LastSearchAdapter(LastSearchsActivity.this, searchDatos);

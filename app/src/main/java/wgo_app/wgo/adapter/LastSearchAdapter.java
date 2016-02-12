@@ -82,7 +82,13 @@ public class LastSearchAdapter extends ArrayAdapter<ObjLastSearch> {
                     context.startActivity(intent);
                 }
             });*/
-
+            searchHolder.getDeleteText().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    datos.remove(position);
+                    notifyDataSetChanged();
+                }
+            });
     	}catch(Exception e){    		
     		Log.e("error adapter search", e.getMessage());
     	}
