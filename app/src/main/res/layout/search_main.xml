@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="com.android.codishare.SearchActivity"
-    android:background="@android:color/transparent">
+    android:background="@android:color/transparent"
+    tools:context="com.android.codishare.SearchActivity">
 
     <!-- Login Header Init-->
     <RelativeLayout
@@ -13,75 +13,93 @@
         android:layout_height="40dp"
         android:background="@drawable/green_button">
 
-        <ImageView
-            android:id="@+id/back_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"/>
+        <RelativeLayout
+            android:id="@+id/close_layout"
+            android:layout_width="30dp"
+            android:layout_height="match_parent">
 
-        <TextView
+            <ImageView
+                android:id="@+id/back_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/back" />
+        </RelativeLayout>
+
+        <wgo_app.wgo.fonts.GNMediumTextView
             android:id="@+id/login_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text= "@string/search"
             android:layout_centerInParent="true"
+            android:letterSpacing="0.1"
+            android:text="@string/search"
             android:textColor="@color/white"
-            android:textSize="18dp"/>
+            android:textSize="18dp" />
 
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/shadow_bar"
-        android:layout_below="@+id/search_header"/>
+        android:layout_below="@+id/search_header"
+        android:background="@drawable/shadow_bar" />
 
     <RelativeLayout
         android:id="@+id/search_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:layout_below="@+id/search_header"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:background="@color/white"
         android:padding="10dp">
-        <ImageView
-            android:id="@+id/close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/close"
-            android:layout_alignParentRight="true"/>
+
+        <RelativeLayout
+            android:id="@+id/close_error"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/close">
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/close" />
+        </RelativeLayout>
+
         <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/dest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/destination"
-            android:textSize="18dp"
-            android:layout_below="@+id/close"
+            android:layout_below="@+id/close_error"
             android:layout_centerHorizontal="true"
+            android:letterSpacing="0.1"
+            android:text="@string/destination"
             android:textColor="@color/grey_flights"
-            android:letterSpacing="0.1"/>
+            android:textSize="18dp" />
 
         <wgo_app.wgo.fonts.GNLightEditText
             android:id="@+id/destination"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/dest"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
             android:background="@android:color/transparent"
             android:imeOptions="actionSearch"
             android:inputType="text"
+            android:letterSpacing="0.1"
+            android:minWidth="200dp"
             android:paddingBottom="2dp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:paddingTop="2dp"
             android:singleLine="true"
-            android:textSize="24dp"
             android:textColor="@color/grey_dark_flights"
-            android:minWidth="200dp"
-            android:layout_below="@+id/dest"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:letterSpacing="0.1"/>
+            android:textSize="24dp" />
     </RelativeLayout>
 
 
@@ -90,10 +108,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/search_layout"
+        android:background="@color/white"
         android:descendantFocusability="beforeDescendants"
         android:fadingEdge="none"
         android:footerDividersEnabled="false"
         android:headerDividersEnabled="false"
-        android:scrollbars="none"
-        android:background="@color/white"/>
+        android:scrollbars="none" />
 </RelativeLayout>

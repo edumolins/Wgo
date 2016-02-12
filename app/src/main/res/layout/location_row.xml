@@ -5,31 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/white_row">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp">
 
-        <wgo_app.wgo.fonts.GNBookTextView
-            android:id="@+id/location"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:textColor="@color/grey_dark_flights"
-            android:text="ROMA"
-            android:letterSpacing="0.1"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"/>
-        <wgo_app.wgo.fonts.GNLightTextView
-            android:id="@+id/country"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:textColor="@color/grey_dark"
-            android:text="(ITALIA)"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/location"
-            android:layout_marginLeft="15dp"
-            android:letterSpacing="0.1"/>
-        
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left">
+
+                <wgo_app.wgo.fonts.GNBookTextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.1"
+                    android:text="BARCELONA"
+                    android:textColor="@color/grey_dark_flights"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left">
+
+                <wgo_app.wgo.fonts.AutoResizeTextView
+                    android:id="@+id/country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/location"
+                    android:letterSpacing="0.1"
+                    android:text="ESPAÑA"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+
     </RelativeLayout>
 </RelativeLayout>

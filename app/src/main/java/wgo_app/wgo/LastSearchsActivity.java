@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
@@ -32,7 +33,13 @@ public class LastSearchsActivity extends Activity {
         });
 
         listSearch= (ListView)findViewById(R.id.list_search);
-
+        RelativeLayout close = (RelativeLayout)findViewById(R.id.close_layout);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         new GetSearch().execute();
     }
 

@@ -3,6 +3,7 @@ package wgo_app.wgo;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.squareup.timessquare.CalendarPickerView;
@@ -84,13 +85,13 @@ public class CalendarActivity extends Activity {
                 calendar.selectDate(saturday);
 
                 if (dayOfWeek == 7)
-                    calendar.selectDate(saturday, true);
+                    calendar.selectDate(saturday);
                 else if (dayOfWeek == 6)
-                    calendar.selectDate(before, true);
+                    calendar.selectDate(before);
                 else if (dayOfWeek == 1)
-                    calendar.selectDate(next, true);
+                    calendar.selectDate(next);
                 else if (dayOfWeek < 6 && dayOfWeek > 1)
-                    calendar.selectDate(date, true);
+                    calendar.selectDate(date);
 
                 numberWeekends.setText(Integer.toString(calendar.getSelectedDates().size() / 3));
 
@@ -122,13 +123,21 @@ public class CalendarActivity extends Activity {
                 Date next = c.getTime();
                 c.clear();
 
-                calendar.selectDate(before, true);
-                calendar.selectDate(next, true);
-                calendar.selectDate(saturday, true);
-                calendar.selectDate(date, true);
+                calendar.selectDate(before);
+                calendar.selectDate(next);
+                calendar.selectDate(saturday);
+                calendar.selectDate(date);
 
                 numberWeekends.setText(Integer.toString(calendar.getSelectedDates().size() / 3));
 
+            }
+        });
+
+        RelativeLayout close = (RelativeLayout)findViewById(R.id.close_layout);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
         /*calendar.setSelector(R.drawable.button_green);

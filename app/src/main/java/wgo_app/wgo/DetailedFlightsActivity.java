@@ -36,6 +36,13 @@ public class DetailedFlightsActivity extends Activity {
         listFlights= (ListView)findViewById(R.id.list_flights);
         headerFlight = (RelativeLayout)getLayoutInflater().inflate(R.layout.header_flight, null, false);
         listFlights.addHeaderView(headerFlight);
+        RelativeLayout close = (RelativeLayout)findViewById(R.id.close_layout);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         new GetFlights().execute();
     }

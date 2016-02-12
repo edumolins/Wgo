@@ -155,21 +155,27 @@
             android:layout_below="@+id/last_search"
             android:background="@color/white"
             android:visibility="gone">
-
-            <ImageView
-                android:id="@+id/close"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_margin="10dp"
+            <RelativeLayout
+                android:id="@+id/close_layout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/close"
-                android:layout_alignParentRight="true"/>
+                android:layout_alignParentRight="true">
+                <ImageView
+                    android:id="@+id/close"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/close"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
             <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/friends1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/close"
+                android:layout_below="@+id/close_layout"
                 android:textColor="@color/grey"
                 android:textSize="16dp"
                 android:letterSpacing="0.1"

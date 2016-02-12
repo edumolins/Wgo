@@ -12,6 +12,7 @@ public class GNLightTextView extends TextView {
         super(context, attrs);
         this.setTypeface(Typeface.createFromAsset(context.getAssets(),"fonts/gn_light.otf"));
 
+
     }
 
 }

@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
-
-import org.json.JSONArray;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
@@ -18,9 +18,7 @@ import wgo_app.wgo.objects.ObjLocation;
 
 public class SearchActivity extends Activity {
    
-	
-	private String nameUser = "";
-	private JSONArray jsonArray;	
+
 	private ListView listLocations;
 	private GNLightEditText searchBar;
 	private LocationAdapter locationAdapter;
@@ -37,7 +35,6 @@ public class SearchActivity extends Activity {
     	try{
 	        setContentView(R.layout.search_main);
 	        from = getIntent().getStringExtra("from");
-			jsonArray = new JSONArray();
 	        searchBar = (GNLightEditText)findViewById(R.id.destination);
 	        locationDatos.clear();
 	        listLocations= (ListView)findViewById(R.id.list_locations);
@@ -63,9 +60,25 @@ public class SearchActivity extends Activity {
 	        searchBar.addTextChangedListener(filterTextWatcher);
 	        searchBar.setEnabled(false);
 
+			RelativeLayout close = (RelativeLayout)findViewById(R.id.close_layout);
+			close.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                }
+            });
+
+            RelativeLayout closeLayout = (RelativeLayout)findViewById(R.id.close_error);
+            closeLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                }
+            });
+
 			new GetLocations().execute();
     	}catch(Exception e){
-    		
+            Log.e("Error load Search", e.getMessage());
     	}
     }
 

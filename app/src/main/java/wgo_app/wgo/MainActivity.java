@@ -9,6 +9,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ViewFlipper;
 
@@ -17,7 +18,11 @@ public class MainActivity extends Activity {
     private RelativeLayout welcomeLayout;
     private RelativeLayout globalLayout;
     private RelativeLayout searchLayout;
+
     private RelativeLayout alertsLayout;
+    private RelativeLayout newAlertLayout;
+    private RelativeLayout manageLayout;
+
     private ViewFlipper viewFlipper;
     private Button goButton;
     private float lastX;
@@ -38,6 +43,10 @@ public class MainActivity extends Activity {
         globalLayout = (RelativeLayout)findViewById(R.id.global_layout);
         searchLayout = (RelativeLayout)findViewById(R.id.last_search);
         alertsLayout = (RelativeLayout)findViewById(R.id.alerts);
+        newAlertLayout = (RelativeLayout)findViewById(R.id.new_alert);
+        manageLayout = (RelativeLayout)findViewById(R.id.manage_alerts);
+
+
         viewFlipper = (ViewFlipper)findViewById(R.id.view_flipper);
         goButton = (Button)findViewById(R.id.go_button);
         point1 = (ImageView)findViewById(R.id.point1);
@@ -96,13 +105,14 @@ public class MainActivity extends Activity {
                 anim.setDuration(500);
                 friends.setAnimation(anim);
                 friends.startAnimation(anim);
-                alertsLayout.setEnabled(false);
+                newAlertLayout.setEnabled(false);
+                manageLayout.setEnabled(false);
 
 
             }
         });
 
-        ImageView closeFriends = (ImageView)findViewById(R.id.close);
+        RelativeLayout closeFriends = (RelativeLayout)findViewById(R.id.close_layout);
         closeFriends.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,10 +122,22 @@ public class MainActivity extends Activity {
                 friends.setAnimation(anim);
                 friends.startAnimation(anim);
                 friends.setVisibility(View.GONE);
-                alertsLayout.setEnabled(true);
+                newAlertLayout.setEnabled(true);
+                manageLayout.setEnabled(true);
             }
         });
 
+        LinearLayout share = (LinearLayout)findViewById(R.id.share);
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent share = new Intent(android.content.Intent.ACTION_SEND);
+                share.setType("text/plain");
+                share.putExtra(Intent.EXTRA_SUBJECT, "Exemple de subject");
+                share.putExtra(Intent.EXTRA_TEXT, "https://www.google.com");
+                startActivity(Intent.createChooser(share, "Comparteix WGO!"));
+            }
+        });
 
     }
 

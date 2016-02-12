@@ -4,210 +4,238 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="wgo_app.wgo.RegisterActivity"
-    android:background="@color/white">
+    tools:context="wgo_app.wgo.RegisterActivity">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-    <!-- Register Header Init-->
-    <RelativeLayout
-        android:id="@+id/register_header"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@drawable/green_button">
+            <!-- Register Header Init-->
+            <RelativeLayout
+                android:id="@+id/register_header"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/green_button">
 
-        <ImageView
-            android:id="@+id/back_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"/>
+                <RelativeLayout
+                    android:id="@+id/close_layout"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent">
 
-        <wgo_app.wgo.fonts.GNBookTextView
-            android:id="@+id/login_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/register"
-            android:layout_centerInParent="true"
-            android:textColor="@color/white"
-            android:textSize="18dp"/>
+                    <ImageView
+                        android:id="@+id/back_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/back" />
+                </RelativeLayout>
 
-    </RelativeLayout>
+                <wgo_app.wgo.fonts.GNMediumTextView
+                    android:id="@+id/login_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:letterSpacing="0.1"
+                    android:text="@string/register"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
 
-    <!-- Login Header End-->
+            </RelativeLayout>
 
-    <!-- Form Register Init -->
-        <ImageView
-            android:id="@+id/register_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/logo_wikendi"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="100dp"/>
+            <!-- Login Header End-->
 
-        <wgo_app.wgo.fonts.GNBookEditText
-            android:id="@+id/email_input"
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
-            android:background="@drawable/white_input"
-            android:inputType="textEmailAddress"
-            android:ellipsize="start"
-            android:layout_below="@+id/register_logo"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="20dp"
-            android:letterSpacing="0.1"
-            android:gravity="center_horizontal|center_vertical"
-            android:hint="@string/email"
-            android:textColorHint="@color/grey_dark"
-            android:textColor="@color/grey_dark"/>
+            <!-- Form Register Init -->
+            <ImageView
+                android:id="@+id/register_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/logo_wikendi" />
 
-        <wgo_app.wgo.fonts.CustomButton
-            android:id="@+id/button_register"
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
-            android:layout_centerVertical="true"
-            android:background="@drawable/green_button"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="20dp"
-            android:layout_below="@+id/email_input"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="@string/register"
-            android:letterSpacing="0.1"
-            android:textColor="@color/white"/>
+            <wgo_app.wgo.fonts.GNBookEditText
+                android:id="@+id/email_input"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@+id/register_logo"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white_input"
+                android:ellipsize="start"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:letterSpacing="0.1"
+                android:textColor="@color/grey_dark"
+                android:textColorHint="@color/grey_dark" />
 
-        <wgo_app.wgo.fonts.GNBookTextView
-            android:id="@+id/text_can"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/or_can"
-            android:letterSpacing="0.1"
-            android:textColor="@color/grey"
-            android:layout_below="@+id/button_register"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"/>
+            <wgo_app.wgo.fonts.CustomButton
+                android:id="@+id/button_register"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@+id/email_input"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/green_button"
+                android:gravity="center_horizontal|center_vertical"
+                android:letterSpacing="0.1"
+                android:text="@string/register"
+                android:textColor="@color/white" />
 
-        <wgo_app.wgo.fonts.CustomButton
-            android:id="@+id/button_facebook"
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
-            android:layout_centerVertical="true"
-            android:background="@drawable/facebook_button"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="20dp"
-            android:layout_below="@+id/text_can"
-            android:letterSpacing="0.1"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="@string/fb_connect"
-            android:textColor="@color/white"/>
+            <wgo_app.wgo.fonts.GNBookTextView
+                android:id="@+id/text_can"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button_register"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:letterSpacing="0.1"
+                android:text="@string/or_can"
+                android:textColor="@color/grey" />
+
+            <wgo_app.wgo.fonts.CustomButton
+                android:id="@+id/button_facebook"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@+id/text_can"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/facebook_button"
+                android:gravity="center_horizontal|center_vertical"
+                android:letterSpacing="0.1"
+                android:text="@string/fb_connect"
+                android:textColor="@color/white" />
+
+
+            <!-- Form Register End -->
+        </RelativeLayout>
+    </ScrollView>
+
     <RelativeLayout
         android:id="@+id/shadow_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/shadow_bar"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <RelativeLayout
         android:id="@+id/error_fb_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:background="@color/white"
-        android:visibility="gone"
-        android:layout_below="@+id/register_header">
+        android:visibility="visible">
 
-        <ImageView
-            android:id="@+id/close_fb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:src="@drawable/close"
-            android:layout_alignParentRight="true"/>
+        <RelativeLayout
+            android:id="@+id/close_error_fb"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/close">
+
+            <ImageView
+                android:id="@+id/close_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/close" />
+        </RelativeLayout>
+
         <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/wait"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_below="@+id/close_error_fb"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/close_fb"
-            android:textColor="@color/grey_dark"
-            android:textSize="24dp"
+            android:layout_marginTop="20dp"
             android:letterSpacing="0.1"
-            android:text="@string/wait"/>
+            android:text="@string/wait"
+            android:textColor="@color/grey_dark"
+            android:textSize="24dp" />
+
         <RelativeLayout
             android:id="@+id/border2"
             android:layout_width="250dp"
             android:layout_height="1px"
             android:layout_below="@+id/wait"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
             android:layout_marginBottom="20dp"
-            android:background="@color/grey"/>
+            android:layout_marginTop="15dp"
+            android:background="@color/grey" />
+
         <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/error_message_fb1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_below="@+id/border2"
-            android:textColor="@color/grey"
-            android:textSize="16dp"
+            android:layout_centerHorizontal="true"
             android:letterSpacing="0.1"
-            android:text="@string/error_fb1"/>
+            android:text="@string/error_fb1"
+            android:textColor="@color/grey"
+            android:textSize="16dp" />
+
         <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/error_message_fb2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_below="@+id/error_message_fb1"
-            android:textColor="@color/grey"
-            android:textSize="16dp"
-            android:letterSpacing="0.1"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:text="@string/error_fb2"/>
+            android:letterSpacing="0.1"
+            android:text="@string/error_fb2"
+            android:textColor="@color/grey"
+            android:textSize="16dp" />
+
         <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/error_message_fb3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_below="@+id/error_message_fb2"
-            android:textColor="@color/grey"
-            android:textSize="16dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:letterSpacing="0.1"
-            android:text="@string/error_fb1"/>
+            android:text="@string/error_fb1"
+            android:textColor="@color/grey"
+            android:textSize="16dp" />
+
         <wgo_app.wgo.fonts.CustomButton
             android:id="@+id/change_mail"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/green_button"
-            android:textColor="@color/white"
-            android:text="@string/change_mail"
-            android:letterSpacing="0.1"
             android:layout_below="@+id/error_message_fb3"
-            android:layout_marginTop="40dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"/>
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/green_button"
+            android:letterSpacing="0.1"
+            android:text="@string/change_mail"
+            android:textColor="@color/white" />
+
         <wgo_app.wgo.fonts.CustomButton
             android:id="@+id/remind_me"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/white_button"
-            android:textColor="@color/grey_dark"
-            android:text="@string/remind_later"
-            android:letterSpacing="0.1"
             android:layout_below="@+id/change_mail"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"/>
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/white_button"
+            android:letterSpacing="0.1"
+            android:text="@string/remind_later"
+            android:textColor="@color/grey_dark" />
     </RelativeLayout>
-    <!-- Form Register End -->
-    </RelativeLayout>
-    </ScrollView>
 </RelativeLayout>

@@ -70,7 +70,7 @@ public class LoginActivity extends Activity {
                 hideError(errorLayout);
             }
         });
-        ImageView closeButton = (ImageView)findViewById(R.id.close);
+        RelativeLayout closeButton = (RelativeLayout)findViewById(R.id.close_error);
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +78,7 @@ public class LoginActivity extends Activity {
             }
         });
 
-        ImageView closeFbButton = (ImageView)findViewById(R.id.close_fb);
+        RelativeLayout closeFbButton = (RelativeLayout)findViewById(R.id.close_error_fb);
         closeFbButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

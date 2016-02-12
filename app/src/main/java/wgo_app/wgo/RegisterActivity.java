@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import wgo_app.wgo.fonts.CustomButton;
@@ -22,7 +21,7 @@ public class RegisterActivity extends Activity {
         errorFbLayout = (RelativeLayout)findViewById(R.id.error_fb_layout);
         shadowLayout = (RelativeLayout)findViewById(R.id.shadow_layout);
 
-        ImageView backIcon = (ImageView)findViewById(R.id.back_icon);
+        RelativeLayout backIcon = (RelativeLayout)findViewById(R.id.close_layout);
         backIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,7 +29,7 @@ public class RegisterActivity extends Activity {
             }
         });
 
-        ImageView closeFbButton = (ImageView)findViewById(R.id.close_fb);
+        RelativeLayout closeFbButton = (RelativeLayout)findViewById(R.id.close_error_fb);
         closeFbButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

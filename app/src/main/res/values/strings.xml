@@ -58,7 +58,7 @@
     <string name="username">Username</string>
     <string name="confirm_password">Confirm password</string>
 
-    <!-- Search -->
+    <!-- New Alert and Search -->
     <string name="search">SEARCH</string>
     <string name="start_trip">START MY TRIP AT</string>
     <string name="destination">DESTINATION</string>
@@ -68,7 +68,10 @@
     <string name="how_many_people">HOW MANY PEOPLE</string>
     <string name="show_me">SHOW ME WHAT\'S AVAILABLE!</string>
     <string name="show_flights">SHOW FLIGHTS</string>
-
+    <string name="error_alert_created">The alert was not created. Do you already have such alert?</string>
+    <string name="error_alert_no_results">No flights matching your search criteria, please try again changing some parameters.</string>
+    <string name="error_alert_arrival_date">Arrival date has to be at least one day after the departure date, please select a correct date.</string>
+    <string name="error_alert_arrival">Arrival city is wrong, please select a city from the list</string>
     <!-- Available Flights -->
     <string name="available_flights">AVAILABLE FLIGHTS</string>
     <string name="from">From</string>
