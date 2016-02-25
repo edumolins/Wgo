@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/edumolins/AndroidStudioProjects/Wgo/library/src/main/jniLibs"/></dataSet><dataSet config="release"><source path="/Users/edumolins/AndroidStudioProjects/Wgo/library/src/release/jniLibs"/></dataSet></merger>
