@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="wgo_app.wgo.MainActivity">
+
+    <!-- Home Header Init-->
+    <RelativeLayout
+        android:id="@+id/home_header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/grey_bar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo_wikendi_tipo"/>
+
+    </RelativeLayout>
+    <!-- Home Header End-->
+
+    <!-- Body Home Init -->
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/home_header">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/roma"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:id="@+id/global_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <!-- Welcome Layout -->
+        <RelativeLayout
+            android:id="@+id/welcome_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:visibility="visible">
+            <ViewFlipper
+                android:id="@+id/view_flipper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <wgo_app.wgo.fonts.GNLightTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/welcome"
+                        android:textColor="@color/green"
+                        android:textSize="24dp"
+                        android:letterSpacing="0.1">
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/welcome1"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/welcome2"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/welcome3"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/welcome4"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </wgo_app.wgo.fonts.GNLightTextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <wgo_app.wgo.fonts.GNLightTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/nice_journey"
+                        android:textColor="@color/green"
+                        android:textSize="24dp"
+                        android:letterSpacing="0.1">
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/journey1"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/journey2"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.CustomButton
+                        android:id="@+id/go_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/green_button"
+                        android:text="@string/lets_go"
+                        android:textColor="@color/white"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="60dp"
+                        android:paddingRight="60dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <wgo_app.wgo.fonts.GNLightTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/wanna_trip"
+                        android:textColor="@color/green"
+                        android:textSize="24dp"
+                        android:letterSpacing="0.1">
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <ImageView
+                        android:id="@+id/airplane"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/airplane"
+                        android:layout_marginTop="15dp"/>
+                    <wgo_app.wgo.fonts.GNLightTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/trip1"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                    <wgo_app.wgo.fonts.GNLightTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/trip2"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp">
+                    </wgo_app.wgo.fonts.GNLightTextView>
+                </LinearLayout>
+            </ViewFlipper>
+            <LinearLayout
+                android:id="@+id/points_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_flipper"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp">
+                <ImageView
+                    android:id="@+id/point1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/elipse_gris"
+                    android:layout_marginRight="15dp"/>
+                <ImageView
+                    android:id="@+id/point2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/elipse_trans"
+                    android:layout_marginRight="15dp"/>
+                <ImageView
+                    android:id="@+id/point3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/elipse_trans"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/points_layout"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    </RelativeLayout>
+
+
+    <!-- Home Body End -->
+
+</RelativeLayout>

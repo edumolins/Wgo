@@ -16,8 +16,8 @@ import wgo_app.wgo.utils.Constants;
 
 public class CalendarActivity extends Activity {
 
-    private CalendarPickerView calendar;
-    private TextView numberWeekends;
+    private  CalendarPickerView calendar;
+    private  TextView numberWeekends;
     private CustomButton buttonAccept;
 
     @Override
@@ -47,10 +47,8 @@ public class CalendarActivity extends Activity {
 
         Calendar nextYear = Calendar.getInstance();
         nextYear.add(Calendar.YEAR, 1);
-
         calendar.init(new Date(),nextYear.getTime()) //
                 .inMode(CalendarPickerView.SelectionMode.MULTIPLE);
-
 
         calendar.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
             @Override
@@ -132,7 +130,6 @@ public class CalendarActivity extends Activity {
 
             }
         });
-
         RelativeLayout close = (RelativeLayout)findViewById(R.id.close_layout);
         close.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,17 +137,12 @@ public class CalendarActivity extends Activity {
                 finish();
             }
         });
-        /*calendar.setSelector(R.drawable.button_green);
-        findViewById(R.id.done_button).setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                //Log.d(TAG, "Selected time in millis: " + calendar.getSelectedDate().getTime());
-                String toast = "Selected dates: " + calendar.getSelectedDate();
-                Toast.makeText(CalendarActivity.this, toast, Toast.LENGTH_SHORT).show();
-            }
-        });*/
+
+    }
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        numberWeekends.setText(Integer.toString(calendar.getSelectedDates().size() / 3));
     }
 
 }

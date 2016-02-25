@@ -14,7 +14,7 @@ import wgo_app.wgo.fonts.GNLightTextView;
 public class PriceSeekBar extends SeekBar {
     private Paint paint;
     private GNLightTextView tv;
-    private static final int TEXT_SIZE = 30;
+    private static final int TEXT_SIZE = 70;
     private int priceSelected = 1;
     private static final String TAG = PriceSeekBar.class.getName();
 
@@ -39,7 +39,7 @@ public class PriceSeekBar extends SeekBar {
     private void initPaint() {
         paint = new Paint();
         paint.setColor(Color.BLACK);
-        paint.setTextSize(TEXT_SIZE);
+        paint.setTextSize(getResources().getDimension(R.dimen.text_size));
 
         //need to set antialias, if not the txt is too pixelated
         paint.setAntiAlias(true);
@@ -48,7 +48,8 @@ public class PriceSeekBar extends SeekBar {
     private void initText(Context context) {
         tv = new GNLightTextView(context, null);
         tv.setText(String.valueOf(priceSelected));
-        tv.setTextSize(TEXT_SIZE);
+        //tv.setTextSize(TEXT_SIZE);
+        tv.setTextSize(getResources().getDimension(R.dimen.text_size));
     }
 
     private int getTextWidth() {

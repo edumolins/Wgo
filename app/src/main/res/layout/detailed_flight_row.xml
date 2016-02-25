@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
     android:background="@drawable/white_row">
 
     <RelativeLayout
@@ -16,141 +18,166 @@
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
         android:padding="5dp">
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <RelativeLayout
                 android:id="@+id/logo_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:id="@+id/logo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@android:drawable/btn_star_big_on"
                     android:layout_marginRight="10dp"
-                    />
+                    android:src="@android:drawable/btn_star_big_on" />
+
                 <wgo_app.wgo.fonts.GNBookTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12dp"
-                    android:textColor="@color/grey_flights"
-                    android:text="VUELING AIRLINES"
                     android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/logo"/>
+                    android:layout_toRightOf="@+id/logo"
+                    android:text="VUELING AIRLINES"
+                    android:textColor="@color/grey_dark_flights"
+                    android:textSize="12dp" />
 
                 <wgo_app.wgo.fonts.GNLightTextView
                     android:id="@+id/price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/green"
-                    android:textSize="30dp"
-                    android:text="75€"
-                    android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="5dp"/>
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/info1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/logo_layout"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="5dp">
-                <ImageView
-                    android:id="@+id/arrow1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/arrow"
-                    android:layout_marginRight="10dp"
-                    android:layout_centerVertical="true" />
-                <wgo_app.wgo.fonts.GNBookTextView
-                    android:id="@+id/day1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/grey_flights"
-                    android:text="WED"
-                    android:textSize="11dp"
-                    android:layout_toRightOf="@+id/arrow1"
+                    android:layout_alignParentTop="true"
                     android:layout_marginRight="5dp"
-                    android:layout_centerVertical="true"/>
-                <wgo_app.wgo.fonts.GNBookTextView
-                    android:id="@+id/time1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/grey_dark_flights"
-                    android:text="29/11/2015"
-                    android:textSize="12dp"
-                    android:layout_toRightOf="@+id/day1"
-                    android:layout_marginRight="5dp"/>
-                </RelativeLayout>
-            <wgo_app.wgo.fonts.GNBookTextView
-                android:id="@+id/duration1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/grey_flights"
-                android:text="2.30 direct"
-                android:textSize="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/info1"
-                android:layout_marginLeft="32dp"/>
-
+                    android:text="75€"
+                    android:textColor="@color/green"
+                    android:textSize="30dp" />
+            </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/info2"
+                android:id="@+id/left_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/logo_layout"
-                android:layout_toRightOf="@+id/info1"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp">
-                <ImageView
-                    android:id="@+id/arrow2"
+
+                <RelativeLayout
+                    android:id="@+id/info1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/arrow_back"
-                    android:layout_marginRight="10dp"
-                    android:layout_centerVertical="true" />
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/arrow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/arrow" />
+
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/day1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/arrow1"
+                        android:text="WED"
+                        android:textColor="@color/grey_dark_flights"
+                        android:textSize="11dp" />
+
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/time1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/day1"
+                        android:singleLine="true"
+                        android:text="29/11/2015"
+                        android:textColor="@color/grey_dark_flights"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
                 <wgo_app.wgo.fonts.GNBookTextView
-                    android:id="@+id/day2"
+                    android:id="@+id/duration1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/grey_flights"
-                    android:text="FRI"
-                    android:textSize="11dp"
-                    android:layout_toRightOf="@+id/arrow2"
-                    android:layout_marginRight="5dp"/>
-                <wgo_app.wgo.fonts.GNBookTextView
-                    android:id="@+id/time2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/grey_dark_flights"
-                    android:text="02/12/2015"
-                    android:textSize="12dp"
-                    android:layout_toRightOf="@+id/day2"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_below="@+id/info1"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="5dp"
+                    android:text="2.30 direct"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="10dp" />
             </RelativeLayout>
-            <wgo_app.wgo.fonts.GNBookTextView
-                android:id="@+id/duration2"
+
+            <RelativeLayout
+                android:id="@+id/right_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/grey_flights"
-                android:text="2.30 direct"
-                android:textSize="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/info2"
-                android:layout_marginLeft="160dp"/>
+                android:layout_below="@+id/logo_layout"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/left_layout">
 
-        <wgo_app.wgo.fonts.GNBookTextView
-            android:id="@+id/last_check"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/duration1"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="25dp"
-            android:textSize="12dp"
-            android:textColor="@color/grey_flights"
-            android:text="Last check 09:35h"/>
-</RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/arrow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/arrow_back" />
+
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/day2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/arrow2"
+                        android:text="FRI"
+                        android:textColor="@color/grey_dark_flights"
+                        android:textSize="11dp" />
+
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/time2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@+id/day2"
+                        android:text="02/12/2015"
+                        android:textColor="@color/grey_dark_flights"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+                <wgo_app.wgo.fonts.GNBookTextView
+                    android:id="@+id/duration2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/info2"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="48dp"
+                    android:text="2.30 direct"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="10dp" />
+            </RelativeLayout>
+
+            <wgo_app.wgo.fonts.GNBookTextView
+                android:id="@+id/last_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/left_layout"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="5dp"
+                android:text="Last check 09:35h"
+                android:textColor="@color/grey_flights"
+                android:textSize="12dp" />
         </RelativeLayout>
     </RelativeLayout>
+</RelativeLayout>

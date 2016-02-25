@@ -11,8 +11,6 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import org.adw.library.widgets.discreteseekbar.DiscreteSeekBar;
-
 import wgo_app.wgo.fonts.CustomButton;
 import wgo_app.wgo.utils.Constants;
 
@@ -38,7 +36,6 @@ public class NewAlertActivity extends Activity {
     private CustomButton availableButton;
 
     private PriceSeekBar priceSeekBar;
-    private DiscreteSeekBar discreteSeekBar1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

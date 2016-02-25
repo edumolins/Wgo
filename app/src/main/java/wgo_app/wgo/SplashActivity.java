@@ -29,7 +29,7 @@ public class SplashActivity extends Activity {
 
         new Handler().postDelayed(new Runnable() {
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashActivity.this, WelcomeActivity.class);
                 startActivity(intent);
                 finish();
             }

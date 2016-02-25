@@ -17,6 +17,5 @@
     <color name="green_seekbar">#00c853</color>
 
     <color name="custom_text_selected">#FFFFFFFF</color>
-    <color name="calendar_text_selected">#ffffffff</color>
 
 </resources>

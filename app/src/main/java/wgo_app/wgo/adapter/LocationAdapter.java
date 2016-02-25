@@ -150,7 +150,7 @@ public class LocationAdapter extends ArrayAdapter<ObjLocation> implements Filter
                 int count = datos.size();
                 for (int i=0; i<count; i++)
                 {
-                    ObjLocation pkmn = (ObjLocation)datos.get(i);
+                    ObjLocation pkmn = datos.get(i);
                     add(pkmn);
                 }
             }

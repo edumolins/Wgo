@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:src="@drawable/logo_wikendi_tipo"/>
+            android:src="@drawable/logo_wikendi_tipo" />
 
     </RelativeLayout>
     <!-- Home Header End-->
@@ -30,447 +30,291 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/home_header">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/roma"
-        android:scaleType="centerCrop"/>
-    <RelativeLayout
-        android:id="@+id/global_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        >
-        <!-- Results Layout -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/londres" />
+
         <RelativeLayout
-            android:id="@+id/last_search"
+            android:id="@+id/global_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shadow_bar"
-            android:visibility="gone"
-            android:padding="3dp">
-            <wgo_app.wgo.fonts.GNMediumTextView
-                android:id="@+id/text_last_search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/your_last_search"
-                android:layout_centerHorizontal="true"
-                android:textSize="14dp"
-                android:textColor="@color/green"
-                android:layout_marginTop="8dp"
-                android:letterSpacing="0.1"/>
-            <wgo_app.wgo.fonts.GNLightTextView
-                android:id="@+id/results"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ROME FROM 75 €"
-                android:layout_below="@+id/text_last_search"
-                android:layout_centerHorizontal="true"
-                android:textSize="28dp"
-                android:textColor="@color/white"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="5dp"
-                android:letterSpacing="0.1"/>
-
-            <wgo_app.wgo.fonts.GNMediumTextView
-                android:id="@+id/view_more"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/view_more"
-                android:layout_below="@+id/results"
-                android:layout_centerHorizontal="true"
-                android:textSize="14dp"
-                android:textColor="@color/white"
-                android:layout_marginBottom="5dp"
-                android:letterSpacing="0.1"/>
-
-        </RelativeLayout>
-
-        <!--Alerts Layout -->
-        <RelativeLayout
-            android:id="@+id/alerts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/last_search"
-            android:visibility="gone">
+            android:layout_alignParentBottom="true">
+            <!-- Results Layout -->
             <RelativeLayout
-                android:id="@+id/new_alert"
+                android:id="@+id/last_search"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:background="@drawable/grey_bar">
-                <wgo_app.wgo.fonts.GNBookTextView
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_bar"
+                android:padding="3dp"
+                android:visibility="visible">
+
+                <wgo_app.wgo.fonts.GNMediumTextView
+                    android:id="@+id/text_last_search"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="@string/new_alert"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:letterSpacing="0.1"
+                    android:text="@string/your_last_search"
                     android:textColor="@color/green"
-                    android:textSize="22dp"
-                    android:letterSpacing="0.1"/>
+                    android:textSize="14dp" />
+
+                <wgo_app.wgo.fonts.GNLightTextView
+                    android:id="@+id/results"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_last_search"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="1dp"
+                    android:letterSpacing="0.1"
+                    android:text="ROME FROM 75 €"
+                    android:textColor="@color/white"
+                    android:textSize="28dp" />
+
+                <wgo_app.wgo.fonts.GNMediumTextView
+                    android:id="@+id/view_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/results"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:letterSpacing="0.1"
+                    android:text="@string/view_more"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
             </RelativeLayout>
+
+            <!--Alerts Layout -->
             <RelativeLayout
-                android:id="@+id/border"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/grey_dark"
-                android:layout_below="@+id/new_alert">
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/manage_alerts"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:background="@drawable/grey_bar"
-                android:layout_below="@+id/border">
-                <wgo_app.wgo.fonts.GNBookTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="@string/manage_alerts"
-                    android:textColor="@color/green"
-                    android:textSize="22dp"
-                    android:letterSpacing="0.1"/>
-            </RelativeLayout>
-            <!--Friends Row -->
-            <RelativeLayout
-                android:id="@+id/friends"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/black_bar"
-                android:layout_below="@+id/manage_alerts">
-                <wgo_app.wgo.fonts.GNBookTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="@string/tell_friends"
-                    android:textColor="@color/green"
-                    android:textSize="20dp"
-                    android:letterSpacing="0.1"/>
-            </RelativeLayout>
-        </RelativeLayout>
-
-        <!-- Friends Layout -->
-        <RelativeLayout
-            android:id="@+id/friends_layout"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_below="@+id/last_search"
-            android:background="@color/white"
-            android:visibility="gone">
-            <RelativeLayout
-                android:id="@+id/close_layout"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/close"
-                android:layout_alignParentRight="true">
-                <ImageView
-                    android:id="@+id/close"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/close"
-                    android:layout_alignParentRight="true"/>
-            </RelativeLayout>
-            <wgo_app.wgo.fonts.GNBookTextView
-                android:id="@+id/friends1"
+                android:id="@+id/alerts"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/close_layout"
-                android:textColor="@color/grey"
-                android:textSize="16dp"
-                android:letterSpacing="0.1"
-                android:text="@string/share_friends1"/>
-            <wgo_app.wgo.fonts.GNBookTextView
-                android:id="@+id/friends2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/friends1"
-                android:textColor="@color/grey"
-                android:textSize="16dp"
-                android:letterSpacing="0.1"
-                android:text="@string/share_friends2"/>
-            <wgo_app.wgo.fonts.GNBookTextView
-                android:id="@+id/friends3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/friends2"
-                android:textColor="@color/grey"
-                android:textSize="16dp"
-                android:letterSpacing="0.1"
-                android:text="@string/share_friends3"/>
-            <LinearLayout
-                android:id="@+id/share"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/friends3"
-                android:layout_marginTop="15dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/rrss_fb"
-                    android:layout_marginRight="15dp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/rrss_tw"
-                    android:layout_marginRight="15dp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/rrss_g"
-                    android:layout_marginRight="15dp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/rrss_wapp"
-                    android:layout_marginRight="15dp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/rrss_msg"
-                    android:layout_marginRight="15dp"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/rrss_mail"
-                    android:layout_marginRight="15dp"/>
-            </LinearLayout>
+                android:layout_below="@+id/last_search"
+                android:visibility="visible">
 
-        </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/new_alert"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:background="@drawable/grey_bar">
 
-        <!-- Log Out Layout -->
-        <RelativeLayout
-            android:id="@+id/logout_layout"
-            android:layout_width="match_parent"
-            android:layout_height="295dp"
-            android:background="@color/white"
-            android:visibility="gone">
-
-            <wgo_app.wgo.fonts.GNBookTextView
-                android:id="@+id/see"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_centerHorizontal="true"
-                android:textColor="@color/grey_dark"
-                android:textSize="30dp"
-                android:letterSpacing="0.1"
-                android:text="@string/see_you"/>
-            <RelativeLayout
-                android:id="@+id/border2"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="30dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginRight="60dp"
-                android:background="@color/grey"
-                android:layout_below="@+id/see"></RelativeLayout>
-            <wgo_app.wgo.fonts.GNBookTextView
-                android:id="@+id/logout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/border2"
-                android:textColor="@color/grey"
-                android:textSize="16dp"
-                android:text="@string/logout_complete"/>
-
-            <wgo_app.wgo.fonts.CustomButton
-                android:id="@+id/accept_button"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/green_button_rect"
-                android:layout_alignParentBottom="true"
-                android:text="@string/accept"
-                android:textColor="@color/white"
-                android:textSize="18dp"/>
-
-        </RelativeLayout>
-
-        <!-- Welcome Layout -->
-        <RelativeLayout
-            android:id="@+id/welcome_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="@color/white"
-            android:visibility="visible">
-            <ViewFlipper
-                android:id="@+id/view_flipper"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp" >
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical" >
-
-                    <wgo_app.wgo.fonts.GNLightTextView
+                    <wgo_app.wgo.fonts.GNBookTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/welcome"
+                        android:layout_centerInParent="true"
+                        android:letterSpacing="0.1"
+                        android:text="@string/new_alert"
                         android:textColor="@color/green"
-                        android:textSize="24dp"
-                        android:letterSpacing="0.1">
-                    </wgo_app.wgo.fonts.GNLightTextView>
-                    <wgo_app.wgo.fonts.GNLightTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/welcome1"
-                        android:textColor="@color/grey_dark"
-                        android:textSize="16dp">
-                    </wgo_app.wgo.fonts.GNLightTextView>
-                    <wgo_app.wgo.fonts.GNLightTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
-                        android:text="@string/welcome2"
-                        android:textColor="@color/grey_dark"
-                        android:textSize="16dp">
-                    </wgo_app.wgo.fonts.GNLightTextView>
-                    <wgo_app.wgo.fonts.GNLightTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
-                        android:text="@string/welcome3"
-                        android:textColor="@color/grey_dark"
-                        android:textSize="16dp">
-                    </wgo_app.wgo.fonts.GNLightTextView>
-                    <wgo_app.wgo.fonts.GNLightTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
-                        android:text="@string/welcome4"
-                        android:textColor="@color/grey_dark"
-                        android:textSize="16dp">
-                    </wgo_app.wgo.fonts.GNLightTextView>
+                        android:textSize="22dp" />
+                </RelativeLayout>
 
-                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/border"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/new_alert"
+                    android:background="@color/grey_dark"></RelativeLayout>
 
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical" >
+                <RelativeLayout
+                    android:id="@+id/manage_alerts"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_below="@+id/border"
+                    android:background="@drawable/grey_bar">
 
-                    <wgo_app.wgo.fonts.GNLightTextView
+                    <wgo_app.wgo.fonts.GNBookTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/nice_journey"
+                        android:layout_centerInParent="true"
+                        android:letterSpacing="0.1"
+                        android:text="@string/manage_alerts"
                         android:textColor="@color/green"
-                        android:textSize="24dp"
-                        android:letterSpacing="0.1">
-                    </wgo_app.wgo.fonts.GNLightTextView>
-                    <wgo_app.wgo.fonts.GNLightTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/journey1"
-                        android:textColor="@color/grey_dark"
-                        android:textSize="16dp">
-                    </wgo_app.wgo.fonts.GNLightTextView>
-                    <wgo_app.wgo.fonts.GNLightTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
-                        android:text="@string/journey2"
-                        android:textColor="@color/grey_dark"
-                        android:textSize="16dp">
-                    </wgo_app.wgo.fonts.GNLightTextView>
-                    <wgo_app.wgo.fonts.CustomButton
-                        android:id="@+id/go_button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:background="@drawable/green_button"
-                        android:text="@string/lets_go"
-                        android:textColor="@color/white"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:paddingLeft="60dp"
-                        android:paddingRight="60dp"/>
+                        android:textSize="22dp" />
+                </RelativeLayout>
+                <!--Friends Row -->
+                <RelativeLayout
+                    android:id="@+id/friends"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/manage_alerts"
+                    android:background="@drawable/black_bar">
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical" >
-
-                    <wgo_app.wgo.fonts.GNLightTextView
+                    <wgo_app.wgo.fonts.GNBookTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/wanna_trip"
+                        android:layout_centerInParent="true"
+                        android:letterSpacing="0.1"
+                        android:text="@string/tell_friends"
                         android:textColor="@color/green"
-                        android:textSize="24dp"
-                        android:letterSpacing="0.1">
-                    </wgo_app.wgo.fonts.GNLightTextView>
+                        android:textSize="20dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- Friends Layout -->
+            <RelativeLayout
+                android:id="@+id/friends_layout"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@+id/last_search"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/close_layout"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/close">
+
                     <ImageView
-                        android:id="@+id/airplane"
+                        android:id="@+id/close"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/close" />
+                </RelativeLayout>
+
+                <wgo_app.wgo.fonts.GNBookTextView
+                    android:id="@+id/friends1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/close_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:letterSpacing="0.1"
+                    android:text="@string/share_friends1"
+                    android:textColor="@color/grey"
+                    android:textSize="16dp" />
+
+                <wgo_app.wgo.fonts.GNBookTextView
+                    android:id="@+id/friends2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/friends1"
+                    android:layout_centerHorizontal="true"
+                    android:letterSpacing="0.1"
+                    android:text="@string/share_friends2"
+                    android:textColor="@color/grey"
+                    android:textSize="16dp" />
+
+                <wgo_app.wgo.fonts.GNBookTextView
+                    android:id="@+id/friends3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/friends2"
+                    android:layout_centerHorizontal="true"
+                    android:letterSpacing="0.1"
+                    android:text="@string/share_friends3"
+                    android:textColor="@color/grey"
+                    android:textSize="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/friends3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/airplane"
-                        android:layout_marginTop="15dp"/>
-                    <wgo_app.wgo.fonts.GNLightTextView
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/rrss_fb" />
+
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:text="@string/trip1"
-                        android:textColor="@color/grey_dark"
-                        android:textSize="16dp">
-                    </wgo_app.wgo.fonts.GNLightTextView>
-                    <wgo_app.wgo.fonts.GNLightTextView
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/rrss_tw" />
+
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
-                        android:text="@string/trip2"
-                        android:textColor="@color/grey_dark"
-                        android:textSize="16dp">
-                    </wgo_app.wgo.fonts.GNLightTextView>
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/rrss_g" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/rrss_wapp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/rrss_msg" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/rrss_mail" />
                 </LinearLayout>
-            </ViewFlipper>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/view_flipper"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="5dp">
-                <ImageView
-                    android:id="@+id/point1"
+
+            </RelativeLayout>
+
+            <!-- Log Out Layout -->
+            <RelativeLayout
+                android:id="@+id/logout_layout"
+                android:layout_width="match_parent"
+                android:layout_height="295dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <wgo_app.wgo.fonts.GNBookTextView
+                    android:id="@+id/see"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/elipse_gris"
-                    android:layout_marginRight="15dp"/>
-                <ImageView
-                    android:id="@+id/point2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:letterSpacing="0.1"
+                    android:text="@string/see_you"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="30dp" />
+
+                <RelativeLayout
+                    android:id="@+id/border2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/see"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/grey"></RelativeLayout>
+
+                <wgo_app.wgo.fonts.GNBookTextView
+                    android:id="@+id/logout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/elipse_trans"
-                    android:layout_marginRight="15dp"/>
-                <ImageView
-                    android:id="@+id/point3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/elipse_trans"/>
-            </LinearLayout>
+                    android:layout_below="@+id/border2"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/logout_complete"
+                    android:textColor="@color/grey"
+                    android:textSize="16dp" />
+
+                <wgo_app.wgo.fonts.CustomButton
+                    android:id="@+id/accept_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/green_button_rect"
+                    android:text="@string/accept"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+
         </RelativeLayout>
-
     </RelativeLayout>
-    </RelativeLayout>
-
 
     <!-- Home Body End -->
 

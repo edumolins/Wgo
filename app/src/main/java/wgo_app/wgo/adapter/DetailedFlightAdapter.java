@@ -1,7 +1,6 @@
 package wgo_app.wgo.adapter;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +11,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import wgo_app.wgo.DetailedFlightsActivity;
 import wgo_app.wgo.R;
 import wgo_app.wgo.objects.FlightHolder;
 import wgo_app.wgo.objects.ObjFlight;
@@ -55,7 +53,7 @@ public class DetailedFlightAdapter extends ArrayAdapter<ObjFlight> {
 			View viewGroup = inflater.inflate(R.layout.detailed_flight_row, parent, false);
 			//using the ViewHolder pattern to reduce lookups
             flightHolder = new FlightHolder(
-                    (RelativeLayout)viewGroup.findViewById(R.id.row),
+                    (RelativeLayout)viewGroup.findViewById(R.id.row1),
             		(TextView)viewGroup.findViewById(R.id.time1),
             		(TextView)viewGroup.findViewById(R.id.day1),
                     (TextView)viewGroup.findViewById(R.id.time2),
@@ -79,13 +77,16 @@ public class DetailedFlightAdapter extends ArrayAdapter<ObjFlight> {
             flightHolder.getFlightRow().setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(context, DetailedFlightsActivity.class);
-                    context.startActivity(intent);
+                    View child = context.getLayoutInflater().inflate(R.layout.expanded_flight_row, null);
+                    flightHolder.getFlightRow().addView(child);
+                    //v.addView(child);
+                    //v = context.getLayoutInflater().inflate(R.layout.expanded_flight_row, null, false);
                 }
             });
 
     	}catch(Exception e){    		
     		Log.e("Adapter error flights", e.getMessage());
+            String x ="";
     	}
     	return item;
     }
