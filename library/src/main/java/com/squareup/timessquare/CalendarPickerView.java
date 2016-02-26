@@ -64,6 +64,7 @@ public class CalendarPickerView extends ListView {
     RANGE
   }
 
+  public static TextView numberWeekends;
   private final MonthAdapter adapter;
   private final List<List<List<MonthCellDescriptor>>> cells = new ArrayList<>();
   final MonthView.Listener listener = new CellClickedListener();
@@ -777,14 +778,15 @@ public class CalendarPickerView extends ListView {
           Calendar calendar = Calendar.getInstance();
           int year = months.get(position).getYear();
           int month = months.get(position).getMonth();
-          int today = calendar.get(Calendar.DAY_OF_MONTH);
-          Calendar cal = new GregorianCalendar(year, month, today);
+          int today = calendar.get(Calendar.DAY_OF_YEAR);
+          Calendar cal = new GregorianCalendar(year, month, 1);
 
           do {
             // get the day of the week for the current day
             int day = cal.get(Calendar.DAY_OF_WEEK);
+            int yearDay = cal.get(Calendar.DAY_OF_YEAR);
             // check if it is a Saturday or Sunday
-            if (day == Calendar.FRIDAY || day == Calendar.SATURDAY || day == Calendar.SUNDAY) {
+            if (yearDay >= today && (day == Calendar.FRIDAY || day == Calendar.SATURDAY || day == Calendar.SUNDAY)) {
               // print the day - but you could add them to a list or whatever
               Date selectDay = cal.getTime();
               selectDate(selectDay);
@@ -793,7 +795,7 @@ public class CalendarPickerView extends ListView {
             // advance to the next day
             cal.add(Calendar.DAY_OF_YEAR, 1);
           }  while (cal.get(Calendar.MONTH) == month);
-
+             numberWeekends.setText(Integer.toString(getSelectedDates().size() / 3));
         }
       });
       return monthView;
