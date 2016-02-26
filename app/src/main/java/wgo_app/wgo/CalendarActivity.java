@@ -17,7 +17,7 @@ import wgo_app.wgo.utils.Constants;
 public class CalendarActivity extends Activity {
 
     private  CalendarPickerView calendar;
-    private  TextView numberWeekends;
+    //private  TextView numberWeekends;
     private CustomButton buttonAccept;
 
     @Override
@@ -29,7 +29,7 @@ public class CalendarActivity extends Activity {
 
 
         calendar = (CalendarPickerView) findViewById(R.id.calendar_view);
-        numberWeekends = (TextView)findViewById(R.id.num_weekends);
+        CalendarPickerView.numberWeekends = (TextView)findViewById(R.id.num_weekends);
         buttonAccept = (CustomButton)findViewById(R.id.button_accept);
 
         buttonAccept.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +91,7 @@ public class CalendarActivity extends Activity {
                 else if (dayOfWeek < 6 && dayOfWeek > 1)
                     calendar.selectDate(date);
 
-                numberWeekends.setText(Integer.toString(calendar.getSelectedDates().size() / 3));
+                CalendarPickerView.numberWeekends.setText(Integer.toString(calendar.getSelectedDates().size() / 3));
 
 
             }
@@ -126,7 +126,7 @@ public class CalendarActivity extends Activity {
                 calendar.selectDate(saturday);
                 calendar.selectDate(date);
 
-                numberWeekends.setText(Integer.toString(calendar.getSelectedDates().size() / 3));
+                CalendarPickerView.numberWeekends.setText(Integer.toString(calendar.getSelectedDates().size() / 3));
 
             }
         });
@@ -142,7 +142,7 @@ public class CalendarActivity extends Activity {
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        numberWeekends.setText(Integer.toString(calendar.getSelectedDates().size() / 3));
+        CalendarPickerView.numberWeekends.setText(Integer.toString(calendar.getSelectedDates().size() / 3));
     }
 
 }

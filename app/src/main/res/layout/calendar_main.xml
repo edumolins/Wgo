@@ -99,7 +99,9 @@
             android:layout_height="1px"
             android:layout_below="@+id/num_weekends"
             android:layout_marginTop="10dp"
-            android:background="@color/grey"></RelativeLayout>
+            android:background="@color/grey">
+
+        </RelativeLayout>
     </RelativeLayout>
 
 
