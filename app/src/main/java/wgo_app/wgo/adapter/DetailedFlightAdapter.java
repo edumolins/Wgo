@@ -6,13 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import wgo_app.wgo.R;
-import wgo_app.wgo.objects.FlightHolder;
+import wgo_app.wgo.objects.DetailedFlightHolder;
 import wgo_app.wgo.objects.ObjFlight;
 
 public class DetailedFlightAdapter extends ArrayAdapter<ObjFlight> {
@@ -45,14 +46,16 @@ public class DetailedFlightAdapter extends ArrayAdapter<ObjFlight> {
 
 
     public View getView(final int position, View convertView, ViewGroup parent) {
-    	final FlightHolder flightHolder;
+    	final DetailedFlightHolder flightHolder;
     	View item = convertView;
     	if(item == null)
 		{
     		LayoutInflater inflater= context.getLayoutInflater();
 			View viewGroup = inflater.inflate(R.layout.detailed_flight_row, parent, false);
 			//using the ViewHolder pattern to reduce lookups
-            flightHolder = new FlightHolder(
+            flightHolder = new DetailedFlightHolder(
+                    (ImageView)viewGroup.findViewById(R.id.logo),
+                    (ImageView)viewGroup.findViewById(R.id.logo2),
                     (RelativeLayout)viewGroup.findViewById(R.id.row1),
             		(TextView)viewGroup.findViewById(R.id.time1),
             		(TextView)viewGroup.findViewById(R.id.day1),
@@ -65,7 +68,7 @@ public class DetailedFlightAdapter extends ArrayAdapter<ObjFlight> {
 		}
 		else
 		{
-			 flightHolder = (FlightHolder)convertView.getTag();
+			 flightHolder = (DetailedFlightHolder)convertView.getTag();
         	 item = convertView;
 		}
     	try{
@@ -86,7 +89,6 @@ public class DetailedFlightAdapter extends ArrayAdapter<ObjFlight> {
 
     	}catch(Exception e){    		
     		Log.e("Adapter error flights", e.getMessage());
-            String x ="";
     	}
     	return item;
     }

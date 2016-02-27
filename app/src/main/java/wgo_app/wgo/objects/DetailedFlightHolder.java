@@ -1,11 +1,14 @@
 package wgo_app.wgo.objects;
 
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class FlightHolder {
+public class DetailedFlightHolder {
 
 
+	private ImageView flightLogo1;
+	private ImageView flightLogo2;
 	private RelativeLayout flightRow;
 	private TextView flightTime1;
 	private TextView flightDay1;
@@ -14,7 +17,9 @@ public class FlightHolder {
 	private TextView flightLastCheck;
 	private TextView flightPrice;
 
-	public FlightHolder(RelativeLayout flightRow, TextView flightTime1, TextView flightDay1, TextView flightTime2, TextView flightDay2, TextView flightLastCheck, TextView flightPrice) {
+	public DetailedFlightHolder(ImageView flightLogo1, ImageView flightLogo2, RelativeLayout flightRow, TextView flightTime1, TextView flightDay1, TextView flightTime2, TextView flightDay2, TextView flightLastCheck, TextView flightPrice) {
+		this.flightLogo1 = flightLogo1;
+		this.flightLogo2 = flightLogo2;
 		this.flightRow = flightRow;
 		this.flightTime1 = flightTime1;
 		this.flightDay1 = flightDay1;
@@ -22,6 +27,22 @@ public class FlightHolder {
 		this.flightDay2 = flightDay2;
 		this.flightLastCheck = flightLastCheck;
 		this.flightPrice = flightPrice;
+	}
+
+	public ImageView getFlightLogo1() {
+		return flightLogo1;
+	}
+
+	public void setFlightLogo1(ImageView flightLogo1) {
+		this.flightLogo1 = flightLogo1;
+	}
+
+	public ImageView getFlightLogo2() {
+		return flightLogo2;
+	}
+
+	public void setFlightLogo2(ImageView flightLogo2) {
+		this.flightLogo2 = flightLogo2;
 	}
 
 	public RelativeLayout getFlightRow() {
