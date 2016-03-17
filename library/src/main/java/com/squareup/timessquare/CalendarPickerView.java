@@ -294,7 +294,7 @@ public class CalendarPickerView extends ListView {
           selectDate(date);
         }
       }
-      scrollToSelectedDates();
+      //scrollToSelectedDates();
 
       validateAndUpdate();
       return this;
@@ -544,7 +544,7 @@ public class CalendarPickerView extends ListView {
     }
     boolean wasSelected = doSelectDate(date, monthCellWithMonthIndex.cell);
     if (wasSelected) {
-      scrollToSelectedMonth(monthCellWithMonthIndex.monthIndex, smoothScroll);
+      //scrollToSelectedMonth(monthCellWithMonthIndex.monthIndex, smoothScroll);
     }
     return wasSelected;
   }
@@ -770,6 +770,7 @@ public class CalendarPickerView extends ListView {
       }
       monthView.init(months.get(position), cells.get(position), displayOnly, titleTypeface,
               dateTypeface);
+
       //title = monthView.getTitle();
       //final int count = months.get(position).getMonth();
       monthView.getTitle().setOnClickListener(new OnClickListener() {

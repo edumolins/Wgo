@@ -12,6 +12,7 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -109,7 +110,7 @@ public class MonthView extends LinearLayout {
     title.setText(month.getLabel());
 
     NumberFormat numberFormatter = NumberFormat.getInstance(locale);
-
+    Calendar calendar = Calendar.getInstance();
     final int numRows = cells.size();
     grid.setNumRows(numRows);
     for (int i = 0; i < 6; i++) {
@@ -125,10 +126,19 @@ public class MonthView extends LinearLayout {
           String cellDate = numberFormatter.format(cell.getValue());
           if (!cellView.getDayOfMonthTextView().getText().equals(cellDate)) {
             cellView.getDayOfMonthTextView().setText(cellDate);
+
+            int cc = R.color.calendar_text_weekend;
+            Date d = cell.getDate();
+            calendar.setTime(d);
+            int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+            if((Calendar.FRIDAY == dayOfWeek || Calendar.SATURDAY == dayOfWeek || Calendar.SUNDAY == dayOfWeek) && cellView.isSelectable()) {
+              //cellView.setBackgroundResource(R.drawable.white_circle);
+              cellView.getDayOfMonthTextView().setTextColor(getResources().getColor(cc));
+            }
           }
+
           cellView.setEnabled(cell.isCurrentMonth());
           cellView.setClickable(!displayOnly);
-
           cellView.setSelectable(cell.isSelectable());
           cellView.setSelected(cell.isSelected());
           cellView.setCurrentMonth(cell.isCurrentMonth());

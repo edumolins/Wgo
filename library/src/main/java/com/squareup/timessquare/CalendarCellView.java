@@ -34,6 +34,7 @@ public class CalendarCellView extends FrameLayout {
   private boolean isSelectable = false;
   private boolean isCurrentMonth = false;
   private boolean isToday = false;
+  private boolean isWeekend = false;
   private boolean isHighlighted = false;
   private RangeState rangeState = RangeState.NONE;
   private TextView dayOfMonthTextView;
@@ -58,6 +59,13 @@ public class CalendarCellView extends FrameLayout {
   }
 
   public void setToday(boolean isToday) {
+    if (this.isToday != isToday) {
+      this.isToday = isToday;
+      refreshDrawableState();
+    }
+  }
+
+  public void setWeekend(boolean isWeekend) {
     if (this.isToday != isToday) {
       this.isToday = isToday;
       refreshDrawableState();

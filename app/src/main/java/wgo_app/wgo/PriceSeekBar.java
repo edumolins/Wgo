@@ -15,7 +15,7 @@ public class PriceSeekBar extends SeekBar {
     private Paint paint;
     private GNLightTextView tv;
     private static final int TEXT_SIZE = 50;
-    private int priceSelected = 10;
+    private int priceSelected = 50;
     private static final String TAG = PriceSeekBar.class.getName();
 
     public PriceSeekBar(Context context) {

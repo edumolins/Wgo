@@ -14,6 +14,7 @@ class MonthCellDescriptor {
   private final int value;
   private final boolean isCurrentMonth;
   private boolean isSelected;
+  private boolean isWeekend;
   private final boolean isToday;
   private final boolean isSelectable;
   private boolean isHighlighted;

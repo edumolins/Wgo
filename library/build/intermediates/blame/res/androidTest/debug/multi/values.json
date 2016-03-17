@@ -11,14 +11,7 @@
                     "endOffset": 154
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 100,
-                        "endColumn": 58,
-                        "endOffset": 154
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
@@ -30,14 +23,7 @@
                     "endOffset": 202
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 159,
-                        "endColumn": 47,
-                        "endOffset": 202
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
@@ -45,112 +31,77 @@
                     "startLine": 4,
                     "startColumn": 4,
                     "startOffset": 207,
-                    "endColumn": 52,
-                    "endOffset": 255
+                    "endColumn": 50,
+                    "endOffset": 253
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 207,
-                        "endColumn": 52,
-                        "endOffset": 255
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 260,
+                    "startOffset": 258,
                     "endColumn": 61,
-                    "endOffset": 317
+                    "endOffset": 315
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 260,
-                        "endColumn": 61,
-                        "endOffset": 317
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 322,
+                    "startOffset": 320,
                     "endColumn": 62,
-                    "endOffset": 380
+                    "endOffset": 378
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 322,
-                        "endColumn": 62,
-                        "endOffset": 380
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 385,
+                    "startOffset": 383,
                     "endColumn": 58,
-                    "endOffset": 439
+                    "endOffset": 437
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 385,
-                        "endColumn": 58,
-                        "endOffset": 439
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 444,
+                    "startOffset": 442,
                     "endColumn": 62,
-                    "endOffset": 502
+                    "endOffset": 500
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 444,
-                        "endColumn": 62,
-                        "endOffset": 502
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 507,
+                    "startOffset": 505,
                     "endColumn": 56,
-                    "endOffset": 559
+                    "endOffset": 557
                 },
                 "from": {
                     "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 507,
+                        "startOffset": 505,
                         "endColumn": 56,
-                        "endOffset": 559
+                        "endOffset": 557
                     }
                 }
             },
@@ -158,94 +109,66 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 564,
+                    "startOffset": 562,
                     "endColumn": 61,
-                    "endOffset": 621
+                    "endOffset": 619
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 564,
-                        "endColumn": 61,
-                        "endOffset": 621
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 626,
+                    "startOffset": 624,
                     "endColumn": 58,
-                    "endOffset": 680
+                    "endOffset": 678
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 626,
-                        "endColumn": 58,
-                        "endOffset": 680
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 685,
+                    "startOffset": 683,
                     "endColumn": 58,
-                    "endOffset": 739
+                    "endOffset": 737
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 685,
-                        "endColumn": 58,
-                        "endOffset": 739
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 744,
+                    "startOffset": 742,
                     "endColumn": 62,
-                    "endOffset": 802
+                    "endOffset": 800
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 744,
-                        "endColumn": 62,
-                        "endOffset": 802
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1682,
-                    "endColumn": 64,
-                    "endOffset": 1742
+                    "startOffset": 805,
+                    "endColumn": 55,
+                    "endOffset": 856
                 },
                 "from": {
                     "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
-                        "startLine": 16,
+                        "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1682,
-                        "endColumn": 64,
-                        "endOffset": 1742
+                        "startOffset": 805,
+                        "endColumn": 55,
+                        "endOffset": 856
                     }
                 }
             },
@@ -253,236 +176,160 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1747,
-                    "endColumn": 63,
-                    "endOffset": 1806
+                    "startOffset": 1736,
+                    "endColumn": 64,
+                    "endOffset": 1796
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 1747,
-                        "endColumn": 63,
-                        "endOffset": 1806
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1811,
-                    "endColumn": 55,
-                    "endOffset": 1862
+                    "startOffset": 1801,
+                    "endColumn": 63,
+                    "endOffset": 1860
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 1811,
-                        "endColumn": 55,
-                        "endOffset": 1862
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1867,
-                    "endColumn": 51,
-                    "endOffset": 1914
+                    "startOffset": 1865,
+                    "endColumn": 55,
+                    "endOffset": 1916
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1867,
-                        "endColumn": 51,
-                        "endOffset": 1914
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1919,
-                    "endColumn": 50,
-                    "endOffset": 1965
+                    "startOffset": 1921,
+                    "endColumn": 51,
+                    "endOffset": 1968
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 1919,
-                        "endColumn": 50,
-                        "endOffset": 1965
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 1970,
-                    "endColumn": 51,
-                    "endOffset": 2017
+                    "startOffset": 1973,
+                    "endColumn": 50,
+                    "endOffset": 2019
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 1970,
-                        "endColumn": 51,
-                        "endOffset": 2017
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 2022,
-                    "endColumn": 47,
-                    "endOffset": 2065
+                    "startOffset": 2024,
+                    "endColumn": 51,
+                    "endOffset": 2071
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 4,
-                        "startOffset": 2022,
-                        "endColumn": 47,
-                        "endOffset": 2065
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 2070,
-                    "endColumn": 76,
-                    "endOffset": 2142
+                    "startOffset": 2076,
+                    "endColumn": 47,
+                    "endOffset": 2119
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 23,
-                        "startColumn": 4,
-                        "startOffset": 2070,
-                        "endColumn": 76,
-                        "endOffset": 2142
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 2147,
-                    "endColumn": 55,
-                    "endOffset": 2198
+                    "startOffset": 2124,
+                    "endColumn": 76,
+                    "endOffset": 2196
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 24,
-                        "startColumn": 4,
-                        "startOffset": 2147,
-                        "endColumn": 55,
-                        "endOffset": 2198
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 2203,
-                    "endLine": 30,
-                    "endColumn": 10,
-                    "endOffset": 2469
+                    "startOffset": 2201,
+                    "endColumn": 55,
+                    "endOffset": 2252
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 25,
-                        "startColumn": 4,
-                        "startOffset": 2203,
-                        "endLine": 30,
-                        "endColumn": 10,
-                        "endOffset": 2469
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 31,
+                    "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 2474,
-                    "endLine": 34,
+                    "startOffset": 2257,
+                    "endLine": 31,
                     "endColumn": 10,
-                    "endOffset": 2641
+                    "endOffset": 2523
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 31,
-                        "startColumn": 4,
-                        "startOffset": 2474,
-                        "endLine": 34,
-                        "endColumn": 10,
-                        "endOffset": 2641
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 35,
+                    "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 2646,
-                    "endLine": 37,
+                    "startOffset": 2528,
+                    "endLine": 35,
                     "endColumn": 10,
-                    "endOffset": 2762
+                    "endOffset": 2695
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 35,
-                        "startColumn": 4,
-                        "startOffset": 2646,
-                        "endLine": 37,
-                        "endColumn": 10,
-                        "endOffset": 2762
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             },
             {
                 "to": {
-                    "startLine": 38,
+                    "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 2767,
-                    "endLine": 41,
+                    "startOffset": 2700,
+                    "endLine": 38,
                     "endColumn": 10,
-                    "endOffset": 2922
+                    "endOffset": 2816
                 },
                 "from": {
-                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml",
-                    "position": {
-                        "startLine": 38,
-                        "startColumn": 4,
-                        "startOffset": 2767,
-                        "endLine": 41,
-                        "endColumn": 10,
-                        "endOffset": 2922
-                    }
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 2821,
+                    "endLine": 42,
+                    "endColumn": 10,
+                    "endOffset": 2976
+                },
+                "from": {
+                    "file": "/Users/edumolins/AndroidStudioProjects/Wgo/library/build/intermediates/bundles/debug/res/values/values.xml"
                 }
             }
         ]

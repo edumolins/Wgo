@@ -126,8 +126,9 @@ containing a value of this type.
         public static int calendar_text_highlighted=0x7f050008;
         public static int calendar_text_inactive=0x7f050009;
         public static int calendar_text_selected=0x7f05000a;
-        public static int calendar_text_selector=0x7f05000c;
+        public static int calendar_text_selector=0x7f05000d;
         public static int calendar_text_unselectable=0x7f05000b;
+        public static int calendar_text_weekend=0x7f05000c;
     }
     public static final class dimen {
         public static int calendar_day_headers_paddingbottom=0x7f060000;
@@ -138,6 +139,7 @@ containing a value of this type.
     }
     public static final class drawable {
         public static int calendar_bg_selector=0x7f020000;
+        public static int white_circle=0x7f020001;
     }
     public static final class id {
         public static int calendar_grid=0x7f070002;
