@@ -90,7 +90,6 @@ public class CalendarActivity extends Activity {
                     calendar.selectDate(next);
                 else if (dayOfWeek < 6 && dayOfWeek > 1)
                     calendar.selectDate(date);
-
                 CalendarPickerView.numberWeekends.setText(Integer.toString(calendar.getSelectedDates().size() / 3));
 
 

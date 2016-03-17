@@ -16,7 +16,7 @@
         android:background="@drawable/green_button">
         <RelativeLayout
             android:id="@+id/close_layout"
-            android:layout_width="30dp"
+            android:layout_width="40dp"
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/back_icon"
@@ -50,8 +50,8 @@
         android:footerDividersEnabled="false"
         android:headerDividersEnabled="false"
         android:scrollbars="none"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:background="@android:color/transparent"
         android:divider="@android:color/transparent"
         android:dividerHeight="10dp"

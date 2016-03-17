@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
     android:background="@drawable/white_row">
 
     <RelativeLayout
@@ -33,24 +31,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:src="@android:drawable/btn_star_big_on" />
-                <ImageView
-                    android:id="@+id/logo2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/logo"
-                    android:layout_marginRight="10dp"
-                    android:src="@android:drawable/btn_star_big_on"
-                    android:visibility="gone"/>
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/vueling" />
 
                 <wgo_app.wgo.fonts.GNBookTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/logo2"
+                    android:layout_toRightOf="@+id/logo"
                     android:text="VUELING AIRLINES"
                     android:textColor="@color/grey_dark_flights"
-                    android:textSize="12dp" />
+                    android:textSize="10dp"
+                    android:letterSpacing="0.1"/>
 
                 <wgo_app.wgo.fonts.GNLightTextView
                     android:id="@+id/price"
@@ -61,7 +53,7 @@
                     android:layout_marginRight="5dp"
                     android:text="75€"
                     android:textColor="@color/green"
-                    android:textSize="30dp" />
+                    android:textSize="24dp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -94,7 +86,7 @@
                         android:layout_toRightOf="@+id/arrow1"
                         android:text="WED"
                         android:textColor="@color/grey_dark_flights"
-                        android:textSize="11dp" />
+                        android:textSize="12dp" />
 
                     <wgo_app.wgo.fonts.GNBookTextView
                         android:id="@+id/time1"
@@ -114,13 +106,18 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_below="@+id/info1">
+                    <LinearLayout
+                        android:id="@+id/linear1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
                     <wgo_app.wgo.fonts.GNBookTextView
                         android:id="@+id/city_origin1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:textColor="@color/grey_dark_flights"
-                        android:textSize="14dp"
+                        android:textSize="16dp"
+                        android:letterSpacing="0.1"
                         android:layout_marginLeft="27dp"
                         android:text="BCN"
                         />
@@ -135,16 +132,22 @@
                         android:layout_marginLeft="10dp"
                         android:text="11:30h"
                         />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linear2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/linear1">
                     <wgo_app.wgo.fonts.GNBookTextView
                         android:id="@+id/city_destination1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:textColor="@color/grey_dark_flights"
-                        android:textSize="14dp"
+                        android:textSize="16dp"
                         android:layout_marginLeft="20dp"
-                        android:layout_toRightOf="@+id/hour_origin1"
                         android:text="ROM"
+                        android:letterSpacing="0.1"
                         />
                     <wgo_app.wgo.fonts.GNBookTextView
                         android:id="@+id/hour_destination1"
@@ -157,12 +160,13 @@
                         android:layout_marginLeft="10dp"
                         android:text="11:30h"
                         />
-                    <wgo_app.wgo.fonts.GNBookTextView
+                    </LinearLayout>
+                    <wgo_app.wgo.fonts.GNBookItalicTextView
                         android:id="@+id/airport_origin1"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
-                        android:layout_below="@+id/city_origin1"
+                        android:layout_below="@+id/linear1"
                         android:layout_marginTop="7dp"
                         android:textColor="@color/grey_dark"
                         android:textSize="12dp"
@@ -170,17 +174,17 @@
                         android:text="El Prat"
                         android:textStyle="italic"
                         />
-                    <wgo_app.wgo.fonts.GNBookTextView
+                    <wgo_app.wgo.fonts.GNBookItalicTextView
                         android:id="@+id/airport_destination1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
-                        android:layout_below="@+id/city_origin1"
+                        android:layout_below="@+id/linear2"
                         android:layout_marginTop="7dp"
                         android:textColor="@color/grey_dark"
                         android:textSize="12dp"
                         android:layout_toRightOf="@+id/airport_origin1"
-                        android:layout_marginLeft="9dp"
+                        android:layout_marginLeft="12dp"
                         android:text="Fiumicino"
                         android:textStyle="italic"
                         />
@@ -197,7 +201,58 @@
                         android:text="Direct"/>
 
                 </RelativeLayout>
-
+                <LinearLayout
+                    android:id="@+id/bottom_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/info_layout1"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="100">
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:orientation="vertical">
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/last_check1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Last check 9:36"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="10dp" />
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/booking1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="27dp"
+                        android:layout_marginTop="5dp"
+                        android:singleLine="true"
+                        android:text="You'll book with Viajar.com"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="8dp" />
+                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50">
+                    <wgo_app.wgo.fonts.CustomButton
+                        android:id="@+id/booking_button1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/booking1"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/book_now"
+                        android:paddingRight="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:background="@drawable/green_button"/>
+                    </LinearLayout>
+                </LinearLayout>
             </RelativeLayout>
 
             <RelativeLayout
@@ -205,13 +260,38 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/up_layout"
-                android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp">
+                <RelativeLayout
+                    android:id="@+id/logo_layout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
+                    <ImageView
+                        android:id="@+id/logo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/vueling" />
+
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/logo2"
+                        android:text="VUELING AIRLINES"
+                        android:textColor="@color/grey_dark_flights"
+                        android:textSize="10dp"
+                        android:letterSpacing="0.1"/>
+
+                </RelativeLayout>
                 <RelativeLayout
                     android:id="@+id/info2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/logo_layout2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp">
 
                     <ImageView
                         android:id="@+id/arrow2"
@@ -230,7 +310,7 @@
                         android:layout_toRightOf="@+id/arrow2"
                         android:text="FRI"
                         android:textColor="@color/grey_dark_flights"
-                        android:textSize="11dp" />
+                        android:textSize="12dp" />
 
                     <wgo_app.wgo.fonts.GNBookTextView
                         android:id="@+id/time2"
@@ -247,18 +327,25 @@
                 <RelativeLayout
                     android:id="@+id/info_layout2"
                     android:layout_width="wrap_content"
+                    android:layout_marginLeft="5dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_below="@+id/info2">
+
+                    <LinearLayout
+                        android:id="@+id/linear3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
                     <wgo_app.wgo.fonts.GNBookTextView
                         android:id="@+id/city_origin2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:textColor="@color/grey_dark_flights"
-                        android:textSize="14dp"
+                        android:textSize="16dp"
                         android:layout_marginLeft="27dp"
                         android:text="ROM"
+                        android:letterSpacing="0.1"
                         />
                     <wgo_app.wgo.fonts.GNBookTextView
                         android:id="@+id/hour_origin2"
@@ -271,16 +358,23 @@
                         android:layout_marginLeft="10dp"
                         android:text="11:30h"
                         />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linear4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/linear3"
+                        android:layout_marginTop="10dp">
                     <wgo_app.wgo.fonts.GNBookTextView
                         android:id="@+id/city_destination2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:textColor="@color/grey_dark_flights"
-                        android:textSize="14dp"
+                        android:textSize="16dp"
                         android:layout_marginLeft="20dp"
-                        android:layout_toRightOf="@+id/hour_origin2"
                         android:text="BCN"
+                        android:letterSpacing="0.1"
                         />
                     <wgo_app.wgo.fonts.GNBookTextView
                         android:id="@+id/hour_destination2"
@@ -293,55 +387,61 @@
                         android:layout_marginLeft="10dp"
                         android:text="11:30h"
                         />
+                    </LinearLayout>
                     <wgo_app.wgo.fonts.GNBookTextView
                         android:id="@+id/airport_origin2"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
-                        android:layout_below="@+id/city_origin2"
                         android:layout_marginTop="7dp"
                         android:textColor="@color/grey_dark"
                         android:textSize="12dp"
                         android:layout_marginLeft="27dp"
                         android:text="Fiumicino"
+                        android:layout_below="@+id/linear3"
                         android:textStyle="italic"
                         />
-                    <wgo_app.wgo.fonts.GNBookTextView
+                    <wgo_app.wgo.fonts.GNBookItalicTextView
                         android:id="@+id/airport_destination2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
-                        android:layout_below="@+id/city_origin2"
                         android:layout_marginTop="7dp"
                         android:textColor="@color/grey_dark"
                         android:textSize="12dp"
+                        android:layout_below="@+id/linear4"
                         android:layout_toRightOf="@+id/airport_origin2"
                         android:layout_marginLeft="9dp"
                         android:text="Fiumicino"
                         android:textStyle="italic"
                         />
-                    <wgo_app.wgo.fonts.GNBookTextView
+                    <wgo_app.wgo.fonts.GNBookItalicTextView
                         android:id="@+id/type2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
-                        android:layout_below="@+id/airport_origin2"
                         android:layout_marginTop="10dp"
                         android:textColor="@color/grey_dark_flights"
                         android:textSize="12dp"
+                        android:layout_below="@+id/airport_origin2"
                         android:layout_marginLeft="27dp"
                         android:text="Direct"/>
 
                 </RelativeLayout>
             </RelativeLayout>
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/bottom_layout"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/down_layout"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="5dp">
-
+                android:layout_marginLeft="5dp"
+                android:weightSum="100">
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:orientation="vertical">
                 <wgo_app.wgo.fonts.GNBookTextView
                     android:id="@+id/last_check"
                     android:layout_width="wrap_content"
@@ -349,6 +449,7 @@
                     android:layout_marginLeft="27dp"
                     android:layout_marginTop="5dp"
                     android:text="Last check 9:36"
+                    android:singleLine="true"
                     android:textColor="@color/grey_dark"
                     android:textSize="10dp" />
                 <wgo_app.wgo.fonts.GNBookTextView
@@ -357,10 +458,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="27dp"
                     android:layout_marginTop="5dp"
-                    android:layout_below="@+id/last_check"
+                    android:singleLine="true"
                     android:text="You'll book with Viajar.com"
                     android:textColor="@color/grey_dark"
-                    android:textSize="10dp" />
+                    android:textSize="8dp" />
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:orientation="vertical">
                 <wgo_app.wgo.fonts.CustomButton
                     android:id="@+id/booking_button"
                     android:layout_width="wrap_content"
@@ -376,8 +483,8 @@
                     android:textColor="@color/white"
                     android:textSize="10dp"
                     android:background="@drawable/green_button"/>
-
-            </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
 
         </RelativeLayout>
     </RelativeLayout>

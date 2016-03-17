@@ -13,6 +13,6 @@ public class CustomButton extends Button {
 
     public CustomButton (Context context, AttributeSet attrs) {
         super(context, attrs);
-        this.setTypeface(Typeface.createFromAsset(context.getAssets(), "fonts/gn_medium.otf"));
+        this.setTypeface(Typeface.createFromAsset(context.getAssets(), "fonts/gn_book.otf"));
     }
 }

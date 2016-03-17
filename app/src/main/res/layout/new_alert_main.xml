@@ -17,7 +17,7 @@
 
         <RelativeLayout
             android:id="@+id/close_layout"
-            android:layout_width="30dp"
+            android:layout_width="40dp"
             android:layout_height="match_parent">
 
             <ImageView
@@ -34,39 +34,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:letterSpacing="0.1"
             android:text="@string/search"
             android:textColor="@color/white"
-            android:textSize="18dp"
-            android:letterSpacing="0.1"/>
+            android:textSize="18dp" />
 
     </RelativeLayout>
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/button_available"
-        android:layout_below="@+id/search_header">
-
-        <RelativeLayout
+        android:layout_below="@+id/search_header"
+        android:orientation="vertical">
+        <!--Origin Layout -->
+        <LinearLayout
+            android:id="@+id/origin_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <!--Origin Layout -->
+            android:layout_height="0dip"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:background="@drawable/white_row">
+
             <RelativeLayout
-                android:id="@+id/origin_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/white_row">
+                >
 
                 <wgo_app.wgo.fonts.GNBookTextView
                     android:id="@+id/start_trip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    android:letterSpacing="0.1"
+                    android:letterSpacing="0.2"
                     android:text="@string/start_trip"
                     android:textColor="@color/grey_flights"
-                    android:textSize="16dp" />
+                    android:textSize="14dp" />
 
                 <wgo_app.wgo.fonts.GNBookTextView
                     android:id="@+id/origin"
@@ -74,37 +77,44 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/start_trip"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginTop="10dp"
-                    android:letterSpacing="0.1"
+                    android:layout_marginTop="17dp"
+                    android:letterSpacing="0.2"
                     android:text="MY HOME"
                     android:textColor="@color/grey_dark_flights"
                     android:textSize="24dp" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_below="@+id/origin"
-                    android:background="@color/green" />
+
             </RelativeLayout>
-            <!-- Destination Layout -->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/origin"
+            android:background="@color/green" />
+        <!-- Destination Layout -->
+        <LinearLayout
+            android:id="@+id/destination_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_below="@+id/origin_layout"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:background="@drawable/white_row">
+
             <RelativeLayout
-                android:id="@+id/destination_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/origin_layout"
-                android:background="@drawable/white_row">
+                >
 
                 <wgo_app.wgo.fonts.GNBookTextView
                     android:id="@+id/to"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    android:letterSpacing="0.1"
+                    android:letterSpacing="0.2"
                     android:text="@string/destination"
                     android:textColor="@color/grey_flights"
-                    android:textSize="16dp" />
+                    android:textSize="14dp" />
 
                 <wgo_app.wgo.fonts.GNBookTextView
                     android:id="@+id/destination"
@@ -112,199 +122,211 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/to"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="17dp"
                     android:letterSpacing="0.1"
                     android:text="ANYWHERE"
                     android:textColor="@color/grey_dark_flights"
                     android:textSize="24dp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_below="@+id/destination"
-                    android:background="@color/green" />
             </RelativeLayout>
-            <!-- Weekends Layout -->
-            <RelativeLayout
-                android:id="@+id/weekends_layout"
-                android:layout_width="match_parent"
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/origin"
+            android:background="@color/green" />
+        <!-- Weekends Layout -->
+        <LinearLayout
+            android:id="@+id/weekends_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:background="@drawable/white_row">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <wgo_app.wgo.fonts.GNBookTextView
+                android:id="@+id/select"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/destination_layout"
-                android:background="@drawable/white_row">
+                android:layout_centerHorizontal="true"
+                android:letterSpacing="0.2"
+                android:text="@string/have_select"
+                android:textColor="@color/grey_flights"
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:id="@+id/result_weekends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="17dp">
 
                 <wgo_app.wgo.fonts.GNBookTextView
-                    android:id="@+id/select"
+                    android:id="@+id/number_weekends"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
                     android:letterSpacing="0.1"
-                    android:text="@string/have_select"
-                    android:textColor="@color/grey_flights"
-                    android:textSize="16dp" />
-
-                <RelativeLayout
-                    android:id="@+id/result_weekends"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/select"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginTop="10dp">
-
-                    <wgo_app.wgo.fonts.GNBookTextView
-                        android:id="@+id/number_weekends"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:letterSpacing="0.1"
-                        android:text="0"
-                        android:textColor="@color/grey_dark"
-                        android:textSize="24dp" />
-
-                    <wgo_app.wgo.fonts.GNBookTextView
-                        android:id="@+id/weekends"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@+id/number_weekends"
-                        android:letterSpacing="0.1"
-                        android:text="@string/weekends"
-                        android:textColor="@color/grey_flights"
-                        android:textSize="24dp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_below="@+id/result_weekends"
-                    android:background="@color/green" />
-            </RelativeLayout>
-            <!-- Expend Layout -->
-            <RelativeLayout
-                android:id="@+id/expend_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/weekends_layout">
+                    android:text="0"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="24dp" />
 
                 <wgo_app.wgo.fonts.GNBookTextView
-                    android:id="@+id/want_expend"
+                    android:id="@+id/weekends"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    android:letterSpacing="0.1"
-                    android:text="@string/want_expend"
-                    android:textColor="@color/grey_flights"
-                    android:textSize="16dp" />
-
-                <RelativeLayout
-                    android:id="@+id/seek_layout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/want_expend"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
-
-                    <TextView
-                        android:id="@+id/min_price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:text="0"
-                        android:textColor="@color/grey" />
-
-
-                    <wgo_app.wgo.PriceSeekBar
-                        android:id="@+id/priceLimitPicker"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginRight="30dp"
-                        android:max="450"
-                        android:maxHeight="5dp"
-                        android:padding="10dp"
-                        android:progressDrawable="@drawable/progressbar"
-                        android:thumb="@drawable/roda_preus" />
-
-                    <TextView
-                        android:id="@+id/max_price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginRight="10dp"
-                        android:text="300"
-                        android:textColor="@color/grey" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_below="@+id/seek_layout"
-                    android:background="@color/green" />
+                    android:layout_toRightOf="@+id/number_weekends"
+                    android:letterSpacing="0.1"
+                    android:text="@string/weekends"
+                    android:textColor="@color/grey_flights"
+                    android:textSize="24dp" />
             </RelativeLayout>
-            <!-- Expend Layout -->
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/origin"
+            android:background="@color/green" />
+        <!-- Expend Layout -->
+        <LinearLayout
+            android:id="@+id/expend_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:gravity="center"
+            android:layout_below="@+id/weekends_layout"
+            android:layout_weight="20">
             <RelativeLayout
-                android:id="@+id/people_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+            <wgo_app.wgo.fonts.GNBookTextView
+                android:id="@+id/want_expend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:letterSpacing="0.2"
+                android:text="@string/want_expend"
+                android:textColor="@color/grey_flights"
+                android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/min_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="0"
+                    android:textColor="@color/grey" />
+
+
+                <wgo_app.wgo.PriceSeekBar
+                    android:id="@+id/priceLimitPicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="35dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:max="300"
+                    android:maxHeight="1dp"
+                    android:progressDrawable="@drawable/progressbar"
+                    android:thumb="@drawable/white_circle"/>
+
+                <TextView
+                    android:id="@+id/max_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="300"
+                    android:textColor="@color/grey" />
+
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/origin"
+            android:background="@color/green" />
+        <!-- Expend Layout -->
+        <LinearLayout
+            android:id="@+id/people_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_below="@+id/expend_layout"
+            android:layout_weight="20">
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/expend_layout">
+                android:layout_gravity="center_horizontal">
+            <wgo_app.wgo.fonts.GNBookTextView
+                android:id="@+id/how_many"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="17dp"
+                android:letterSpacing="0.2"
+                android:text="@string/how_many_people"
+                android:textColor="@color/grey_flights"
+                android:textSize="14dp" />
 
-                <wgo_app.wgo.fonts.GNBookTextView
-                    android:id="@+id/how_many"
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/how_many"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+
+                <TextView
+                    android:id="@+id/minus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    android:letterSpacing="0.1"
-                    android:text="@string/how_many_people"
-                    android:textColor="@color/grey_flights"
-                    android:textSize="16dp" />
-
+                    android:text="-"
+                    android:textColor="@color/green"
+                    android:textSize="30dp" />
                 <RelativeLayout
+                    android:id="@+id/minus_l"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="-15dp"/>
+
+                <TextView
+                    android:id="@+id/people"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/how_many"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_toRightOf="@+id/minus"
+                    android:text="4"
+                    android:textColor="@color/grey_dark_flights"
+                    android:textSize="30dp" />
 
-                    <TextView
-                        android:id="@+id/minus"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:text="-"
-                        android:textColor="@color/green"
-                        android:textSize="30dp" />
-
-                    <TextView
-                        android:id="@+id/people"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginRight="30dp"
-                        android:layout_toRightOf="@+id/minus"
-                        android:text="4"
-                        android:textColor="@color/grey_dark_flights"
-                        android:textSize="30dp" />
-
-                    <TextView
-                        android:id="@+id/plus"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/people"
-                        android:text="+"
-                        android:textColor="@color/green"
-                        android:textSize="30dp" />
-                </RelativeLayout>
+                <TextView
+                    android:id="@+id/plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/people"
+                    android:text="+"
+                    android:textColor="@color/green"
+                    android:textSize="30dp" />
             </RelativeLayout>
-        </RelativeLayout>
-    </ScrollView>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
 
     <wgo_app.wgo.fonts.CustomButton
         android:id="@+id/button_available"
@@ -321,68 +343,75 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/shadow_bar"
-        android:visibility="gone"/>
+        android:visibility="gone" />
+
     <RelativeLayout
         android:id="@+id/error_layout"
         android:layout_width="match_parent"
         android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
         android:background="@color/white"
-        android:visibility="gone"
-        android:layout_alignParentBottom="true">
+        android:visibility="gone">
+
         <RelativeLayout
             android:id="@+id/close_error"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/close"
-            android:layout_alignParentRight="true">
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/close">
+
             <ImageView
                 android:id="@+id/close"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:src="@drawable/close"
-                android:layout_alignParentRight="true"/>
+                android:layout_centerInParent="true"
+                android:src="@drawable/close" />
         </RelativeLayout>
+
         <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/ups"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_centerHorizontal="true"
             android:layout_below="@+id/close_error"
-            android:textColor="@color/grey_dark"
-            android:textSize="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
             android:letterSpacing="0.1"
-            android:text="@string/ups"/>
+            android:text="@string/ups"
+            android:textColor="@color/grey_dark"
+            android:textSize="24dp" />
+
         <RelativeLayout
             android:id="@+id/border"
             android:layout_width="200dp"
             android:layout_height="1px"
             android:layout_below="@+id/ups"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
-            android:background="@color/grey"/>
+            android:layout_marginTop="15dp"
+            android:background="@color/grey" />
+
         <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/error_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_below="@+id/border"
-            android:textColor="@color/grey"
-            android:letterSpacing="0.1"
-            android:textSize="14dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"/>
+            android:layout_marginRight="30dp"
+            android:letterSpacing="0.1"
+            android:textColor="@color/grey"
+            android:textSize="14dp" />
+
         <wgo_app.wgo.fonts.CustomButton
             android:id="@+id/error_button"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:background="@drawable/green_button_rect"
-            android:textColor="@color/white"
             android:letterSpacing="0.1"
-            android:text="@string/accept"/>
+            android:text="@string/accept"
+            android:textColor="@color/white" />
     </RelativeLayout>
 
 </RelativeLayout>

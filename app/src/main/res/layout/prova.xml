@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="4dp"
+    android:paddingRight="8dp"
+    tools:context=".TestActivity" >
+
+    <LinearLayout
+        android:id="@+id/scratchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/topArea1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingRight="3dp"
+                android:text="Top Area 2"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/topArea2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingRight="3dp"
+                android:text="Top Area 1"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/centerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/centerArea1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:text="Center Area 1" />
+
+            <TextView
+                android:id="@+id/centerArea2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:text="Center Area 2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/BottomLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/bottomArea1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:text="Bottom Area 1" />
+
+            <TextView
+                android:id="@+id/bottomArea2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:text="Bottom Area 2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

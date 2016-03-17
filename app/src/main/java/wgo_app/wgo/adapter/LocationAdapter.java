@@ -1,6 +1,7 @@
 package wgo_app.wgo.adapter;
 
 import android.app.Activity;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -60,9 +61,7 @@ public class LocationAdapter extends ArrayAdapter<ObjLocation> implements Filter
 			View viewGroup = inflater.inflate(R.layout.location_row, parent, false);
 			//using the ViewHolder pattern to reduce lookups
             locationHolder = new LocationHolder(
-            		(TextView)viewGroup.findViewById(R.id.location),
-            		(TextView)viewGroup.findViewById(R.id.country)
-            		);
+            		(TextView)viewGroup.findViewById(R.id.location));
             viewGroup.setTag(locationHolder);
             item = viewGroup;
 		}
@@ -73,9 +72,9 @@ public class LocationAdapter extends ArrayAdapter<ObjLocation> implements Filter
 		}
     	try{
 	    	//Location Name
-	    	locationHolder.getLocationName().setText(datos.get(position).getLocationName());
+            String text = "<font color=#333333>"+datos.get(position).getLocationName()+"</font>&nbsp;&nbsp;<font color=#999999>"+datos.get(position).getLocationCountry()+"</font>";
+	    	locationHolder.getLocationName().setText(Html.fromHtml(text));
 	        //Location Country
-	    	locationHolder.getLocationCountry().setText(datos.get(position).getLocationCountry());
             item.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

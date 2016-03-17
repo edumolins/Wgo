@@ -14,14 +14,19 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/green_button">
+        <RelativeLayout
+            android:id="@+id/close_layout"
+            android:layout_width="40dp"
+            android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/back_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"/>
+            <ImageView
+                android:id="@+id/back_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/back" />
+        </RelativeLayout>
 
         <wgo_app.wgo.fonts.GNMediumTextView
             android:id="@+id/login_text"
@@ -45,8 +50,8 @@
         android:footerDividersEnabled="false"
         android:headerDividersEnabled="false"
         android:scrollbars="none"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:background="@android:color/transparent"
         android:divider="@android:color/transparent"
         android:dividerHeight="10dp"

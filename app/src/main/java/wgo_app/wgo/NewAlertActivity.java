@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -16,9 +17,9 @@ import wgo_app.wgo.utils.Constants;
 
 public class NewAlertActivity extends Activity {
 
-    private RelativeLayout weekendsLayout;
-    private RelativeLayout originLayout;
-    private RelativeLayout destinationLayout;
+    private LinearLayout weekendsLayout;
+    private LinearLayout originLayout;
+    private LinearLayout destinationLayout;
 
     private RelativeLayout shadowLayout;
     private RelativeLayout errorLayout;
@@ -29,7 +30,7 @@ public class NewAlertActivity extends Activity {
     private TextView numberWeekends;
 
 
-    private TextView minusText;
+    private RelativeLayout minusText;
     private TextView plusText;
     private TextView peopleText;
 
@@ -44,7 +45,7 @@ public class NewAlertActivity extends Activity {
 
         //DiscreteSeekBar discreteSeekBar1 = (DiscreteSeekBar) findViewById(R.id.seek_bar);
 
-        weekendsLayout = (RelativeLayout) findViewById(R.id.weekends_layout);
+        weekendsLayout = (LinearLayout) findViewById(R.id.weekends_layout);
         weekendsLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,7 +54,7 @@ public class NewAlertActivity extends Activity {
             }
         });
 
-        originLayout = (RelativeLayout) findViewById(R.id.origin_layout);
+        originLayout = (LinearLayout) findViewById(R.id.origin_layout);
         originLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,7 +64,7 @@ public class NewAlertActivity extends Activity {
             }
         });
 
-        destinationLayout = (RelativeLayout) findViewById(R.id.destination_layout);
+        destinationLayout = (LinearLayout) findViewById(R.id.destination_layout);
         destinationLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,7 +78,7 @@ public class NewAlertActivity extends Activity {
         destinationLocation = (TextView) findViewById(R.id.destination);
         numberWeekends = (TextView) findViewById(R.id.number_weekends);
 
-        minusText = (TextView) findViewById(R.id.minus);
+        minusText = (RelativeLayout) findViewById(R.id.minus_l);
         plusText = (TextView) findViewById(R.id.plus);
         peopleText = (TextView) findViewById(R.id.people);
 

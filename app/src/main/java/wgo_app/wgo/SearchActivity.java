@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import java.util.ArrayList;
 
 import wgo_app.wgo.adapter.LocationAdapter;
+import wgo_app.wgo.fonts.GNBookTextView;
 import wgo_app.wgo.fonts.GNLightEditText;
 import wgo_app.wgo.objects.ObjLocation;
 
@@ -23,7 +24,7 @@ public class SearchActivity extends Activity {
 	private GNLightEditText searchBar;
 	private LocationAdapter locationAdapter;
 	private ArrayList<ObjLocation> locationDatos = new ArrayList<ObjLocation>();
-
+    private GNBookTextView title;
 	private String from;
 
 
@@ -36,7 +37,10 @@ public class SearchActivity extends Activity {
 	        setContentView(R.layout.search_main);
 	        from = getIntent().getStringExtra("from");
 	        searchBar = (GNLightEditText)findViewById(R.id.destination);
-	        locationDatos.clear();
+			title = (GNBookTextView)findViewById(R.id.dest);
+	        if(from.equals("Destination"))
+				title.setText(R.string.destination);
+			locationDatos.clear();
 	        listLocations= (ListView)findViewById(R.id.list_locations);
 	        //Utils.listOverScrollMode(listFriends);
 	        buffer = new StringBuffer();
@@ -97,14 +101,13 @@ public class SearchActivity extends Activity {
 		protected void onPostExecute(Boolean result) {
 			try{
 
-				locationDatos.add(new ObjLocation(1, "ROMA", "ITALIA"));
-				locationDatos.add(new ObjLocation(2, "BARCELONA", "ESPAÑA"));
-				locationDatos.add(new ObjLocation(3, "LONDRES", "REINO UNIDO"));
-				locationDatos.add(new ObjLocation(4, "NUEVA YORK", "ESTADOS UNIDOS"));
-				locationDatos.add(new ObjLocation(5, "BARCELONA", "COLOMBIA"));
-				locationDatos.add(new ObjLocation(6, "BERLÍN", "ALEMANIA"));
-				locationDatos.add(new ObjLocation(7, "LONDRINA", "ANDORRA"));
-				locationDatos.add(new ObjLocation(7, "SANTA CRUS DE TENERIFE", "PAÍS MEGALARGO"));
+				locationDatos.add(new ObjLocation(1, "ROMA", "(ITALIA)"));
+				locationDatos.add(new ObjLocation(2, "BARCELONA", "(ESPAÑA)"));
+				locationDatos.add(new ObjLocation(3, "LONDRES", "(REINO UNIDO)"));
+				locationDatos.add(new ObjLocation(4, "NUEVA YORK", "(ESTADOS UNIDOS)"));
+				locationDatos.add(new ObjLocation(5, "BARCELONA", "(COLOMBIA)"));
+				locationDatos.add(new ObjLocation(6, "BERLÍN", "(ALEMANIA)"));
+				locationDatos.add(new ObjLocation(7, "AMSTERDAM", "(PAISES BAJOS)"));
 				locationAdapter = new LocationAdapter(SearchActivity.this, locationDatos, from);
 				//listFriends.setVisibility(View.VISIBLE);
 				listLocations.setAdapter(locationAdapter);

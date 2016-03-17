@@ -16,143 +16,181 @@
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
         android:padding="10dp">
+
         <RelativeLayout
             android:id="@+id/info1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/origin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="BARCELONA"
-                android:textSize="18dp"
                 android:letterSpacing="0.1"
+                android:text="BARCELONA"
                 android:textColor="@color/grey_dark_flights"
-                />
+                android:textSize="18dp" />
+
             <ImageView
                 android:id="@+id/arrow"
-                android:layout_width="wrap_content"
+                android:layout_width="12dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/arrow"
-                android:layout_toRightOf="@+id/origin"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_centerVertical="true"/>
+                android:layout_toRightOf="@+id/origin"
+                android:src="@drawable/arrow" />
+
             <wgo_app.wgo.fonts.GNBookTextView
                 android:id="@+id/destination"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ROMA"
-                android:textSize="18dp"
-                android:letterSpacing="0.1"
-                android:textColor="@color/grey_dark_flights"
                 android:layout_toRightOf="@+id/arrow"
-                />
+                android:letterSpacing="0.1"
+                android:text="ROMA"
+                android:textColor="@color/grey_dark_flights"
+                android:textSize="18dp" />
         </RelativeLayout>
 
         <LinearLayout
             android:id="@+id/info2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/info1"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+            android:layout_marginLeft="5dp">
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="35">
             <wgo_app.wgo.fonts.GNLightTextView
                 android:id="@+id/number_weekends"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
-                android:layout_marginLeft="5dp"
-                android:textSize="25dp"
                 android:letterSpacing="0.1"
+                android:text="5"
                 android:textColor="@color/green"
-                />
+                android:textSize="25dp" />
+
             <wgo_app.wgo.fonts.GNLightTextView
                 android:id="@+id/weekends"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Weekends"
                 android:layout_marginLeft="5dp"
-                android:layout_marginRight="15dp"
                 android:gravity="bottom"
-                android:textSize="10dp"
                 android:letterSpacing="0.1"
+                android:text="Weekends"
                 android:textColor="@color/grey_dark"
-                />
-
+                android:textSize="12dp" />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="35">
             <wgo_app.wgo.fonts.GNLightTextView
                 android:id="@+id/number_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="175€"
-                android:textSize="25dp"
                 android:letterSpacing="0.1"
+                android:text="175€"
                 android:textColor="@color/green"
-                />
+                android:textSize="25dp" />
+
             <wgo_app.wgo.fonts.GNLightTextView
                 android:id="@+id/max"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Max"
                 android:layout_marginLeft="5dp"
-                android:layout_marginRight="15dp"
                 android:gravity="bottom"
-                android:textSize="10dp"
                 android:letterSpacing="0.1"
+                android:text="Max"
                 android:textColor="@color/grey_dark"
-                />
+                android:textSize="12dp" />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="30"
+            android:layout_gravity="bottom">
             <wgo_app.wgo.fonts.GNLightTextView
                 android:id="@+id/duration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Daily"
-                android:textSize="16dp"
                 android:letterSpacing="0.1"
+                android:text="Daily"
+                android:gravity="bottom"
                 android:textColor="@color/green"
-                />
+                android:textSize="20dp" />
+            </LinearLayout>
         </LinearLayout>
-        <RelativeLayout
+
+        <LinearLayout
             android:id="@+id/info3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/info2"
-            android:layout_marginTop="20dp">
-            <wgo_app.wgo.fonts.GNBookTextView
-                android:id="@+id/edit"
-                android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="0dip"
                 android:layout_height="wrap_content"
-                android:text="EDIT"
-                android:textSize="12dp"
-                android:letterSpacing="0.1"
-                android:layout_marginLeft="5dp"
-                android:textColor="@color/green"
-                android:layout_centerVertical="true"
-                />
-            <wgo_app.wgo.fonts.GNBookTextView
-                android:id="@+id/delete"
-                android:layout_width="wrap_content"
+                android:layout_weight="20"
+                android:layout_gravity="center">
+
+                <wgo_app.wgo.fonts.GNBookTextView
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:letterSpacing="0.1"
+                    android:text="EDIT"
+                    android:textColor="@color/green"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
                 android:layout_height="wrap_content"
-                android:text="DELETE"
-                android:textSize="12dp"
-                android:letterSpacing="0.1"
-                android:layout_toRightOf="@+id/edit"
-                android:layout_marginLeft="20dp"
-                android:textColor="@color/green"
-                android:layout_centerVertical="true"
-                />
-            <wgo_app.wgo.fonts.CustomButton
-                android:id="@+id/show_button"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:text="@string/show_flights"
-                android:textColor="@color/white"
-                android:textSize="12dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:paddingLeft="12dp"
-                android:paddingRight="12dp"
-                android:layout_toRightOf="@+id/delete"
-                android:layout_marginLeft="40dp"
-                android:background="@drawable/green_button"/>
-        </RelativeLayout>
+                android:layout_weight="20"
+                android:layout_gravity="center">
+
+                <wgo_app.wgo.fonts.GNBookTextView
+                    android:id="@+id/delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/edit"
+                    android:letterSpacing="0.1"
+                    android:text="DELETE"
+                    android:textColor="@color/green"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:layout_gravity="right">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <wgo_app.wgo.fonts.CustomButton
+                    android:id="@+id/show_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/green_button"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="3dp"
+                    android:paddingLeft="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:paddingRight="10dp"
+                    android:text="@string/show_flights"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>

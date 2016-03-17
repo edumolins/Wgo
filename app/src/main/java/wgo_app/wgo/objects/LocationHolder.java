@@ -5,19 +5,9 @@ import android.widget.TextView;
 public class LocationHolder {
 
 	private TextView locationName;
-	private TextView locationCountry;
 
-	public LocationHolder(TextView locationName, TextView locationCountry) {
+	public LocationHolder(TextView locationName) {
 		this.locationName = locationName;
-		this.locationCountry = locationCountry;
-	}
-
-	public TextView getLocationCountry() {
-		return locationCountry;
-	}
-
-	public void setLocationCountry(TextView locationCountry) {
-		this.locationCountry = locationCountry;
 	}
 
 	public TextView getLocationName() {

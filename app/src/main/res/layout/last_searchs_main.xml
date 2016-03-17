@@ -17,7 +17,7 @@
 
         <RelativeLayout
             android:id="@+id/close_layout"
-            android:layout_width="30dp"
+            android:layout_width="40dp"
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/back_icon"

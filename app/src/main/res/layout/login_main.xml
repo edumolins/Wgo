@@ -22,7 +22,7 @@
 
                 <RelativeLayout
                     android:id="@+id/close_layout"
-                    android:layout_width="30dp"
+                    android:layout_width="40dp"
                     android:layout_height="match_parent">
                     <ImageView
                         android:id="@+id/back_icon"
@@ -176,14 +176,14 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/close"
+            android:layout_margin="10dp"
             android:layout_alignParentRight="true">
             <ImageView
                 android:id="@+id/close"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:src="@drawable/close"
-                android:layout_alignParentRight="true"/>
+                android:layout_centerInParent="true"/>
         </RelativeLayout>
         <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/ups"
@@ -239,14 +239,14 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/close"
+            android:layout_margin="10dp"
             android:layout_alignParentRight="true">
             <ImageView
                 android:id="@+id/close_fb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:src="@drawable/close"
-                android:layout_alignParentRight="true"/>
+                android:layout_centerInParent="true"/>
         </RelativeLayout>
         <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/wait"
@@ -323,8 +323,11 @@
             android:layout_below="@+id/change_mail"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginRight="50dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/remind_me"/>
     </RelativeLayout>
 </RelativeLayout>
 

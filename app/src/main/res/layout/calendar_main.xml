@@ -14,7 +14,7 @@
 
         <RelativeLayout
             android:id="@+id/close_layout"
-            android:layout_width="30dp"
+            android:layout_width="40dp"
             android:layout_height="match_parent">
 
             <ImageView
@@ -56,18 +56,25 @@
         android:background="@color/white"
         android:padding="10dp">
 
-        <ImageView
-            android:id="@+id/close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/close" />
+        <RelativeLayout
+            android:id="@+id/close_l"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/close" />
+        </RelativeLayout>
 
         <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/dest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/close"
+            android:layout_below="@+id/close_l"
             android:layout_centerHorizontal="true"
             android:letterSpacing="0.1"
             android:text="@string/select_weeks"

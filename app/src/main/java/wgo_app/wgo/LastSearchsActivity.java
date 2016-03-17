@@ -19,6 +19,7 @@ public class LastSearchsActivity extends Activity {
     private ArrayList<ObjLastSearch> searchDatos = new ArrayList<>();
     private LastSearchAdapter searchAdapter;
     private ListView listSearch;
+    private RelativeLayout headerFlight;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +41,8 @@ public class LastSearchsActivity extends Activity {
                 finish();
             }
         });
+        headerFlight = (RelativeLayout)getLayoutInflater().inflate(R.layout.header_empty, null, false);
+        listSearch.addHeaderView(headerFlight);
         new GetSearch().execute();
     }
 

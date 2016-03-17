@@ -15,7 +15,7 @@
 
         <RelativeLayout
             android:id="@+id/close_layout"
-            android:layout_width="30dp"
+            android:layout_width="40dp"
             android:layout_height="match_parent">
 
             <ImageView
@@ -52,22 +52,21 @@
         android:layout_below="@+id/search_header"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:background="@color/white"
-        android:padding="10dp">
+        android:background="@color/white">
 
         <RelativeLayout
             android:id="@+id/close_error"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/close">
+            android:layout_margin="10dp"
+            android:layout_alignParentRight="true">
 
             <ImageView
                 android:id="@+id/close"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/close" />
+                android:layout_centerInParent="true"
+                android:src="@drawable/close"/>
         </RelativeLayout>
 
         <wgo_app.wgo.fonts.GNBookTextView
@@ -76,10 +75,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/close_error"
             android:layout_centerHorizontal="true"
-            android:letterSpacing="0.1"
-            android:text="@string/destination"
+            android:letterSpacing="0.2"
+            android:text="@string/start_trip"
             android:textColor="@color/grey_flights"
-            android:textSize="18dp" />
+            android:textSize="14dp" />
 
         <wgo_app.wgo.fonts.GNLightEditText
             android:id="@+id/destination"
@@ -90,8 +89,8 @@
             android:layout_marginTop="10dp"
             android:background="@android:color/transparent"
             android:imeOptions="actionSearch"
-            android:inputType="text"
-            android:letterSpacing="0.1"
+            android:inputType="textCapCharacters"
+            android:letterSpacing="0.2"
             android:minWidth="200dp"
             android:paddingBottom="2dp"
             android:paddingLeft="5dp"
@@ -99,7 +98,10 @@
             android:paddingTop="2dp"
             android:singleLine="true"
             android:textColor="@color/grey_dark_flights"
-            android:textSize="24dp" />
+            android:textSize="24dp"
+            android:gravity="center"
+            android:ellipsize="start"
+            android:layout_marginBottom="15dp"/>
     </RelativeLayout>
 
 
