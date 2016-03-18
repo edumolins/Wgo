@@ -5,7 +5,7 @@
     android:id="@+id/row"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/white_row">
+    android:background="@drawable/white_calendar">
 
     <RelativeLayout
         android:id="@+id/row1"

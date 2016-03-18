@@ -1,6 +1,5 @@
 package wgo_app.wgo;
 
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -8,14 +7,13 @@ import android.graphics.Paint;
 import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.widget.SeekBar;
-
-import wgo_app.wgo.fonts.GNLightTextView;
+import android.widget.TextView;
 
 public class PriceSeekBar extends SeekBar {
     private Paint paint;
-    private GNLightTextView tv;
+    private TextView tv;
     private static final int TEXT_SIZE = 50;
-    private int priceSelected = 50;
+    private int priceSelected = 10;
     private static final String TAG = PriceSeekBar.class.getName();
 
     public PriceSeekBar(Context context) {
@@ -39,36 +37,24 @@ public class PriceSeekBar extends SeekBar {
     private void initPaint() {
         paint = new Paint();
         paint.setColor(Color.BLACK);
+        paint.setTextSize(TEXT_SIZE);
         paint.setTextSize(getResources().getDimension(R.dimen.text_size));
-        //paint.setTextSize(TEXT_SIZE);
-
         //need to set antialias, if not the txt is too pixelated
         paint.setAntiAlias(true);
     }
 
     private void initText(Context context) {
-        tv = new GNLightTextView(context, null);
+        tv = new TextView(context);
         tv.setText(String.valueOf(priceSelected));
-        //tv.setTextSize(TEXT_SIZE);
-        tv.setTextSize(getResources().getDimension(R.dimen.text_size));
+        //tv.setTextSize(getResources().getDimension(R.dimen.text_size));
+       //tv.setTextSize(TEXT_SIZE);
     }
 
     private int getTextWidth() {
-        try {
+        try{
             tv.measure(0, 0);
-        }catch (Exception e){
-
-        }
+        }catch(Exception e){}
         return tv.getMeasuredWidth();
-    }
-
-    private int getTextHeight() {
-        try {
-            tv.measure(0, 0);
-        }catch (Exception e){
-
-        }
-        return tv.getMeasuredHeight();
     }
 
     public void setPriceSelected(Context context, int priceSelected) {
@@ -85,8 +71,7 @@ public class PriceSeekBar extends SeekBar {
     @Override
     protected synchronized void onDraw(@NonNull Canvas canvas) {
         super.onDraw(canvas);
-        //canvas.drawText(tv.getText().toString(), this.getThumb().getBounds().exactCenterX() - getTextWidth() / 4, this.getThumb().getBounds().exactCenterY() + this.getThumb().getBounds().exactCenterY() / 2, paint);
-        canvas.drawText(tv.getText().toString(), this.getThumb().getBounds().exactCenterX() - getTextWidth() / 4 ,  this.getThumb().getBounds().exactCenterY() + this.getThumb().getBounds().exactCenterY() / 4, paint);
-        int i = 0;
+
+        canvas.drawText(tv.getText().toString(), this.getThumb().getBounds().exactCenterX() - getTextWidth() / 2, this.getThumb().getBounds().exactCenterY() + this.getThumb().getBounds().exactCenterY() / 4, paint);
     }
 }

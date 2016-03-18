@@ -54,7 +54,7 @@
             android:layout_height="0dip"
             android:layout_weight="20"
             android:gravity="center"
-            android:background="@drawable/white_row">
+            android:background="@drawable/white_calendar">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -99,7 +99,7 @@
             android:layout_below="@+id/origin_layout"
             android:layout_weight="20"
             android:gravity="center"
-            android:background="@drawable/white_row">
+            android:background="@drawable/white_calendar">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -141,7 +141,7 @@
             android:layout_height="0dip"
             android:layout_weight="20"
             android:gravity="center"
-            android:background="@drawable/white_row">
+            android:background="@drawable/white_calendar">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

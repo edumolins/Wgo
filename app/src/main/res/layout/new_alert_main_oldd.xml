@@ -55,7 +55,7 @@
                 android:id="@+id/origin_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/white_row">
+                android:background="@drawable/white_calendar">
 
                 <wgo_app.wgo.fonts.GNBookTextView
                     android:id="@+id/start_trip"
@@ -93,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/origin_layout"
-                android:background="@drawable/white_row">
+                android:background="@drawable/white_calendar">
 
                 <wgo_app.wgo.fonts.GNBookTextView
                     android:id="@+id/to"
@@ -131,7 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/destination_layout"
-                android:background="@drawable/white_row">
+                android:background="@drawable/white_calendar">
 
                 <wgo_app.wgo.fonts.GNBookTextView
                     android:id="@+id/select"

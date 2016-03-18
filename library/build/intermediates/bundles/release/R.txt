@@ -31,7 +31,7 @@ int dimen calendar_month_topmargin 0x7f060002
 int dimen calendar_text_medium 0x7f060003
 int dimen calendar_text_small 0x7f060004
 int drawable calendar_bg_selector 0x7f020000
-int drawable white_circle 0x7f020001
+int drawable white_calendar 0x7f020001
 int id calendar_grid 0x7f070002
 int id day_view_adapter_class 0x7f070000
 int id title 0x7f070001

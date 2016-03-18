@@ -126,16 +126,17 @@ public class MonthView extends LinearLayout {
           String cellDate = numberFormatter.format(cell.getValue());
           if (!cellView.getDayOfMonthTextView().getText().equals(cellDate)) {
             cellView.getDayOfMonthTextView().setText(cellDate);
-
-            int cc = R.color.calendar_text_weekend;
-            Date d = cell.getDate();
-            calendar.setTime(d);
-            int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
-            if((Calendar.FRIDAY == dayOfWeek || Calendar.SATURDAY == dayOfWeek || Calendar.SUNDAY == dayOfWeek) && cellView.isSelectable()) {
-              //cellView.setBackgroundResource(R.drawable.white_circle);
-              cellView.getDayOfMonthTextView().setTextColor(getResources().getColor(cc));
-            }
           }
+
+          int cc = R.color.calendar_text_weekend;
+          Date d = cell.getDate();
+          calendar.setTime(d);
+          int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+          if((Calendar.FRIDAY == dayOfWeek || Calendar.SATURDAY == dayOfWeek || Calendar.SUNDAY == dayOfWeek) && cellView.isSelectable()) {
+            //cellView.setBackgroundResource(R.drawable.white_calendar);
+            //cellView.getDayOfMonthTextView().setTextColor(getResources().getColor(cc));
+          }
+
 
           cellView.setEnabled(cell.isCurrentMonth());
           cellView.setClickable(!displayOnly);

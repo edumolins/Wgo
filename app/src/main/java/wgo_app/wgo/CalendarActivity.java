@@ -129,7 +129,7 @@ public class CalendarActivity extends Activity {
 
             }
         });
-        RelativeLayout close = (RelativeLayout)findViewById(R.id.close_layout);
+        RelativeLayout close = (RelativeLayout)findViewById(R.id.close_l);
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
