@@ -40,7 +40,7 @@
             android:id="@+id/calendar_demo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calendar"
+            android:text="Calendari"
             android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
