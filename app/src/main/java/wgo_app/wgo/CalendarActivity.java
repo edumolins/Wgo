@@ -1,8 +1,10 @@
 package wgo_app.wgo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -26,6 +28,14 @@ public class CalendarActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calendar_main);
 
+        Button cal = (Button)findViewById(R.id.calendar_demo);
+        cal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CalendarActivity.this, CalendarDemoActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         calendar = (CalendarPickerView) findViewById(R.id.calendar_view);

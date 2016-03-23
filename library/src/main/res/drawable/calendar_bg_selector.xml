@@ -6,8 +6,13 @@
     <item app:tsquare_state_range_middle="true">
         <color android:color="@color/calendar_selected_range_bg"/>
     </item>
-    <item android:state_selected="true">
-        <color android:color="@color/calendar_selected_day_bg"/>
+    <item android:state_selected="true" android:color="@android:color/white">
+        <!-- <color android:color="@color/calendar_selected_day_bg"/> -->
+
+        <shape>
+            <solid android:color="#66cc33" />
+            <corners android:radius="12dp" />
+        </shape>
     </item>
     <item android:state_pressed="true">
         <color android:color="@color/calendar_selected_day_bg"/>
@@ -21,7 +26,10 @@
     <item app:tsquare_state_today="true">
         <color android:color="@color/calendar_text_active"/>
     </item>
-    <item>
+    <item android:color="@color/calendar_text_weekend">
         <color android:color="@color/calendar_active_month_bg"/>
+    </item>
+    <item android:color="@color/calendar_text_white">
+        <color android:color="@color/calendar_text_active"/>
     </item>
 </selector>

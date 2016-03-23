@@ -22,9 +22,10 @@ int color calendar_text_active 0x7f050007
 int color calendar_text_highlighted 0x7f050008
 int color calendar_text_inactive 0x7f050009
 int color calendar_text_selected 0x7f05000a
-int color calendar_text_selector 0x7f05000d
+int color calendar_text_selector 0x7f05000e
 int color calendar_text_unselectable 0x7f05000b
 int color calendar_text_weekend 0x7f05000c
+int color calendar_text_white 0x7f05000d
 int dimen calendar_day_headers_paddingbottom 0x7f060000
 int dimen calendar_month_title_bottommargin 0x7f060001
 int dimen calendar_month_topmargin 0x7f060002

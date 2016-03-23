@@ -67,6 +67,10 @@
             android:name=".CalendarActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name=".CalendarDemoActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
         <activity
             android:name=".SearchActivity"

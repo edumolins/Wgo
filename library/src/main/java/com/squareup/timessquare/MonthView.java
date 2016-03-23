@@ -128,13 +128,13 @@ public class MonthView extends LinearLayout {
             cellView.getDayOfMonthTextView().setText(cellDate);
           }
 
-          int cc = R.color.calendar_text_weekend;
+          int cc = R.color.calendar_text_white;
           Date d = cell.getDate();
           calendar.setTime(d);
           int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
-          if((Calendar.FRIDAY == dayOfWeek || Calendar.SATURDAY == dayOfWeek || Calendar.SUNDAY == dayOfWeek) && cellView.isSelectable()) {
+          if(!(Calendar.FRIDAY == dayOfWeek) && !(Calendar.SATURDAY == dayOfWeek) && !(Calendar.SUNDAY == dayOfWeek)) {
             //cellView.setBackgroundResource(R.drawable.white_calendar);
-            //cellView.getDayOfMonthTextView().setTextColor(getResources().getColor(cc));
+            cellView.getDayOfMonthTextView().setTextColor(getResources().getColor(cc));
           }
 
 
