@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import com.imanoweb.calendarview.CustomCalendarView;
 import com.roomorama.caldroid.CaldroidFragment;
 import com.roomorama.caldroid.CaldroidListener;
 
@@ -17,7 +16,6 @@ import java.util.Date;
 
 public class CalendarDemoActivity extends AppCompatActivity {
 
-    CustomCalendarView calendarView;
     CaldroidFragment caldroidFragment;
 
     @Override
