@@ -13,7 +13,7 @@
         android:id="@+id/flights_header"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="@drawable/green_button">
+        android:background="@drawable/grey_bar">
         <RelativeLayout
             android:id="@+id/close_layout"
             android:layout_width="40dp"
@@ -27,13 +27,13 @@
                 android:layout_marginLeft="10dp"/>
         </RelativeLayout>
 
-        <wgo_app.wgo.fonts.GNMediumTextView
+        <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/login_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/available_flights"
             android:layout_centerInParent="true"
-            android:textColor="@color/white"
+            android:textColor="@color/green_new"
             android:textSize="18dp"
             android:letterSpacing="0.1"/>
 

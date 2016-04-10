@@ -135,6 +135,10 @@ public class MonthView extends LinearLayout {
           if(!(Calendar.FRIDAY == dayOfWeek) && !(Calendar.SATURDAY == dayOfWeek) && !(Calendar.SUNDAY == dayOfWeek)) {
             //cellView.setBackgroundResource(R.drawable.white_calendar);
             cellView.getDayOfMonthTextView().setTextColor(getResources().getColor(cc));
+            //cellView.getDayOfMonthTextView().setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/gn_medium.otf"));
+          }
+          else{
+            //cellView.getDayOfMonthTextView().setTypeface(Typeface.createFromAsset(getContext().getAssets(),"fonts/gn_book.otf"));
           }
 
 

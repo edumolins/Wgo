@@ -6,6 +6,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+
 import com.squareup.timessquare.MonthCellDescriptor.RangeState;
 
 public class CalendarCellView extends FrameLayout {
@@ -37,7 +38,7 @@ public class CalendarCellView extends FrameLayout {
   private boolean isWeekend = false;
   private boolean isHighlighted = false;
   private RangeState rangeState = RangeState.NONE;
-  private TextView dayOfMonthTextView;
+  private GNBookTextView dayOfMonthTextView;
 
   @SuppressWarnings("UnusedDeclaration") //
   public CalendarCellView(Context context, AttributeSet attrs) {
@@ -129,10 +130,10 @@ public class CalendarCellView extends FrameLayout {
   }
 
   public void setDayOfMonthTextView(TextView textView) {
-    dayOfMonthTextView = textView;
+    dayOfMonthTextView = (GNBookTextView)textView;
   }
 
-  public TextView getDayOfMonthTextView() {
+  public GNBookTextView getDayOfMonthTextView() {
     if (dayOfMonthTextView == null) {
       throw new IllegalStateException(
               "You have to setDayOfMonthTextView in your custom DayViewAdapter."

@@ -2,6 +2,7 @@
     <string name="app_name">Wgo</string>
     <string name="action_settings">Settings</string>
 
+
     <!--Welcome -->
     <string name="welcome">WELCOME!</string>
     <string name="welcome1">Wgo is the app that tells you when</string>
@@ -82,5 +83,18 @@
 
     <!-- Weekends -->
     <string name="select_weeks">SELECT YOUR WEEKENDS</string>
+
+    <!-- Settings -->
+    <string name="settings">SETTINGS</string>
+    <string name="language">LANGUAGE</string>
+    <string name="currency">CURRENCY</string>
+    <string name="alert_frequency">ALERT FREQUENCY</string>
+    <string name="change_email">CHANGE E-MAIL ADDRESS</string>
+    <string name="change_password">CHANGE PASSWORD</string>
+    <string name="old_password">Old password</string>
+    <string name="new_password">New password</string>
+    <string name="new_password_again">New password again</string>
+    <string name="delete_account">DELETE ACCOUNT</string>
+    <string name="logout">LOG OUT</string>
 
 </resources>

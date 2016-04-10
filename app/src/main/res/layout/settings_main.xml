@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="wgo_app.wgo.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- Login Header Init-->
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/grey_bar">
+
+                <RelativeLayout
+                    android:id="@+id/close_layout"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/back_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/back" />
+                </RelativeLayout>
+
+                <wgo_app.wgo.fonts.GNBookTextView
+                    android:id="@+id/login_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:letterSpacing="0.1"
+                    android:text="@string/settings"
+                    android:textColor="@color/green_new"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/header"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp">
+
+                <RelativeLayout
+                    android:id="@+id/language_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.1"
+                        android:text="@string/language"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp" />
+
+                    <Spinner
+                        android:id="@+id/language_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@android:color/transparent" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/language"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/green_new" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/currency_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/language_layout"
+                    android:layout_marginTop="15dp">
+
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.1"
+                        android:text="@string/currency"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioEuro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableLeft="@drawable/radio_button_custom"
+                            android:drawablePadding="5dp"
+                            android:gravity="center"
+                            android:text="€"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="16dp" />
+
+                        <RadioButton
+                            android:id="@+id/radioPound"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/radio_button_custom"
+                            android:drawablePadding="5dp"
+                            android:gravity="center"
+                            android:text="£"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="16dp" />
+
+                        <RadioButton
+                            android:id="@+id/radioDolar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/radio_button_custom"
+                            android:drawablePadding="5dp"
+                            android:gravity="center"
+                            android:text="$"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="16dp" />
+
+                    </RadioGroup>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/radioCurrency"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/green_new" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/alerts_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/currency_layout"
+                    android:layout_marginTop="15dp">
+
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/alerts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.1"
+                        android:text="@string/alert_frequency"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp" />
+
+                    <Spinner
+                        android:id="@+id/alerts_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@android:color/transparent" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/alerts"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/green_new" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/email_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/alerts_layout"
+                    android:layout_marginTop="15dp">
+
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.1"
+                        android:text="@string/change_email"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp" />
+
+                    <wgo_app.wgo.fonts.GNBookEditText
+                        android:id="@+id/change_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/email"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/edit"
+                        android:text="johndoe@gmail.com"
+                        android:textColor="@color/grey_dark" />
+
+                    <wgo_app.wgo.fonts.CustomButton
+                        android:id="@+id/email_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/change_email"
+                        android:background="@drawable/green_button"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/accept"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/email_button"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/green_new" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/password_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/email_layout">
+
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/change_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.1"
+                        android:text="@string/change_password"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp" />
+
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/old_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.1"
+                        android:text="@string/old_password"
+                        android:layout_below="@+id/change_password"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp"
+                        android:layout_marginTop="15dp"/>
+                    <wgo_app.wgo.fonts.GNBookEditText
+                        android:id="@+id/change_old_password"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/input_border"
+                        android:text=""
+                        android:layout_toRightOf="@+id/old_password"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="textPassword"
+                        android:layout_below="@+id/change_password"
+                        android:textColor="@color/grey_dark"
+                        android:layout_alignParentRight="true"
+                        />
+
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/new_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.1"
+                        android:text="@string/new_password"
+                        android:layout_below="@+id/old_password"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp"
+                        android:layout_marginTop="10dp"/>
+                    <wgo_app.wgo.fonts.GNBookEditText
+                        android:id="@+id/change_new_password"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/input_border"
+                        android:text=""
+                        android:layout_toRightOf="@+id/new_password"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="textPassword"
+                        android:layout_below="@+id/old_password"
+                        android:textColor="@color/grey_dark"
+                        android:layout_alignParentRight="true"
+                        />
+
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/new_password_again"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.1"
+                        android:text="@string/new_password_again"
+                        android:layout_below="@+id/new_password"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp"
+                        android:layout_marginTop="10dp"/>
+                    <wgo_app.wgo.fonts.GNBookEditText
+                        android:id="@+id/change_new_password_again"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/input_border"
+                        android:text=""
+                        android:layout_toRightOf="@+id/new_password_again"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="textPassword"
+                        android:layout_below="@+id/new_password"
+                        android:textColor="@color/grey_dark"
+                        android:layout_alignParentRight="true"
+                        />
+
+                    <wgo_app.wgo.fonts.CustomButton
+                        android:id="@+id/password_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/accept"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/change_new_password_again"
+                        android:paddingRight="25dp"
+                        android:paddingLeft="25dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:enabled="false"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/green_button"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/password_button"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/green_new" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/logout_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/password_layout"
+                    android:layout_marginTop="15dp">
+
+                    <wgo_app.wgo.fonts.GNBookTextView
+                        android:id="@+id/logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.1"
+                        android:text="@string/logout"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp"
+                        android:layout_marginTop="8dp"/>
+
+                    <wgo_app.wgo.fonts.CustomButton
+                        android:id="@+id/logout_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/green_button"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/delete_account"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/logout_button"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/green_new" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
+

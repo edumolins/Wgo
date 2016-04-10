@@ -135,4 +135,9 @@ public class LoginActivity extends Activity {
         layout.setAnimation(anim);
         layout.startAnimation(anim);
     }
+
+    public void settings (View v) {
+        Intent intent = new Intent (this, SettingsActivity.class);
+        startActivity(intent);
+    }
 }

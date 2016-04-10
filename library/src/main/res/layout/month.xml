@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     >
-  <TextView
+  <wgo_app.wgo.fonts.GNBookTextView
       android:id="@+id/title"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -25,37 +25,37 @@
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/calendar_day_headers_paddingbottom"
         >
-      <TextView
+      <wgo_app.wgo.fonts.GNBookTextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           style="@style/CalendarCell.DayHeader"
           />
-      <TextView
+      <wgo_app.wgo.fonts.GNBookTextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           style="@style/CalendarCell.DayHeader"
           />
-      <TextView
+      <wgo_app.wgo.fonts.GNBookTextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           style="@style/CalendarCell.DayHeader"
           />
-      <TextView
+      <wgo_app.wgo.fonts.GNBookTextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           style="@style/CalendarCell.DayHeader"
           />
-      <TextView
+      <wgo_app.wgo.fonts.GNBookTextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           style="@style/CalendarCell.DayHeader"
           />
-      <TextView
+      <wgo_app.wgo.fonts.GNBookTextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           style="@style/CalendarCell.DayHeader"
           />
-      <TextView
+      <wgo_app.wgo.fonts.GNBookTextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           style="@style/CalendarCell.DayHeader"

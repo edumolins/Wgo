@@ -1,0 +1,8 @@
+<wgo_app.wgo.fonts.GNBookTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/grey_dark"
+    android:textSize="16dp"
+    android:letterSpacing="0.1"
+    android:drawableRight="@drawable/down"
+    android:drawablePadding="10dp" />

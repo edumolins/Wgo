@@ -10,7 +10,7 @@
         android:id="@+id/calendar_header"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="@drawable/green_button">
+        android:background="@drawable/grey_bar">
 
         <RelativeLayout
             android:id="@+id/close_layout"
@@ -26,22 +26,15 @@
                 android:src="@drawable/back" />
         </RelativeLayout>
 
-        <wgo_app.wgo.fonts.GNMediumTextView
+        <wgo_app.wgo.fonts.GNBookTextView
             android:id="@+id/login_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:letterSpacing="0.1"
             android:text="@string/search"
-            android:textColor="@color/white"
+            android:textColor="@color/green_new"
             android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/calendar_demo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Calendari"
-            android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
 
@@ -54,78 +47,88 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/calendar_layout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/calendar_header"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:background="@color/white"
-        android:padding="10dp">
+        android:background="@color/white">
 
         <RelativeLayout
-            android:id="@+id/close_l"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true">
-
-            <ImageView
-                android:id="@+id/close"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/close" />
-        </RelativeLayout>
-
-        <wgo_app.wgo.fonts.GNBookTextView
-            android:id="@+id/dest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/close_l"
-            android:layout_centerHorizontal="true"
-            android:letterSpacing="0.1"
-            android:text="@string/select_weeks"
-            android:textColor="@color/grey_flights"
-            android:textSize="18dp" />
-
-        <wgo_app.wgo.fonts.GNLightTextView
-            android:id="@+id/num_weekends"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/dest"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/transparent"
-            android:imeOptions="actionSearch"
-            android:inputType="text"
-            android:letterSpacing="0.1"
-            android:paddingBottom="2dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="2dp"
-            android:singleLine="true"
-            android:text="0"
-            android:textColor="@color/grey_dark_flights"
-            android:textSize="24dp" />
-
-        <RelativeLayout
+            android:id="@+id/calendar_layout"
             android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:layout_below="@+id/num_weekends"
-            android:layout_marginTop="10dp"
-            android:background="@color/grey">
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp">
 
+            <RelativeLayout
+                android:id="@+id/close_l"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/close"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/close" />
+            </RelativeLayout>
+
+            <wgo_app.wgo.fonts.GNBookTextView
+                android:id="@+id/dest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/close_l"
+                android:layout_centerHorizontal="true"
+                android:letterSpacing="0.1"
+                android:text="@string/select_weeks"
+                android:textColor="@color/grey_flights"
+                android:textSize="18dp" />
+
+            <wgo_app.wgo.fonts.GNLightTextView
+                android:id="@+id/num_weekends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dest"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:letterSpacing="0.1"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@color/grey_dark_flights"
+                android:textSize="24dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/num_weekends"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/grey">
+
+            </RelativeLayout>
         </RelativeLayout>
+
+
+        <com.squareup.timessquare.CalendarPickerView
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/calendar_layout"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@color/white"
+            android:scrollbars="none"
+            android:textSize="10dp" />
     </RelativeLayout>
-
-
-    <com.squareup.timessquare.CalendarPickerView
-        android:id="@+id/calendar_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/calendar_layout"
-        android:background="@color/white"
-        android:textSize="10dp" />
 
     <wgo_app.wgo.fonts.CustomButton
         android:id="@+id/button_accept"
