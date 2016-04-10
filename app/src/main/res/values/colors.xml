@@ -16,7 +16,7 @@
     <color name="grey_seekbar">#898989</color>
     <color name="green_seekbar">#00c853</color>
     <color name="green_last_search">#bce342</color>
-    <color name="green_tell_friends">#7ad645</color>
+    <color name="green_new">#7ad645</color>
     <color name="custom_text_selected">#FFFFFFFF</color>
 
 </resources>

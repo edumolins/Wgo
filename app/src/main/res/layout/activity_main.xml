@@ -149,7 +149,7 @@
                         android:layout_centerInParent="true"
                         android:letterSpacing="0.1"
                         android:text="@string/tell_friends"
-                        android:textColor="@color/green_tell_friends"
+                        android:textColor="@color/green_new"
                         android:textSize="17dp" />
                 </RelativeLayout>
             </RelativeLayout>
