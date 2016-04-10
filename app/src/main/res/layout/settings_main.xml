@@ -255,17 +255,21 @@
                         android:text="@string/change_password"
                         android:textColor="@color/grey_dark"
                         android:textSize="16dp" />
-
+                    <RelativeLayout
+                        android:id="@+id/lay1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@+id/change_password">
                     <wgo_app.wgo.fonts.GNBookTextView
                         android:id="@+id/old_password"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:letterSpacing="0.1"
+                        android:layout_centerVertical="true"
                         android:text="@string/old_password"
-                        android:layout_below="@+id/change_password"
                         android:textColor="@color/grey_dark"
-                        android:textSize="16dp"
-                        android:layout_marginTop="15dp"/>
+                        android:textSize="16dp"/>
                     <wgo_app.wgo.fonts.GNBookEditText
                         android:id="@+id/change_old_password"
                         android:layout_width="200dp"
@@ -274,23 +278,27 @@
                         android:background="@drawable/input_border"
                         android:text=""
                         android:layout_toRightOf="@+id/old_password"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="15dp"
                         android:inputType="textPassword"
-                        android:layout_below="@+id/change_password"
                         android:textColor="@color/grey_dark"
                         android:layout_alignParentRight="true"
                         />
-
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/lay2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/lay1">
                     <wgo_app.wgo.fonts.GNBookTextView
                         android:id="@+id/new_password"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:letterSpacing="0.1"
+                        android:layout_centerVertical="true"
                         android:text="@string/new_password"
-                        android:layout_below="@+id/old_password"
                         android:textColor="@color/grey_dark"
-                        android:textSize="16dp"
-                        android:layout_marginTop="10dp"/>
+                        android:textSize="16dp"/>
                     <wgo_app.wgo.fonts.GNBookEditText
                         android:id="@+id/change_new_password"
                         android:layout_width="200dp"
@@ -299,20 +307,25 @@
                         android:background="@drawable/input_border"
                         android:text=""
                         android:layout_toRightOf="@+id/new_password"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="15dp"
                         android:inputType="textPassword"
-                        android:layout_below="@+id/old_password"
                         android:textColor="@color/grey_dark"
                         android:layout_alignParentRight="true"
                         />
-
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/lay3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/lay2">
                     <wgo_app.wgo.fonts.GNBookTextView
                         android:id="@+id/new_password_again"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:letterSpacing="0.1"
+                        android:layout_centerVertical="true"
                         android:text="@string/new_password_again"
-                        android:layout_below="@+id/new_password"
                         android:textColor="@color/grey_dark"
                         android:textSize="16dp"
                         android:layout_marginTop="10dp"/>
@@ -324,20 +337,19 @@
                         android:background="@drawable/input_border"
                         android:text=""
                         android:layout_toRightOf="@+id/new_password_again"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="15dp"
                         android:inputType="textPassword"
-                        android:layout_below="@+id/new_password"
                         android:textColor="@color/grey_dark"
                         android:layout_alignParentRight="true"
                         />
-
+                       </RelativeLayout>
                     <wgo_app.wgo.fonts.CustomButton
                         android:id="@+id/password_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/accept"
                         android:layout_alignParentRight="true"
-                        android:layout_below="@+id/change_new_password_again"
+                        android:layout_below="@+id/lay3"
                         android:paddingRight="25dp"
                         android:paddingLeft="25dp"
                         android:paddingTop="10dp"
