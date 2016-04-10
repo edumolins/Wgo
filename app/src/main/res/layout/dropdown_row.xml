@@ -4,4 +4,5 @@
     android:textColor="@color/grey_dark"
     android:textSize="16dp"
     android:letterSpacing="0.1"
-    android:padding="15dp"/>
+    android:padding="15dp"
+    android:background="@android:color/transparent"/>
