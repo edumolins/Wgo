@@ -58,7 +58,7 @@
                     android:layout_marginTop="8dp"
                     android:letterSpacing="0.2"
                     android:text="@string/your_last_search"
-                    android:textColor="@color/green"
+                    android:textColor="@color/green_last_search"
                     android:textSize="14dp" />
 
                 <wgo_app.wgo.fonts.GNLightTextView
@@ -141,7 +141,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_below="@+id/manage_alerts"
-                    android:background="@drawable/black_bar">
+                    android:background="@drawable/grey_bar">
 
                     <wgo_app.wgo.fonts.GNBookTextView
                         android:layout_width="wrap_content"
@@ -149,8 +149,8 @@
                         android:layout_centerInParent="true"
                         android:letterSpacing="0.1"
                         android:text="@string/tell_friends"
-                        android:textColor="@color/green_seekbar"
-                        android:textSize="20dp" />
+                        android:textColor="@color/green_tell_friends"
+                        android:textSize="17dp" />
                 </RelativeLayout>
             </RelativeLayout>
 

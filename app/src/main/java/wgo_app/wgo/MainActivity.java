@@ -23,22 +23,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //WELCOME VIEW
+        //WELCOME VIW
         globalLayout = (RelativeLayout)findViewById(R.id.global_layout);
         searchLayout = (RelativeLayout)findViewById(R.id.last_search);
         alertsLayout = (RelativeLayout)findViewById(R.id.alerts);
         newAlertLayout = (RelativeLayout)findViewById(R.id.new_alert);
         manageLayout = (RelativeLayout)findViewById(R.id.manage_alerts);
 
-        /*
-        searchLayout.setVisibility(View.VISIBLE);
-        alertsLayout.setVisibility(View.VISIBLE);
-
-        Animation anim  = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.down_to_up_anim);
-        anim.setDuration(500);
-        globalLayout.setAnimation(anim);
-        globalLayout.startAnimation(anim);
-        */
 
         RelativeLayout alert = (RelativeLayout)findViewById(R.id.new_alert);
         alert.setOnClickListener(new View.OnClickListener() {
